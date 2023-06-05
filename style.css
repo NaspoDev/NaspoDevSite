@@ -1,0 +1,65 @@
+/* Global Configurations */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url(fonts/inter/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Inter Extra-Light";
+  src: url(fonts/inter/static/Inter-ExtraLight.ttf);
+}
+
+:root {
+  --text-color-grey: #e8e6e6;
+  --text-color-white: #ffffff;
+  --text-color-blue: #39bde2;
+}
+
+/* prettier-ignore */
+h1, h2, h3, h4, h5, h6, button, li, a {
+  font-family: "Inter Bold";
+  color: var(--text-color-white);
+}
+
+p {
+  font-family: "Inter Extra-Light";
+  color: var(--text-color-grey);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+
+#header-container {
+  background-color: #101010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.navigation {
+  list-style: none;
+}
+
+.navigation li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.navigation li a {
+  transition: all 0.3s ease 0s;
+}
+
+.navigation li a:hover {
+  color: var(--text-color-grey);
+}
