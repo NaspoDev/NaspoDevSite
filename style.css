@@ -22,6 +22,7 @@
   --text-color-white: #ffffff;
   --text-color-blue: #39bde2;
   --text-color-darker-blue: #05aad8;
+  --theme-color-grey: #595959;
 }
 
 /* prettier-ignore */
@@ -30,9 +31,22 @@ h1, h2, h3, h4, h5, h6, button, li, a {
   color: var(--text-color-white);
 }
 
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
 p {
   font-family: "Inter Extra-Light";
   color: var(--text-color-grey);
+  font-size: 18px;
 }
 
 a {
@@ -59,6 +73,20 @@ button {
 
 button:hover {
   background-color: var(--text-color-darker-blue);
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  border-bottom: 18px solid var(--text-color-blue);
+  width: 95%;
+  left: 10%;
+  top: 65%;
+  z-index: -1;
 }
 
 .left-side {
@@ -166,15 +194,19 @@ button:hover {
   background-image: radial-gradient(var(--text-color-grey) 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
+  opacity: 0.3;
 }
 
 .home .right-side .shape-decor {
   position: absolute;
   width: 50%;
-  height: 40%;
+  height: 35%;
   transform: skew(-20deg);
-  background-color: var(--text-color-grey);
+  background-color: var(--theme-color-grey);
   z-index: -1;
+  left: 25%;
+  top: 25%;
+  opacity: 0.6;
 }
 
 .home .right-side .content-container {
@@ -188,14 +220,25 @@ button:hover {
 }
 
 .home .right-side .content-container h2 {
-  font-size: 35px;
+  font-size: 40px;
   margin-bottom: 20px;
+  position: relative;
 }
+
+/* .home .right-side .content-container h2::before {
+  position: absolute;
+  content: "";
+  border-bottom: 18px solid var(--text-color-blue);
+  width: 95%;
+  left: 10%;
+  top: 65%;
+  z-index: -1;
+} */
 
 .home .right-side .content-container ul li {
   font-size: 24px;
-  font-family: "Inter Extra-Light";
-  color: var(--text-color-grey);
+  /* font-family: "Inter Extra-Light";
+  color: var(--text-color-grey); */
   margin-bottom: 10px;
 
   background-image: url(images/other/check.png);
