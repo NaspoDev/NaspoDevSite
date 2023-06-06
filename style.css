@@ -75,17 +75,17 @@ button:hover {
   background-color: var(--text-color-darker-blue);
 }
 
-.section-title {
+.underline-style {
   position: relative;
 }
 
-.section-title::before {
+.underline-style::before {
   position: absolute;
   content: "";
   border-bottom: 18px solid var(--text-color-blue);
   width: 95%;
   left: 10%;
-  top: 65%;
+  top: 70%;
   z-index: -1;
 }
 
@@ -197,16 +197,28 @@ button:hover {
   opacity: 0.3;
 }
 
-.home .right-side .shape-decor {
+.home .right-side .square-decor-1 {
   position: absolute;
-  width: 50%;
-  height: 35%;
-  transform: skew(-20deg);
+  width: 30%;
+  height: 30%;
+  /* transform: skew(20deg); */
+  background-color: var(--theme-color-grey);
+  z-index: -3;
+  left: -10%;
+  top: 20%;
+  opacity: 0.2;
+}
+
+.home .right-side .square-decor-2 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  /* transform: skew(-20deg); */
   background-color: var(--theme-color-grey);
   z-index: -1;
-  left: 25%;
-  top: 25%;
-  opacity: 0.6;
+  right: 2%;
+  bottom: 10%;
+  opacity: 0.2;
 }
 
 .home .right-side .content-container {
@@ -220,29 +232,18 @@ button:hover {
 }
 
 .home .right-side .content-container h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  position: relative;
+  font-size: 36px;
+  margin-bottom: 30px;
 }
-
-/* .home .right-side .content-container h2::before {
-  position: absolute;
-  content: "";
-  border-bottom: 18px solid var(--text-color-blue);
-  width: 95%;
-  left: 10%;
-  top: 65%;
-  z-index: -1;
-} */
 
 .home .right-side .content-container ul li {
   font-size: 24px;
-  /* font-family: "Inter Extra-Light";
-  color: var(--text-color-grey); */
-  margin-bottom: 10px;
+  font-family: "Inter Extra-Light";
+  color: var(--text-color-grey);
+  margin-bottom: 30px;
+  padding-left: 40px;
 
   background-image: url(images/other/check.png);
   background-repeat: no-repeat;
   background-size: 25px;
-  padding: 0px 0px 10px 35px;
 }
