@@ -179,7 +179,6 @@ button:hover {
 }
 
 .home .right-side {
-  /* background-color: grey; */
   display: flex;
   flex-direction: column;
   justify-content: center;
