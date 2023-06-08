@@ -154,6 +154,11 @@ button:hover {
   justify-content: center;
 }
 
+.home .left-side .content-container .welcome-animation-text-container {
+  width: auto;
+  height: 60%;
+}
+
 .home .left-side .content-container h2 {
   font-size: 64px;
   margin-bottom: 10px;
