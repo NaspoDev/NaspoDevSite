@@ -1,7 +1,7 @@
 const elements = [
-  { id: "welcome-span", text: "Hey there" },
-  { id: "welcome-h2", text: ", I'm" },
-  { id: "welcome-h1", text: "Naspo" },
+  { id: "animation-span", text: "Hey there" },
+  { id: "animation-h2", text: ", I'm" },
+  { id: "animation-h1", text: "Naspo" },
 ];
 
 let index = 0;
