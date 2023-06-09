@@ -159,10 +159,11 @@ button:hover {
   height: 60%;
 }
 
-.home .left-side .content-container .animation-text-container .cursor {
+.home .left-side .animation-text-container .cursor {
   display: inline-block;
   background-color: var(--text-color-white);
-  width: 2px;
+  width: 3px;
+  font-size: 64px;
   animation: blink 1s infinite;
 }
 
@@ -181,6 +182,7 @@ button:hover {
 .home .left-side .content-container h2 {
   font-size: 64px;
   margin-bottom: 10px;
+  display: inline-block;
 }
 
 .home .left-side .content-container span {
@@ -190,6 +192,7 @@ button:hover {
 .home .left-side .content-container h1 {
   font-size: 96px;
   margin-bottom: 30px;
+  display: inline-block;
 }
 
 .home .left-side .content-container p {

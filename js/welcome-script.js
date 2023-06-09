@@ -5,7 +5,7 @@ const elements = [
 ];
 
 let index = 0;
-let speed = 60;
+const speed = 60;
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -27,9 +27,9 @@ async function typeWritterEffect(id, text) {
 async function runAnimations() {
   for (element of elements) {
     // If the element if the h2, add an extra delay after tpying the comma.
-    if (element.id === "welcome-h2") {
+    if (element.text === ", I'm") {
       await typeWritterEffect(element.id, element.text.charAt(0));
-      await delay(100);
+      await delay(90);
       await typeWritterEffect(element.id, element.text.substring(1));
     } else {
       await typeWritterEffect(element.id, element.text);
