@@ -159,6 +159,25 @@ button:hover {
   height: 60%;
 }
 
+.home .left-side .content-container .animation-text-container .cursor {
+  display: inline-block;
+  background-color: var(--text-color-white);
+  width: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .home .left-side .content-container h2 {
   font-size: 64px;
   margin-bottom: 10px;
