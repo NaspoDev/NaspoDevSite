@@ -29,7 +29,7 @@ async function runAnimations() {
     // If the element if the h2, add an extra delay after tpying the comma.
     if (element.id === "welcome-h2") {
       await typeWritterEffect(element.id, element.text.charAt(0));
-      await delay(90);
+      await delay(100);
       await typeWritterEffect(element.id, element.text.substring(1));
     } else {
       await typeWritterEffect(element.id, element.text);
