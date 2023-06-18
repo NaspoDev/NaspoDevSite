@@ -10,3 +10,12 @@ document.addEventListener("click", (event) => {
 document.addEventListener("scroll", (event) => {
   cursor.remove();
 });
+
+// Parallax scroll effect listener
+// Listens for scroll event
+window.addEventListener("scroll", () => {
+  let box1 = document.getElementById("parallax-box-1");
+  let box2 = document.getElementById("parallax-box-2");
+  box1.style.transform = "translateY(" + window.scrollY * 0.8 + "px)";
+  box2.style.transform = "translateY(" + window.scrollY * 0.5 + "px)";
+});

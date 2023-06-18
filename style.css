@@ -224,6 +224,10 @@ button:hover {
   opacity: 0.3;
 }
 
+.home .right-side .parallax-warpper {
+  overflow-y: hidden;
+}
+
 .home .right-side .square-decor-1 {
   position: absolute;
   width: 30%;
