@@ -225,9 +225,17 @@ button:hover {
 }
 
 .home .right-side .parallax-container {
-  position: relative;
-  overflow: hidden;
+  position: absolute;
   height: 100%;
+  width: 100%;
+  /* background-color: #05aad8; */
+}
+
+.home .right-side .parallax-wrapper {
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  /* background-color: #05aad8; */
 }
 
 .home .right-side .square-decor-1 {
