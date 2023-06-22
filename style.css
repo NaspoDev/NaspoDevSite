@@ -231,6 +231,10 @@ button:hover {
   background-color: var(--theme-color-grey);
 }
 
+.home .right-side .square-decor:hover {
+  background-color: #05aad8;
+}
+
 .home .right-side .square-decor-1 {
   z-index: -3;
   left: -10%;
