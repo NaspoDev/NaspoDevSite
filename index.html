@@ -43,8 +43,17 @@
 
         <div class="right-side">
           <div class="dots-decor"></div>
-          <div class="square-decor square-decor-1"></div>
-          <div class="square-decor square-decor-2"></div>
+          <div class="square-decor square-decor-1" id="square-decor-1"></div>
+          <!-- square-decor-overlay allows hover animations for square decors to work -->
+          <div
+            class="square-decor-overlay square-decor square-decor-1"
+            id="square-decor-overlay-1"
+          ></div>
+          <div class="square-decor square-decor-2" id="square-decor-2"></div>
+          <div
+            class="square-decor-overlay square-decor square-decor-2"
+            id="square-decor-overlay-2"
+          ></div>
           <div class="content-container">
             <h2 class="underline-style">Here's what I offer...</h2>
             <ul class="services-list">
@@ -53,6 +62,7 @@
               <li>Minecraft Plugin Development</li>
               <li>Minecraft Server Setups</li>
             </ul>
+            <!-- border boxe divs are for the corner border design for the content container -->
             <div class="border-box-top-left"></div>
             <div class="border-box-bottom-right"></div>
           </div>
