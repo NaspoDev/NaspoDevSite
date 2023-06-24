@@ -5,7 +5,7 @@ const elements = [
 ];
 
 let index = 0;
-const speed = 60;
+const speed = 80;
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
