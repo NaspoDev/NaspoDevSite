@@ -20,9 +20,13 @@
 :root {
   --text-color-grey: #e8e6e6;
   --text-color-white: #ffffff;
-  --text-color-blue: #39bde2;
-  --text-color-darker-blue: #05aad8;
+
+  --theme-color-blue: #39bde2;
+  --button-hover-color: #05aad8;
   --theme-color-grey: #595959;
+
+  --backgound-color-grey: #28282b;
+  --backgound-color-dark: #090a0b;
 }
 
 /* prettier-ignore */
@@ -59,12 +63,13 @@ img {
 }
 
 body {
-  background-color: #28282b;
+  background-color: var(--backgound-color-grey);
+  overflow-x: hidden;
 }
 
 button {
   cursor: pointer;
-  background-color: var(--text-color-blue);
+  background-color: var(--theme-color-blue);
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -73,7 +78,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--text-color-darker-blue);
+  background-color: var(--button-hover-color);
 }
 
 /* underline style: Custom underline styling for heading elements*/
@@ -85,11 +90,20 @@ button:hover {
 .underline-style::before {
   position: absolute;
   content: "";
-  border-bottom: 18px solid var(--text-color-blue);
+  border-bottom: 18px solid var(--theme-color-blue);
   width: 95%;
   left: 10%;
   top: 70%;
   z-index: -1;
+}
+
+.waves-spacer {
+  aspect-ratio: 900/600;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* title (heading) of each section. Ex. "About" */
@@ -138,7 +152,7 @@ button:hover {
 }
 
 .navigation li a:hover {
-  color: var(--text-color-blue);
+  color: var(--theme-color-blue);
 }
 
 /* === Home === */
@@ -197,7 +211,7 @@ button:hover {
 }
 
 .home .left-side .content-container span {
-  color: var(--text-color-blue);
+  color: var(--theme-color-blue);
 }
 
 .home .left-side .content-container h1 {
@@ -322,13 +336,25 @@ button:hover {
 
 /* === ABOUT === */
 
+.about-section-spacer {
+  background-image: url(images/section_transition_svgs/about-section-waves-transition.svg);
+  height: 350px;
+}
+
 .about {
   height: 1000px;
-  display: flex;
+  background-color: var(--backgound-color-dark);
+}
+
+.about-heading {
+  background-color: red;
+}
+
+.about-content {
+  background-color: blue;
 }
 
 .about .left-side {
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
