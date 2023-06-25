@@ -82,7 +82,6 @@ button:hover {
 }
 
 /* underline style: Custom underline styling for heading elements*/
-
 .underline-style {
   position: relative;
 }
@@ -155,7 +154,9 @@ button:hover {
   color: var(--theme-color-blue);
 }
 
-/* === Home === */
+/* === === === === === ===
+=== === === HOME === === ===
+=== === === === === ===*/
 
 .home {
   height: 800px;
@@ -330,7 +331,9 @@ button:hover {
   background-size: 25px;
 }
 
-/* === ABOUT === */
+/* === === === === === ===
+=== === === ABOUT === === ===
+=== === === === === ===*/
 
 .about-section-spacer {
   background-image: url(images/section_transition_svgs/about-section-waves-transition.svg);
@@ -339,32 +342,34 @@ button:hover {
 
 .about {
   height: 1000px;
+  display: grid;
   background-color: var(--backgound-color-dark);
 }
 
-.about-heading {
-  background-color: red;
-}
-
 .about-content {
-  background-color: blue;
+  overflow-y: hidden;
+  display: flex;
 }
 
-.about .left-side {
+.about-content .left-side {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.about .left-side .about-hero-image {
+.about-content .left-side .about-hero-image {
   width: 20%;
   height: auto;
   margin-bottom: 50px;
 }
 
-.about .left-side .about-text {
+.about-content .left-side .about-text {
   padding: 0 20% 0 20%;
   line-height: 2;
   margin-bottom: 50px;
+}
+
+.about-content .right-side {
+  background-color: yellowgreen;
 }
