@@ -84,6 +84,7 @@ button:hover {
 /* underline style: Custom underline styling for heading elements*/
 .underline-style {
   position: relative;
+  z-index: 1; /* to make sure other element layers dont intercept text and underline */
 }
 
 .underline-style::before {
@@ -343,11 +344,12 @@ button:hover {
 .about {
   height: 1000px;
   display: grid;
+  grid-template-rows: auto 1fr;
+  overflow-y: hidden;
   background-color: var(--backgound-color-dark);
 }
 
 .about-content {
-  overflow-y: hidden;
   display: flex;
 }
 
@@ -371,5 +373,5 @@ button:hover {
 }
 
 .about-content .right-side {
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
 }
