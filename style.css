@@ -342,7 +342,7 @@ button:hover {
 }
 
 .about {
-  height: 1000px;
+  height: 900px;
   display: grid;
   grid-template-rows: auto 1fr;
   overflow-y: hidden;
@@ -353,21 +353,59 @@ button:hover {
   display: flex;
 }
 
-.about-content .left-side {
+/* general content-container styling for both left and right sides of about-content */
+.about-content .content-container {
+  width: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
+  /* background-color: #05aad8; */
+}
+
+.about-content .content-container p {
+  line-height: 2;
+}
+
+.about-content .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.about-content .left-side .about-hero-image {
-  width: 20%;
-  height: auto;
-  margin-bottom: 50px;
+.about-content .left-side .content-container h2 {
+  color: var(--backgound-color-dark);
+
+  /* text shadow trickery to create a text border 
+  1px bg color to left, top, right, and bottom */
+  text-shadow: -1px 0 var(--text-color-white), 0 1px var(--text-color-white),
+    1px 0 var(--text-color-white), 0 -1px var(--text-color-white);
+
+  margin-bottom: 30px;
 }
 
-.about-content .left-side .about-text {
-  padding: 0 20% 0 20%;
-  line-height: 2;
-  margin-bottom: 50px;
+.about-content .left-side .content-container h2 span {
+  /* color: var(--theme-color-blue); */
+  /* text-shadow: none; */
+  text-shadow: -1px 0 var(--theme-color-blue), 0 1px var(--theme-color-blue),
+    1px 0 var(--theme-color-blue), 0 -1px var(--theme-color-blue);
+}
+
+.about-content .right-side .content-container p {
+  margin-bottom: 30px;
+}
+
+.about-content .tech-display {
+  position: absolute;
+  display: none;
+  z-index: -2;
+}
+
+.about-content .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
