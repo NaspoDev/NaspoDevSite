@@ -20,11 +20,15 @@ class GridSlot {
   constructor(row, column) {
     this.row = row;
     this.column = column;
-    let occupied = false;
+    this.occupied = false;
   }
 
   getRowFormatted() {
-    return `${row} / ${row + 1}`;
+    return `${this.row} / ${this.row + 1}`;
+  }
+
+  getColumnFormatted() {
+    return `${this.column} / ${this.column + 1}`;
   }
 }
 
@@ -36,14 +40,17 @@ for (let row = 1; row <= rows.length; row++) {
   }
 }
 
-for (let i = 0; i < gridItems; i++) {
-  do {
-    let gridSlot = gridSlots[Math.floor(Math.random() * gridSlots.length)];
+// For each grid item, set it to a random slot.
+for (let i = 0; i < gridItems.length; i++) {
+  let gridSlot = undefined;
+  while (true) {
+    gridSlot = gridSlots[Math.floor(Math.random() * gridSlots.length)];
     if (!gridSlot.occupied) {
       break;
     }
-  } while (true);
+  }
 
   gridItems[i].style.gridRow = gridSlot.getRowFormatted();
+  gridItems[i].style.gridColumn = gridSlot.getColumnFormatted();
   gridSlot.occupied = true;
 }
