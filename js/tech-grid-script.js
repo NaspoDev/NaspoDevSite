@@ -32,11 +32,31 @@ class GridSlot {
   }
 }
 
-// adding each possible grid slot to gridSlots array
-// (starting loop at 1 because css starts grid line count at 1)
-for (let row = 1; row <= rows.length; row++) {
-  for (let column = 1; column <= columns.length; column++) {
-    gridSlots.push(new GridSlot(row, column));
+createGridSlots((full = false));
+
+// Create and add whcichever grid slots should be usable to the gridSLots array
+function createGridSlots(full) {
+  // if full is true. Add every single grid slot on the grid to gridSlots
+  if (full) {
+    // starting loop at 1 because css starts grid line count at 1
+    for (let row = 1; row <= rows.length; row++) {
+      for (let column = 1; column <= columns.length; column++) {
+        gridSlots.push(new GridSlot(row, column));
+      }
+    }
+    // if full is fale. Add grid slots in a cross pattern (no x or y neighbours).
+  } else {
+    let selectorOffset = 0;
+    for (let row = 1; row <= rows.length; row++) {
+      if (row % 2 !== 1) {
+        selectorOffset = 1;
+      } else {
+        selectorOffset = 0;
+      }
+      for (let column = 1; column <= columns.length; column += 2) {
+        gridSlots.push(new GridSlot(row, column + selectorOffset));
+      }
+    }
   }
 }
 
