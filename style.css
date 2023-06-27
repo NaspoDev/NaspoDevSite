@@ -415,8 +415,7 @@ button:hover {
   gap: 20px;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(5, 1fr);
-  padding: 0 5% 29% 5%;
-  border: #05aad8 1px solid;
+  padding: 0% 5% 0% 5%;
 }
 
 .about-content .grid-item {
