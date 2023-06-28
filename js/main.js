@@ -1,14 +1,14 @@
-import { initializeListners } from "./listeners";
-import { run as runWelcomeScript } from "./scripts/welcome-script";
-import { run as runTechGridScript } from "./scripts/tech-grid-script";
+import { initializeListners } from "./listeners.js";
+// import { run as runWelcomeScript } from "./scripts/welcome-script.js";
+// import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
 
 // Main application functions on startup.
 const APP = {
   date: new Date(),
   init() {
-    console.log(this.date);
+    console.log(this.date); // make this print a string
     this.initListners();
-    this.runScripts();
+    // this.runScripts();
   },
   initListners() {
     initializeListners();
@@ -19,5 +19,5 @@ const APP = {
   },
 };
 
-// After HTML DOM content has been loaded, call APP.init().
-document.addEventListener("DOMContentLoaded", APP.init());
+// After HTML DOM content has been loaded, call APP.init.
+document.addEventListener("DOMContentLoaded", APP.init);

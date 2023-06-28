@@ -1,21 +1,12 @@
 export function initializeListners() {
   // General listners
-  document.addEventListener("click", handleClickEvent());
-  document.addEventListener("scroll", handleScroll());
+  document.addEventListener("click", handleClick);
+  document.addEventListener("scroll", handleScroll);
 
   // Specific element listners
-  // square decor overlays
-  document
-    .getElementById("square-decor-overlay-1")
-    .addEventListener("mouseover", handleMouseOver());
-  document
-    .getElementById("square-decor-overlay-2")
-    .addEventListener("mouseover", handleMouseOver());
+  // square decor overlays:
+  squareDecorListners();
 }
-
-const squareDecorOverlay1 = document.getElementById("square-decor-overlay-1");
-squareDecorOverlay1.addEventListener("mouse", listener);
-const squareDecorOverlay2 = document.getElementById("square-decor-overlay-2");
 
 function handleClick() {
   document.getElementById("cursor").remove();
@@ -25,7 +16,25 @@ function handleScroll() {
   document.getElementById("cursor").remove();
 }
 
-function handleMouseOver() {}
+function squareDecorListners() {
+  // square decor 1
+  const squareDecorOverlay1 = document.getElementById("square-decor-overlay-1");
+  squareDecorOverlay1.addEventListener("mouseover", () => {
+    document.getElementById("square-decor-1").style.transform = "scale(0.9)";
+  });
+  squareDecorOverlay1.addEventListener("mouseout", () => {
+    document.getElementById("square-decor-1").style.transform = "scale(1)";
+  });
+
+  // square decor 2
+  const squareDecorOverlay2 = document.getElementById("square-decor-overlay-2");
+  squareDecorOverlay2.addEventListener("mouseover", () => {
+    document.getElementById("square-decor-2").style.transform = "scale(0.9)";
+  });
+  squareDecorOverlay2.addEventListener("mouseout", () => {
+    document.getElementById("square-decor-2").style.transform = "scale(1)";
+  });
+}
 
 // // Capturing frequently used elements
 // const cursor = document.getElementById("cursor");
@@ -42,20 +51,20 @@ function handleMouseOver() {}
 //   cursor.remove();
 // });
 
-// square decor mouseover event
-window.addEventListener("mouseover", (event) => {
-  if (event.target === squareDecorOverlay1) {
-    document.getElementById("square-decor-1").style.transform = "scale(0.9)";
-  } else if (event.target === squareDecorOverlay2) {
-    document.getElementById("square-decor-2").style.transform = "scale(0.9)";
-  }
-});
+// // square decor mouseover event
+// window.addEventListener("mouseover", (event) => {
+//   if (event.target === squareDecorOverlay1) {
+//     document.getElementById("square-decor-1").style.transform = "scale(0.9)";
+//   } else if (event.target === squareDecorOverlay2) {
+//     document.getElementById("square-decor-2").style.transform = "scale(0.9)";
+//   }
+// });
 
-// square decor mouseout event
-window.addEventListener("mouseout", (event) => {
-  if (event.target === squareDecorOverlay1) {
-    document.getElementById("square-decor-1").style.transform = "scale(1)";
-  } else if (event.target === squareDecorOverlay2) {
-    document.getElementById("square-decor-2").style.transform = "scale(1)";
-  }
-});
+// // square decor mouseout event
+// window.addEventListener("mouseout", (event) => {
+//   if (event.target === squareDecorOverlay1) {
+//     document.getElementById("square-decor-1").style.transform = "scale(1)";
+//   } else if (event.target === squareDecorOverlay2) {
+//     document.getElementById("square-decor-2").style.transform = "scale(1)";
+//   }
+// });
