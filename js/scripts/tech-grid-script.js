@@ -1,4 +1,5 @@
 // Displays the tech grid items in random grid slots on page load.
+export function run() {}
 
 // tech grid DOM element and computed style version.
 const techGrid = document.getElementById("tech-grid");

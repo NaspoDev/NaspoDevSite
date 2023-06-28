@@ -1,5 +1,7 @@
 // Runs opening animations on the home screen page. (Typewriter effect)
 
+export function run() {}
+
 const elements = [
   { id: "welcome-animation-span", text: "Hey there" },
   { id: "welcome-animation-h2", text: ", I'm" },

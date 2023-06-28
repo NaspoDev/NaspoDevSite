@@ -1,17 +1,46 @@
-// Capturing frequently used elements
-const cursor = document.getElementById("cursor");
+export function initializeListners() {
+  // General listners
+  document.addEventListener("click", handleClickEvent());
+  document.addEventListener("scroll", handleScroll());
+
+  // Specific element listners
+  // square decor overlays
+  document
+    .getElementById("square-decor-overlay-1")
+    .addEventListener("mouseover", handleMouseOver());
+  document
+    .getElementById("square-decor-overlay-2")
+    .addEventListener("mouseover", handleMouseOver());
+}
+
 const squareDecorOverlay1 = document.getElementById("square-decor-overlay-1");
+squareDecorOverlay1.addEventListener("mouse", listener);
 const squareDecorOverlay2 = document.getElementById("square-decor-overlay-2");
 
-// Page click anywhere event
-document.addEventListener("click", (event) => {
-  cursor.remove();
-});
+function handleClick() {
+  document.getElementById("cursor").remove();
+}
 
-// Page scroll event
-document.addEventListener("scroll", (event) => {
-  cursor.remove();
-});
+function handleScroll() {
+  document.getElementById("cursor").remove();
+}
+
+function handleMouseOver() {}
+
+// // Capturing frequently used elements
+// const cursor = document.getElementById("cursor");
+// const squareDecorOverlay1 = document.getElementById("square-decor-overlay-1");
+// const squareDecorOverlay2 = document.getElementById("square-decor-overlay-2");
+
+// // Page click anywhere event
+// document.addEventListener("click", (event) => {
+//   cursor.remove();
+// });
+
+// // Page scroll event
+// document.addEventListener("scroll", (event) => {
+//   cursor.remove();
+// });
 
 // square decor mouseover event
 window.addEventListener("mouseover", (event) => {
