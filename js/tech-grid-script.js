@@ -60,7 +60,7 @@ function createGridSlots(full) {
   }
 }
 
-// For each grid item, set it to a random slot.
+// For each grid item, set it to a random slot (with random fadein animation).
 for (let i = 0; i < gridItems.length; i++) {
   let gridSlot = undefined;
   while (true) {
@@ -70,6 +70,7 @@ for (let i = 0; i < gridItems.length; i++) {
     }
   }
 
+  gridItems[i].style.animation = `fadein ${Math.random() * 3}s`;
   gridItems[i].style.gridRow = gridSlot.getRowFormatted();
   gridItems[i].style.gridColumn = gridSlot.getColumnFormatted();
   gridSlot.occupied = true;

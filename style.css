@@ -422,3 +422,13 @@ button:hover {
   width: 150px;
   opacity: 0.2;
 }
+
+/* Fade in animation */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
