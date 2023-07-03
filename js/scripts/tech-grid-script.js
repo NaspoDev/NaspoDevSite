@@ -4,24 +4,23 @@
 const techGrid = document.getElementById("tech-grid");
 const techGridStyles = window.getComputedStyle(techGrid);
 
+let gridItems = []; // array of all grid items
+let gridSlots = []; // array of grid slots in the gird
+let rows = techGridStyles.gridTemplateRows.split(" "); // array of rows
+let columns = techGridStyles.gridTemplateColumns.split(" "); // array of columns
+
 export function run() {
-
+  fillGridItems();
+  createGridSlots(false);
+  setGridItemPositions();
 }
 
-initElements() {
-  
+// Fill the girdItems array with all the children of the techGrid element.
+function fillGridItems() {
+  for (let i = 0; i < techGrid.children.length; i++) {
+    gridItems.push(techGrid.children[i]);
+  }
 }
-
-// list of grid items.
-const gridItems = [];
-for (let i = 0; i < techGrid.children.length; i++) {
-  gridItems.push(techGrid.children[i]);
-}
-
-// List of GridSlot objects.
-const gridSlots = [];
-let rows = techGridStyles.gridTemplateRows.split(" ");
-let columns = techGridStyles.gridTemplateColumns.split(" ");
 
 // GridSlot object class
 class GridSlot {
@@ -40,11 +39,9 @@ class GridSlot {
   }
 }
 
-createGridSlots((full = false));
-
-// Create and add whcichever grid slots should be usable to the gridSLots array
+// Create and add whichever grid slots should be usable to the gridSLots array
 function createGridSlots(full) {
-  // if full is true. Add every single grid slot on the grid to gridSlots
+  // if full is true, add every single grid slot on the grid to gridSlots
   if (full) {
     // starting loop at 1 because css starts grid line count at 1
     for (let row = 1; row <= rows.length; row++) {
@@ -52,7 +49,7 @@ function createGridSlots(full) {
         gridSlots.push(new GridSlot(row, column));
       }
     }
-    // if full is fale. Add grid slots in a cross pattern (no x or y neighbours).
+    // if full is false, add grid slots in a cross pattern (no x or y neighbours).
   } else {
     let selectorOffset = 0;
     for (let row = 1; row <= rows.length; row++) {
@@ -69,17 +66,19 @@ function createGridSlots(full) {
 }
 
 // For each grid item, set it to a random slot (with random fadein animation).
-for (let i = 0; i < gridItems.length; i++) {
-  let gridSlot = undefined;
-  while (true) {
-    gridSlot = gridSlots[Math.floor(Math.random() * gridSlots.length)];
-    if (!gridSlot.occupied) {
-      break;
+function setGridItemPositions() {
+  for (let i = 0; i < gridItems.length; i++) {
+    let gridSlot = undefined;
+    while (true) {
+      gridSlot = gridSlots[Math.floor(Math.random() * gridSlots.length)];
+      if (!gridSlot.occupied) {
+        break;
+      }
     }
-  }
 
-  gridItems[i].style.animation = `fadein ${Math.random() * 3}s`;
-  gridItems[i].style.gridRow = gridSlot.getRowFormatted();
-  gridItems[i].style.gridColumn = gridSlot.getColumnFormatted();
-  gridSlot.occupied = true;
+    gridItems[i].style.animation = `fadein ${Math.random() * 3}s`;
+    gridItems[i].style.gridRow = gridSlot.getRowFormatted();
+    gridItems[i].style.gridColumn = gridSlot.getColumnFormatted();
+    gridSlot.occupied = true;
+  }
 }
