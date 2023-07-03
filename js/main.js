@@ -1,5 +1,5 @@
 import { initializeListeners } from "./listeners.js";
-// import { run as runWelcomeScript } from "./scripts/welcome-script.js";
+import { run as runWelcomeScript } from "./scripts/welcome-script.js";
 // import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
 
 // Main application functions on startup.
@@ -8,7 +8,7 @@ const APP = {
   init() {
     console.log(this.date.toString());
     this.addListeners();
-    // this.runScripts();
+    this.runScripts();
   },
   addListeners() {
     initializeListeners();
@@ -17,7 +17,7 @@ const APP = {
   runScripts() {
     console.log("Running startup scripts...");
     runWelcomeScript();
-    runTechGridScript();
+    // runTechGridScript();
   },
 };
 
