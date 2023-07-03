@@ -21,5 +21,6 @@ const APP = {
   },
 };
 
-// After HTML DOM content has been loaded, call APP.init.
-document.addEventListener("DOMContentLoaded", APP.init.bind(APP));
+// Run the application.
+// (Waiting for DOMContentLoaded event is not necessary because the scripts are loaded at the end of the body tag).
+APP.init();
