@@ -1,4 +1,4 @@
-import { initializeListners } from "./listeners.js";
+import { initializeListeners } from "./listeners.js";
 // import { run as runWelcomeScript } from "./scripts/welcome-script.js";
 // import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
 
@@ -6,18 +6,20 @@ import { initializeListners } from "./listeners.js";
 const APP = {
   date: new Date(),
   init() {
-    console.log(this.date); // make this print a string
-    this.initListners();
+    console.log(this.date.toString());
+    this.addListeners();
     // this.runScripts();
   },
-  initListners() {
-    initializeListners();
+  addListeners() {
+    initializeListeners();
+    console.log("Listeners initialized!");
   },
   runScripts() {
+    console.log("Running startup scripts...");
     runWelcomeScript();
     runTechGridScript();
   },
 };
 
 // After HTML DOM content has been loaded, call APP.init.
-document.addEventListener("DOMContentLoaded", APP.init);
+document.addEventListener("DOMContentLoaded", APP.init.bind(APP));
