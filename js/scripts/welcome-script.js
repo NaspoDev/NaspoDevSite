@@ -7,8 +7,8 @@ const elements = [
   { id: "welcome-animation-h1", text: "Naspo" },
 ];
 
-let index;
-const speed = 80;
+let index = 0;
+const speed = 70;
 
 export function run() {
   runAnimations();
