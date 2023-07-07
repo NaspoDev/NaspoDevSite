@@ -108,5 +108,6 @@ function hideGridItems() {
   for (let i = 0; i < gridItems.length; i++) {
     // gridItems[i].style.visibility = "hidden";
     gridItems[i].style.animation = `fadeout ${Math.random() * 3}s`;
+    gridItems[i].style.opacity = 0;
   }
 }
