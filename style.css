@@ -421,6 +421,7 @@ button:hover {
 .about-content .grid-item {
   width: 150px;
   opacity: 0.2;
+  visibility: hidden; /* Let tech-grid-script handle visibility */
 }
 
 /* Fade in animation */
@@ -430,5 +431,15 @@ button:hover {
   }
   to {
     opacity: 0.2;
+  }
+}
+
+/* Fade out animation */
+@keyframes fadeout {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0;
   }
 }

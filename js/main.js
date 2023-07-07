@@ -15,9 +15,9 @@ const APP = {
     console.log("Listeners initialized!");
   },
   runScripts() {
-    console.log("Running startup scripts...");
     runWelcomeScript();
     runTechGridScript();
+    console.log("Startup scripts executed!");
   },
 };
 

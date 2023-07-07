@@ -9,13 +9,26 @@ let gridSlots = []; // array of grid slots in the gird
 let rows = techGridStyles.gridTemplateRows.split(" "); // array of rows
 let columns = techGridStyles.gridTemplateColumns.split(" "); // array of columns
 
+// Intersection observer to check if the tech grid is visible on the screen.
+let observer = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting) {
+      showGridItems();
+    } else {
+      hideGridItems();
+    }
+  },
+  { threshold: 0.5 }
+);
+
 export function run() {
   fillGridItems();
   createGridSlots(false);
   setGridItemPositions();
+  observer.observe(techGrid);
 }
 
-// Fill the girdItems array with all the children of the techGrid element.
+// Fill the girdItems array with all the grid items. (Children of the techGrid element).
 function fillGridItems() {
   for (let i = 0; i < techGrid.children.length; i++) {
     gridItems.push(techGrid.children[i]);
@@ -39,7 +52,7 @@ class GridSlot {
   }
 }
 
-// Create and add whichever grid slots should be usable to the gridSLots array
+// Create and add whichever grid slots should be usable to the gridSLots array.
 function createGridSlots(full) {
   // if full is true, add every single grid slot on the grid to gridSlots
   if (full) {
@@ -65,7 +78,7 @@ function createGridSlots(full) {
   }
 }
 
-// For each grid item, set it to a random slot (with random fadein animation).
+// For each grid item, assign it a random slot.
 function setGridItemPositions() {
   for (let i = 0; i < gridItems.length; i++) {
     let gridSlot = undefined;
@@ -76,9 +89,24 @@ function setGridItemPositions() {
       }
     }
 
-    gridItems[i].style.animation = `fadein ${Math.random() * 3}s`;
     gridItems[i].style.gridRow = gridSlot.getRowFormatted();
     gridItems[i].style.gridColumn = gridSlot.getColumnFormatted();
     gridSlot.occupied = true;
+  }
+}
+
+// Show grid items in their slots with a fade in animation.
+function showGridItems() {
+  for (let i = 0; i < gridItems.length; i++) {
+    gridItems[i].style.visibility = "visible";
+    gridItems[i].style.animation = `fadein ${Math.random() * 3}s`;
+  }
+}
+
+// Hide grid items with a fade out animation.
+function hideGridItems() {
+  for (let i = 0; i < gridItems.length; i++) {
+    // gridItems[i].style.visibility = "hidden";
+    gridItems[i].style.animation = `fadeout ${Math.random() * 3}s`;
   }
 }
