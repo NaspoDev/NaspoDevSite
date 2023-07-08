@@ -420,8 +420,7 @@ button:hover {
 
 .about-content .grid-item {
   width: 150px;
-  opacity: 0.2;
-  visibility: hidden; /* Let tech-grid-script handle visibility */
+  opacity: 0; /* initially hidden, animation script deals with visibility */
 }
 
 /* Fade in animation */

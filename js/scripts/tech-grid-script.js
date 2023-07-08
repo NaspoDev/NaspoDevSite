@@ -98,7 +98,7 @@ function setGridItemPositions() {
 // Show grid items in their slots with a fade in animation.
 function showGridItems() {
   for (let i = 0; i < gridItems.length; i++) {
-    gridItems[i].style.visibility = "visible";
+    gridItems[i].style.opacity = 0.2;
     gridItems[i].style.animation = `fadein ${Math.random() * 3}s`;
   }
 }
@@ -106,7 +106,6 @@ function showGridItems() {
 // Hide grid items with a fade out animation.
 function hideGridItems() {
   for (let i = 0; i < gridItems.length; i++) {
-    // gridItems[i].style.visibility = "hidden";
     gridItems[i].style.animation = `fadeout ${Math.random() * 3}s`;
     gridItems[i].style.opacity = 0;
   }
