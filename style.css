@@ -126,6 +126,7 @@ button:hover {
   float: right;
 }
 
+/* "hidden" and "show" classes used for general scroll animations  */
 /* keep elements that should be animated on scroll initially hidden */
 .hidden {
   opacity: 0;
