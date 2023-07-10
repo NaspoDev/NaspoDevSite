@@ -126,6 +126,21 @@ button:hover {
   float: right;
 }
 
+/* keep elements that should be animated on scroll initially hidden */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px);
+  transition: all 1s;
+}
+
+/* added through script to elements that should be part of the scroll animation */
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
 /* === Header === */
 
 .header {

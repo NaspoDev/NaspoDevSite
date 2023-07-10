@@ -9,7 +9,8 @@ let gridSlots = []; // array of grid slots in the gird
 let rows = techGridStyles.gridTemplateRows.split(" "); // array of rows
 let columns = techGridStyles.gridTemplateColumns.split(" "); // array of columns
 
-const maxAnimationTime = 3; // max animation time in seconds
+const maxShowAnimationTime = 3; // max animation time to show grid items (in seconds)
+const maxHideAnimationTime = 1; // max animation time to hide grid items (in seconds)
 
 // Intersection observer to check if the tech grid is visible on the screen.
 let observer = new IntersectionObserver(
@@ -20,7 +21,7 @@ let observer = new IntersectionObserver(
       hideGridItems();
     }
   },
-  { threshold: 0.5 }
+  { threshold: 0.7 }
 );
 
 export function run() {
@@ -102,7 +103,7 @@ function showGridItems() {
   for (let i = 0; i < gridItems.length; i++) {
     gridItems[i].style.opacity = 0.2;
     gridItems[i].style.animation = `fadein ${
-      Math.random() * maxAnimationTime
+      Math.random() * maxShowAnimationTime
     }s`;
   }
 }
@@ -111,7 +112,7 @@ function showGridItems() {
 function hideGridItems() {
   for (let i = 0; i < gridItems.length; i++) {
     gridItems[i].style.animation = `fadeout ${
-      Math.random() * maxAnimationTime
+      Math.random() * maxHideAnimationTime
     }s`;
     gridItems[i].style.opacity = 0;
   }

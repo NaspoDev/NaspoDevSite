@@ -1,6 +1,7 @@
 import { initializeListeners } from "./listeners.js";
 import { run as runWelcomeScript } from "./scripts/welcome-script.js";
 import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
+import { run as runScrollAnimations } from "./scripts/scroll-animations.js";
 
 // Main application functions on startup.
 const APP = {
@@ -17,6 +18,7 @@ const APP = {
   runScripts() {
     runWelcomeScript();
     runTechGridScript();
+    runScrollAnimations();
     console.log("Startup scripts executed!");
   },
 };
