@@ -388,8 +388,6 @@ button:hover {
 }
 
 .about-content .left-side .content-container h2 span {
-  /* color: var(--theme-color-blue); */
-  /* text-shadow: none; */
   text-shadow: -1px 0 var(--theme-color-blue), 0 1px var(--theme-color-blue),
     1px 0 var(--theme-color-blue), 0 -1px var(--theme-color-blue);
 }
