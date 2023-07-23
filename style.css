@@ -27,7 +27,6 @@
 
   --background-color-grey: #28282b;
   --background-color-dark: #090a0b;
-  --background-color-purple: #682bd7;
 }
 
 /* prettier-ignore */
@@ -456,4 +455,19 @@ button:hover {
   to {
     opacity: 0;
   }
+}
+
+/* === === === === === ===
+=== === === PROJECTS === === ===
+=== === === === === ===*/
+
+.projects-section-spacer {
+  background-image: url(images/section_transition_svgs/projects-section-waves-transition.svg);
+  height: 350px;
+  aspect-ratio: 900/450;
+}
+
+.projects {
+  height: 900px;
+  background-color: var(--background-color-dark);
 }
