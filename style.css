@@ -25,8 +25,8 @@
   --button-hover-color: #05aad8;
   --theme-color-grey: #595959;
 
-  --backgound-color-grey: #28282b;
-  --backgound-color-dark: #090a0b;
+  --background-color-grey: #28282b;
+  --background-color-dark: #090a0b;
 }
 
 /* prettier-ignore */
@@ -63,7 +63,7 @@ img {
 }
 
 body {
-  background-color: var(--backgound-color-grey);
+  background-color: var(--background-color-grey);
   overflow-x: hidden;
 }
 
@@ -362,7 +362,7 @@ button:hover {
   display: grid;
   grid-template-rows: auto 1fr;
   overflow-y: hidden;
-  background-color: var(--backgound-color-dark);
+  background-color: var(--background-color-dark);
 }
 
 .about-content {
@@ -393,7 +393,7 @@ button:hover {
 }
 
 .about-content .left-side .content-container h2 {
-  color: var(--backgound-color-dark);
+  color: var(--background-color-dark);
 
   /* text shadow trickery to create a text border 
   1px bg color to left, top, right, and bottom */
