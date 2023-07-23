@@ -461,13 +461,13 @@ button:hover {
 === === === PROJECTS === === ===
 === === === === === ===*/
 
-.projects-section-spacer {
-  background-image: url(images/section_transition_svgs/projects-section-waves-transition.svg);
-  height: 350px;
-  aspect-ratio: 900/450;
-}
-
 .projects {
   height: 900px;
   background-color: var(--background-color-dark);
+  overflow: hidden;
+}
+
+.projects-heading {
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
