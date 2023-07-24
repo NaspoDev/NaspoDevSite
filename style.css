@@ -477,14 +477,16 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: #05aad8; */
 }
 
 .projects-grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr 1fr;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 70%;
+  /* top: 0; */
   gap: 5px;
   border: 1px solid var(--text-color-white);
 }
