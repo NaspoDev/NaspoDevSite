@@ -1,0 +1,28 @@
+/* === Header === */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.header .logo {
+  font-size: 24px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation li {
+  padding: 0 20px;
+}
+
+.navigation li a {
+  transition: all 0.3s ease 0s;
+}
+
+.navigation li a:hover {
+  color: var(--theme-color-blue);
+}

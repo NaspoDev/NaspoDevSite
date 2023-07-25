@@ -1,0 +1,148 @@
+/* === Global Configurations === */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* Bolder font face, mainly used for headings. */
+@font-face {
+  font-family: "Inter Bold";
+  src: url(/fonts/inter/static/Inter-Bold.ttf);
+}
+
+/* Lighter font face, mainly used for paragraphs. */
+@font-face {
+  font-family: "Inter Extra-Light";
+  src: url(/fonts/inter/static/Inter-ExtraLight.ttf);
+}
+
+/* Variables */
+:root {
+  --text-color-grey: #e8e6e6;
+  --text-color-white: #ffffff;
+  --text-color-black: #000000;
+
+  --theme-color-blue: #39bde2;
+  --button-hover-color: #05aad8;
+  --theme-color-grey: #595959;
+
+  --background-color-grey: #28282b;
+  --background-color-dark: #090a0b;
+}
+
+/* prettier-ignore */
+h1, h2, h3, h4, h5, h6, button, li, a {
+    font-family: "Inter Bold";
+    color: var(--text-color-white);
+  }
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-family: "Inter Extra-Light";
+  color: var(--text-color-grey);
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--background-color-grey);
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--theme-color-blue);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* underline style: Custom underline styling for heading elements*/
+.underline-style {
+  position: relative;
+  z-index: 1; /* to make sure other element layers dont intercept text and underline */
+}
+
+.underline-style::before {
+  position: absolute;
+  content: "";
+  border-bottom: 18px solid var(--theme-color-blue);
+  width: 95%;
+  left: 10%;
+  top: 70%;
+  z-index: -1;
+}
+
+/* Whenever a waves section spaces from Haikei is used. */
+.waves-spacer {
+  aspect-ratio: 900/600;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* title (heading) of each section. Ex. "About" */
+.section-heading {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+  width: 50%;
+  height: 100%;
+}
+
+.right-side {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+/* "hidden" and "show" classes used for general scroll animations  */
+/* keep elements that should be animated on scroll initially hidden */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px);
+  transition: all 1s;
+}
+
+/* added through script to elements that should be part of the scroll animation */
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
