@@ -18,6 +18,5 @@ const observer = new IntersectionObserver(
 );
 
 export function run() {
-  console.log(hiddenElements);
   hiddenElements.forEach((element) => observer.observe(element));
 }
