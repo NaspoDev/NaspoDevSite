@@ -1,7 +1,7 @@
 /* === Projects === */
 
 .projects {
-  height: 900px;
+  height: 1000px;
   display: grid;
   grid-template-rows: auto 1fr;
   background-color: var(--background-color-dark);
@@ -9,22 +9,25 @@
 
 .projects-heading {
   margin-top: 100px;
-  margin-bottom: 0px;
 }
 
 .projects-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .projects-grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr 1fr;
-  width: 90%;
-  height: 70%;
+  width: 100%;
+  height: 60%;
   gap: 10px;
+  margin-bottom: 50px;
 }
 
 /* Projects grid items configurations */
@@ -86,4 +89,30 @@
 .projects-grid .long-item h2 {
   color: var(--text-color-black);
   font-size: 22px;
+}
+
+/* Project description area */
+
+.project-description-area {
+  width: 80%;
+  height: 20%;
+  position: relative;
+}
+
+.project-description-area .project-description {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  position: absolute;
+
+  opacity: 0;
+  transition: 0.5s;
+  filter: blur(5px);
+}
+
+/* displayed-description class will be set to whichever project-description
+should be currently displayed. Managed through javascript. */
+.project-description-area .displayed-description {
+  opacity: 1;
+  filter: blur(0px);
 }
