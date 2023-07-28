@@ -71,7 +71,7 @@
   display: inline-block;
   font-size: 40px;
   padding-right: 5px;
-  font-size: 80px;
+  color: var(--text-color-black);
 }
 
 /* text scrolling animation */
@@ -98,6 +98,12 @@
 
 .project-1 .project-content h2 {
   font-size: 28px;
+}
+
+/* custom scrolling text styling for project-1 */
+.project-1 .scrolling-text-wrapper p {
+  font-size: 80px;
+  color: var(--text-color-grey);
 }
 
 .projects-grid .project2 {
