@@ -12,7 +12,6 @@ class Project {
   }
   initListeners() {
     this.gridItem.addEventListener("mouseover", () => {
-      console.log("MOUSEOVER");
       displayDescription(this);
     });
     this.gridItem.addEventListener("mouseout", () => {
@@ -31,7 +30,7 @@ function initProjects() {
   for (let i = 1; i <= 4; i++) {
     projects.push(
       new Project(
-        document.getElementById(`project-${i}-item`),
+        document.getElementById(`project-${i}`),
         document.getElementById(`project-${i}-description`)
       )
     );
