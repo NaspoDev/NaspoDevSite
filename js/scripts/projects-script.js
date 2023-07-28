@@ -1,13 +1,62 @@
 // Manages animations and display of proper project description for the projects section.
 
-// !! Is this the way I want to do it??
-// Stores class
-let projectItemPairs = [
-  {
-    item: document.querySelector(".big-item"),
-    description: "big-item-description",
-  },
-  { item: "small-item-1", description: "small-item-1-description" },
-  { item: "small-item-2", description: "small-item-2-description" },
-  { item: "long-item", description: "long-item-description" },
-];
+let projects = []; // array of project objects
+let landingDescription = document.getElementById("landing-description"); // landing description element
+const displayDescriptionClass = "displayed-description"; // class to apply to displayed description
+
+//Project object. Holds the grid item and description for each project.
+class Project {
+  constructor(gridItem, description) {
+    this.gridItem = gridItem;
+    this.description = description;
+  }
+  initListeners() {
+    this.gridItem.addEventListener("mouseover", () => {
+      console.log("MOUSEOVER");
+      displayDescription(this);
+    });
+    this.gridItem.addEventListener("mouseout", () => {
+      hideDescription(this);
+    });
+  }
+}
+
+export function run() {
+  initProjects();
+  initListeners();
+}
+
+// Initialize project objects and add them to the projects array.
+function initProjects() {
+  for (let i = 1; i <= 4; i++) {
+    projects.push(
+      new Project(
+        document.getElementById(`project-${i}-item`),
+        document.getElementById(`project-${i}-description`)
+      )
+    );
+  }
+}
+
+function initListeners() {
+  // Initialize project listeners
+  for (const project of projects) {
+    project.initListeners();
+  }
+}
+
+// Displays the description for the given project, and hides the landing description
+function displayDescription(project) {
+  if (project.description) {
+    project.description.classList.add(displayDescriptionClass);
+    landingDescription.classList.remove(displayDescriptionClass);
+  }
+}
+
+// Hides the description for the given project, and displays the landing description
+function hideDescription(project) {
+  if (project.description) {
+    project.description.classList.remove(displayDescriptionClass);
+    landingDescription.classList.add(displayDescriptionClass);
+  }
+}
