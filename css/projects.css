@@ -63,6 +63,7 @@
   opacity: 0;
   transition: 0.5s;
   filter: blur(5px);
+  animation: scroll 13s linear infinite;
 
   position: absolute;
   top: 35%;
@@ -72,7 +73,6 @@
 .project-container .scrolling {
   opacity: 1;
   filter: blur(0px);
-  animation: scroll 18s linear infinite;
 }
 
 .project-container .scrolling-text-wrapper p {
@@ -109,6 +109,9 @@
 }
 
 /* custom scrolling text styling for project-1 */
+.project-1 .scrolling-text-wrapper {
+  animation: scroll 18s linear infinite;
+}
 .project-1 .scrolling-text-wrapper p {
   font-size: 80px;
   color: var(--text-color-grey);
