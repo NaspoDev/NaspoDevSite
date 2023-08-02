@@ -30,6 +30,33 @@
   margin-bottom: 50px;
 }
 
+/* Project description area */
+
+.project-description-area {
+  width: 80%;
+  height: 20%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.project-description-area .project-description {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  position: absolute;
+
+  opacity: 0;
+  transition: 0.5s;
+  filter: blur(5px);
+}
+
+/* displayed-description class will be set to whichever project-description
+should be currently displayed. Managed through javascript. */
+.project-description-area .displayed-description {
+  opacity: 1;
+  filter: blur(0px);
+}
+
 /* Projects grid items configurations */
 
 /* General configs: */
@@ -160,31 +187,4 @@
 .project-4 .project-content h2 {
   color: var(--text-color-black);
   font-size: 22px;
-}
-
-/* Project description area */
-
-.project-description-area {
-  width: 80%;
-  height: 20%;
-  position: relative;
-  /* margin-bottom: 50px; */
-}
-
-.project-description-area .project-description {
-  display: flex;
-  flex-direction: column;
-  line-height: 2;
-  position: absolute;
-
-  opacity: 0;
-  transition: 0.5s;
-  filter: blur(5px);
-}
-
-/* displayed-description class will be set to whichever project-description
-should be currently displayed. Managed through javascript. */
-.project-description-area .displayed-description {
-  opacity: 1;
-  filter: blur(0px);
 }
