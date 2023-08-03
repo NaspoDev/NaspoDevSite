@@ -76,6 +76,7 @@ should be currently displayed. Managed through javascript. */
   border-radius: 50px;
   display: flex;
   align-items: end;
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -135,6 +136,10 @@ should be currently displayed. Managed through javascript. */
   font-size: 28px;
 }
 
+.project-1 .project-content img {
+  width: 6%;
+}
+
 /* custom scrolling text styling for project-1 */
 .project-1 .scrolling-text-wrapper {
   animation: scroll 18s linear infinite;
@@ -159,6 +164,10 @@ should be currently displayed. Managed through javascript. */
   font-size: 22px;
 }
 
+.project-2 .project-content img {
+  width: 10%;
+}
+
 .projects-grid .project-3 {
   grid-row: 1 / 2;
   grid-column: 3 / 4;
@@ -174,6 +183,10 @@ should be currently displayed. Managed through javascript. */
   font-size: 22px;
 }
 
+.project-3 .project-content img {
+  width: 12%;
+}
+
 .projects-grid .project-4 {
   grid-row: 2 / 3;
   grid-column: 2 / 4;
@@ -187,4 +200,8 @@ should be currently displayed. Managed through javascript. */
 .project-4 .project-content h2 {
   color: var(--text-color-black);
   font-size: 22px;
+}
+
+.project-4 .project-content img {
+  width: 5%;
 }
