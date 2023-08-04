@@ -95,7 +95,7 @@ should be currently displayed. Managed through javascript. */
   animation: scroll 13s linear infinite;
 
   position: absolute;
-  top: 35%;
+  top: 39%;
 }
 
 /* applied through javascript to whichever project text scrolling animation should be playing */
@@ -144,6 +144,7 @@ should be currently displayed. Managed through javascript. */
 /* custom scrolling text styling for project-1 */
 .project-1 .scrolling-text-wrapper {
   animation: scroll 18s linear infinite;
+  top: 35%;
 }
 .project-1 .scrolling-text-wrapper p {
   font-size: 80px;
