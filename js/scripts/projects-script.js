@@ -4,6 +4,10 @@ let projects = []; // array of project objects
 let landingDescription = document.getElementById("landing-description"); // landing description element
 const displayDescriptionClass = "displayed-description"; // class to apply to displayed description
 const scrollingTextClass = "scrolling"; // class to apply to scrolling text
+// array of hidden projects to be animated on scroll
+let hiddenProjects = document.querySelectorAll(
+  ".projects-grid .project-hidden"
+);
 
 //Project object. Holds the grid item and description for each project.
 class Project {
@@ -23,9 +27,23 @@ class Project {
   }
 }
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("project-appear");
+      } else {
+        entry.target.classList.remove("project-appear");
+      }
+    }
+  },
+  { threshold: 0.7 }
+);
+
 export function run() {
   initProjects();
   initListeners();
+  observeProjects();
 }
 
 // Initialize project objects and add them to the projects array.
@@ -47,7 +65,12 @@ function initListeners() {
   }
 }
 
-// Displays the description for the given project, and hides the landing description
+// Observe projects (from hiddenProjects array) to be animated on scroll.
+function observeProjects() {
+  hiddenProjects.forEach((element) => observer.observe(element));
+}
+
+// Displays the description for the given project, and hides the landing description.
 function displayDescription(project) {
   if (project.description) {
     project.description.classList.add(displayDescriptionClass);
@@ -55,7 +78,7 @@ function displayDescription(project) {
   }
 }
 
-// Hides the description for the given project, and displays the landing description
+// Hides the description for the given project, and displays the landing description.
 function hideDescription(project) {
   if (project.description) {
     project.description.classList.remove(displayDescriptionClass);
