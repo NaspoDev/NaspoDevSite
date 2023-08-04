@@ -80,8 +80,9 @@ should be currently displayed. Managed through javascript. */
   height: 100%;
 }
 
-/* transition for h2 disappearing on hover  */
-.project-container .project-content h2 {
+/* transition for h2 and img disappearing on hover  */
+.project-container .project-content h2,
+.project-container .project-content img {
   transition: 0.2s;
 }
 

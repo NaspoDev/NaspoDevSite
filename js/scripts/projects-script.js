@@ -63,25 +63,33 @@ function hideDescription(project) {
   }
 }
 
-// Applies scrolling text to the given project, and removes it from the first project. Also hides the project title.
+// Applies scrolling text to the given project, and removes it from the first project. Also hides the project title & image.
 function applyScrollingText(project) {
   if (project.gridItem != document.getElementById("project-1")) {
+    // applying scrolling text
     project.gridItem
       .querySelector(".scrolling-text-wrapper")
       .classList.add(scrollingTextClass);
+    // hiding project title & image
     project.gridItem.querySelector(".project-content h2").style.opacity = 0;
+    project.gridItem.querySelector(".project-content img").style.opacity = 0;
+    // removing scrolling text from first project
     document
       .querySelector(".project-1 .scrolling-text-wrapper")
       .classList.remove(scrollingTextClass);
   }
 }
 
-// Removes scrolling text from the given project, and applies it to the first project. Also displays the project title.
+// Removes scrolling text from the given project, and applies it to the first project. Also displays the project title & image.
 function removeScrollingText(project) {
+  // removing scrolling text
   project.gridItem
     .querySelector(".scrolling-text-wrapper")
     .classList.remove(scrollingTextClass);
+  // displaying project title & image
   project.gridItem.querySelector(".project-content h2").style.opacity = 1;
+  project.gridItem.querySelector(".project-content img").style.opacity = 1;
+  // applying scrolling text to first project
   document
     .querySelector(".project-1 .scrolling-text-wrapper")
     .classList.add(scrollingTextClass);
