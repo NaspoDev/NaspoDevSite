@@ -1,1 +1,6 @@
+/* === Services === */
 
+.services-section-spacer {
+  background-image: url(/images/section_transition_svgs/services-section-waves-transition.svg);
+  height: 350px;
+}
