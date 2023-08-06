@@ -191,8 +191,8 @@ Applied to any project that should be animated on scroll. */
 }
 
 .project-3 .project-content {
-  background-color: var(--project-item-color-pink);
-  border: 60px solid var(--project-item-color-pink);
+  background-color: var(--project-item-color-purple);
+  border: 60px solid var(--project-item-color-purple);
 }
 
 .project-3 .project-content h2 {
