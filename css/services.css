@@ -23,20 +23,20 @@
   justify-content: center;
 }
 
-.services-content .left-side {
-  position: relative;
-  padding: 2% 5% 2% 5%;
-}
-
 /* Services Display (left-side) */
 
+.services-content .left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .services-content .services-display {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   display: flex;
   align-items: center;
   position: relative;
-  /* border: 1px solid red; */
 }
 
 .services-display .service {
@@ -90,23 +90,38 @@
   border-radius: 10px;
   box-shadow: 0 0 10px #9ecaed;
 
+  /* centering its position */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* Book Service Container */
+/* Work With Me (right-side) */
 
-.services .book-service-container {
-  width: 50%;
-  height: 20%;
+.services-content .right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-with-me {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: flex-start;
+  border: 1px solid white;
+}
+
+.work-with-me .work-with-me-heading {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.book-service-container h2 {
-  margin-right: 20px;
+.work-with-me .work-with-me-heading img {
+  width: 100px;
 }
