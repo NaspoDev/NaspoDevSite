@@ -178,3 +178,23 @@
   width: 20px;
   margin-left: 5px;
 }
+
+/* Testing animations */
+
+/* LEFT OFF HERE */
+/* vertical scroll animation done. Just make it a general thing now, not specific to 
+services. Call it "hidden-vertical" and call the other "hidden-horizontal" 
+(and show-vertical and show horizontal respectively.*/
+/* Move css to global-config.css and move js to scroll-animations.js */
+.hidden-top {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(+50px);
+  transition: all 1s;
+}
+
+.show-top {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
