@@ -107,7 +107,7 @@
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top;
-  transition-delay: 300ms;
+  transition-delay: 200ms;
 }
 
 .line-decor-show {
