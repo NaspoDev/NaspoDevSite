@@ -82,6 +82,22 @@
   left: 0%;
 }
 
+/* Floating effect for service images */
+.service .floating {
+  animation: floating 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
 /* Used to center the line decor */
 .services-display .line-decor-container {
   position: absolute;
