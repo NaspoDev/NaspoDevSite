@@ -140,18 +140,33 @@ button:hover {
   float: right;
 }
 
-/* "hidden" and "show" classes used for general scroll animations  */
-/* keep elements that should be animated on scroll initially hidden */
-.hidden {
+/* General Scroll Animation Classes: */
+/* Hidden classes are applied elements that should be animated on scroll. 
+Hides them initially. */
+/* Show classes are applied through js as needed for the scroll animation. */
+
+/* For horizontal scroll animations. */
+.hidden-horizontal {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100px);
   transition: all 1s;
 }
-
-/* added through script to elements that should be part of the scroll animation */
-.show {
+.show-horizontal {
   opacity: 1;
   filter: blur(0px);
   transform: translateX(0);
+}
+
+/* For vertical scroll animations. */
+.hidden-vertical {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(+50px);
+  transition: all 1s;
+}
+.show-vertical {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
 }
