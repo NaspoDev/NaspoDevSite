@@ -82,18 +82,37 @@
   left: 0%;
 }
 
+/* Used to center the line decor */
+.services-display .line-decor-container {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .services-display .line-decor {
   width: 2px;
   height: 80%;
   background-color: var(--text-color-grey);
   border-radius: 10px;
   box-shadow: 0 0 10px #9ecaed;
+}
 
-  /* centering its position */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* animation classes for line-decor */
+.line-decor-hidden {
+  transition: all 3s;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition-delay: 300ms;
+}
+
+.line-decor-show {
+  opacity: 1;
+  transform: scaleY(1);
 }
 
 /* Work With Me (right-side) */
