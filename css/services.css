@@ -22,18 +22,24 @@
   justify-content: center;
 }
 
-/* Services Display (left-side) */
-
-.services-content .left-side {
+.services-content .left-side,
+.services-content .right-side {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.services-content .services-display {
+/* General styling applied to the actual content containers at the lowest level. */
+.services-content .services-inner-content {
   width: 80%;
   height: 80%;
+  margin-top: 40px;
   display: flex;
+}
+
+/* Services Display (left-side) */
+
+.services-content .services-display {
   align-items: center;
   position: relative;
 }
@@ -133,16 +139,7 @@
 
 /* Work With Me (right-side) */
 
-.services-content .right-side {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.work-with-me {
-  width: 80%;
-  height: 80%;
-  display: flex;
+.services-content .work-with-me {
   flex-direction: column;
   justify-content: center;
   align-items: center;
