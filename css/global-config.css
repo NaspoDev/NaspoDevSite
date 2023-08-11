@@ -60,10 +60,16 @@ h3 {
   font-size: 24px;
 }
 
-p {
+/* prettier-ignore */
+p, input, textarea {
   font-family: "Inter Extra-Light";
   color: var(--text-color-grey);
   font-size: 18px;
+}
+
+/* prettier-ignore */
+input, textarea {
+  font-size: 16px;
 }
 
 a {

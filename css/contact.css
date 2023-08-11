@@ -1,5 +1,5 @@
 .contact {
-  height: 800px;
+  height: 700px;
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -8,8 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 80px;
+  justify-content: center;
   border: 1px solid white;
 }
 
@@ -18,11 +17,44 @@
 }
 
 .contact-form {
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  border: 1px solid white;
+}
+
+.contact-form .form-field {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: var(--theme-color-grey);
+  border: none;
+  padding-left: 8px;
+  opacity: 0.5;
+}
+
+.contact-form .form-field::placeholder {
+  opacity: 1;
+}
+
+.contact-form .form-field:focus {
+  outline: none;
+}
+
+.contact-form .message-field {
+  padding-top: 8px;
+  height: 100px;
+}
+
+.contact-form .submit-button {
+  width: 90px;
+  height: 30px;
+  align-self: flex-end;
+
+  background-color: var(--theme-color-grey);
+  opacity: 0.5;
+  border: none;
+  color: var(--text-color-grey);
 }
