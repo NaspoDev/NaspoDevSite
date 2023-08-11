@@ -1,1 +1,17 @@
+.contact {
+  height: 800px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
 
+.contact-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+  border: 1px solid white;
+}
+
+.contact-text {
+  text-align: center;
+}
