@@ -4,6 +4,7 @@ import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
 import { run as runScrollAnimations } from "./scripts/scroll-animations.js";
 import { run as runProjectsScript } from "./scripts/projects-script.js";
 import { run as runServicesScript } from "./scripts/services-script.js";
+import { run as runContactScript } from "./scripts/contact-script.js";
 
 // Main application functions on startup.
 const APP = {
@@ -23,6 +24,7 @@ const APP = {
     runScrollAnimations();
     runProjectsScript();
     runServicesScript();
+    runContactScript();
     console.log("Startup scripts executed!");
   },
 };
