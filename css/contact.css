@@ -12,7 +12,9 @@
 }
 
 .contact-text {
+  width: 30%;
   text-align: center;
+  line-height: 1.5;
 }
 
 .contact-form {
