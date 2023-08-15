@@ -1,5 +1,7 @@
+/* Contact Section */
+
 .contact {
-  height: 700px;
+  height: 750px;
   display: grid;
   grid-template-rows: auto 1fr;
 }
