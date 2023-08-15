@@ -66,9 +66,11 @@
   background-color: transparent;
   border: none;
   border: 1px solid var(--theme-color-blue);
+  font-family: "Inter Extra-Light";
   font-size: 18px;
   color: var(--text-color-white);
   transition: all 0.3s;
+  padding: none;
 }
 
 .contact-form .submit-button:hover {
