@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  height: 89px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,4 +32,15 @@
 
 .navigation li a:hover {
   color: var(--theme-color-blue);
+}
+
+/* Since header now has to be `position:fixed` (for scrolling behaviour),
+the sizing of the home section appears to be thrown off since it doesn't have the header
+contributing to the height. So we need to add a spacer to the top of the home section to
+make up for the header's height.
+
+89px was discovered as the true height of the header.*/
+.header-space {
+  width: 100%;
+  height: 89px;
 }
