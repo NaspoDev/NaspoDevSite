@@ -1,5 +1,6 @@
 import { initializeListeners } from "./listeners.js";
 import { run as runWelcomeScript } from "./scripts/welcome-script.js";
+import { run as runHeaderScript } from "./scripts/header-script.js";
 import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
 import { run as runScrollAnimations } from "./scripts/scroll-animations.js";
 import { run as runProjectsScript } from "./scripts/projects-script.js";
@@ -20,6 +21,7 @@ const APP = {
   },
   runScripts() {
     runWelcomeScript();
+    runHeaderScript();
     runTechGridScript();
     runScrollAnimations();
     runProjectsScript();

@@ -8,7 +8,7 @@ const contactForm = document.getElementById("contact-form");
 
 export function initializeListeners() {
   document.addEventListener("click", handleClick);
-  document.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll);
   // Called right before the page is about to be unloaded.
   window.addEventListener("onbeforeunload", handleOnBeforeUnload());
   squareDecorListeners();
