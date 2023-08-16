@@ -7,6 +7,10 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Bolder font face, mainly used for headings. */
 @font-face {
   font-family: "Inter Bold";
