@@ -47,7 +47,7 @@ html {
 }
 
 /* prettier-ignore */
-h1, h2, h3, h4, h5, h6, button, li, a {
+h1, h2, h3, h4, h5, h6, li, a {
     font-family: "Inter Bold";
     color: var(--text-color-white);
   }
@@ -65,7 +65,7 @@ h3 {
 }
 
 /* prettier-ignore */
-p, input, textarea {
+p, button, input, textarea {
   font-family: "Inter Extra-Light";
   color: var(--text-color-grey);
   font-size: 18px;
@@ -92,16 +92,18 @@ body {
 
 button {
   cursor: pointer;
-  background-color: var(--theme-color-blue);
+  background-color: transparent;
   border: none;
+  border: 1px solid var(--theme-color-blue);
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 16px;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s;
 }
 
 button:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--theme-color-blue);
+  color: var(--text-color-black);
+  letter-spacing: 3px;
 }
 
 /* underline style: Custom underline styling for heading elements*/
