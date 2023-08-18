@@ -1,5 +1,8 @@
-// Handles header scroll functionality.
-// Disappears on scroll down, appears on scroll up.
+/* 
+Header Module
+Handles header scroll functionality.
+Disappears on scroll down, appears on scroll up.
+*/
 
 let lastScrollTop = 0;
 let header = document.getElementById("header-div");

@@ -5,37 +5,35 @@ import { adjustHeader } from "./modules/header.js";
 
 // Capturing elements
 const cursor = document.getElementById("cursor");
-const squareDecorOverlay1 = document.getElementById("square-decor-overlay-1");
-const squareDecorOverlay2 = document.getElementById("square-decor-overlay-2");
-const squareDecor1 = document.getElementById("square-decor-1");
-const squareDecor2 = document.getElementById("square-decor-2");
 const contactForm = document.getElementById("contact-form");
 
 export function initializeListeners() {
-  document.addEventListener("click", handleClick);
+  // Document click event
+  document.addEventListener("click", () => {
+    cursor.remove();
+  });
+
+  // Window scroll event
   window.addEventListener("scroll", () => {
     cursor.remove();
     adjustHeader();
   });
+
   // Called right before the page is about to be unloaded.
-  window.addEventListener("onbeforeunload", () => {
+  window.addEventListener("beforeunload", () => {
     contactForm.reset();
   });
+
   squareDecorListeners();
 }
 
-function handleClick() {
-  cursor.remove();
-}
-
-function handleScroll() {}
-
-function handleOnBeforeUnload() {
-  // Resetting the contact form.
-  contactForm.reset();
-}
-
+// Handles square decor animations (home section).
 function squareDecorListeners() {
+  const squareDecorOverlay1 = document.getElementById("square-decor-overlay-1");
+  const squareDecorOverlay2 = document.getElementById("square-decor-overlay-2");
+  const squareDecor1 = document.getElementById("square-decor-1");
+  const squareDecor2 = document.getElementById("square-decor-2");
+
   // square decor 1
   squareDecorOverlay1.addEventListener("mouseover", () => {
     squareDecor1.style.transform = "scale(0.9)";
