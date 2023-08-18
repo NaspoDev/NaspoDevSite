@@ -39,7 +39,17 @@
   transition: all 0.3s;
 }
 
-.contact-form .form-field::placeholder {
+/* Standard, Chrome/Opera/Safari, Firefox */
+.contact-form .form-field::placeholder,
+.contact-form .form-field::-webkit-input-placeholder,
+.contact-form .form-field::-moz-placeholder {
+  color: var(--text-color-grey);
+  opacity: 1;
+}
+
+.contact-form .form-field::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--text-color-grey);
   opacity: 1;
 }
 
