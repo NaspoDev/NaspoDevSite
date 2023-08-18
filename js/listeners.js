@@ -1,3 +1,8 @@
+// Handles general listeners for the website.
+
+// Imports
+import { adjustHeader } from "./modules/header.js";
+
 // Capturing elements
 const cursor = document.getElementById("cursor");
 const squareDecorOverlay1 = document.getElementById("square-decor-overlay-1");
@@ -8,9 +13,14 @@ const contactForm = document.getElementById("contact-form");
 
 export function initializeListeners() {
   document.addEventListener("click", handleClick);
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", () => {
+    cursor.remove();
+    adjustHeader();
+  });
   // Called right before the page is about to be unloaded.
-  window.addEventListener("onbeforeunload", handleOnBeforeUnload());
+  window.addEventListener("onbeforeunload", () => {
+    contactForm.reset();
+  });
   squareDecorListeners();
 }
 
@@ -18,9 +28,7 @@ function handleClick() {
   cursor.remove();
 }
 
-function handleScroll() {
-  cursor.remove();
-}
+function handleScroll() {}
 
 function handleOnBeforeUnload() {
   // Resetting the contact form.
