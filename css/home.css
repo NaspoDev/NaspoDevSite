@@ -172,3 +172,47 @@
   background-repeat: no-repeat;
   background-size: 25px;
 }
+
+/* Responsive Design */
+
+@media (width < 500px) {
+  .home .right-side {
+    display: none;
+  }
+
+  .home .left-side {
+    width: 100%;
+  }
+
+  .home .left-side .content-container {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .home .left-side .content-container h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .home .left-side .content-container h1 {
+    font-size: 64px;
+    margin-bottom: 0px;
+    display: inline-block;
+  }
+
+  .home .left-side .content-container .animation-text-container {
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .home .left-side .animation-text-container .cursor {
+    display: none;
+  }
+
+  .home .left-side .content-container p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
