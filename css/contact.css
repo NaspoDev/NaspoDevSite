@@ -61,23 +61,5 @@
 
 /* Button finished for now. Will probably change later. */
 .contact-form .submit-button {
-  width: 110px;
-  height: 40px;
   align-self: flex-end;
-
-  background-color: transparent;
-  border: none;
-  border: 1px solid var(--theme-color-blue);
-  font-family: "Inter Extra-Light";
-  font-size: 18px;
-  color: var(--text-color-white);
-  transition: all 0.3s;
-  padding: none;
-}
-
-.contact-form .submit-button:hover {
-  cursor: pointer;
-  background-color: var(--theme-color-blue);
-  color: var(--text-color-black);
-  letter-spacing: 3px;
 }
