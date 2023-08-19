@@ -210,3 +210,28 @@
   width: 20px;
   margin-left: 5px;
 }
+
+/* Responsive Design */
+
+@media (width < 1000px) {
+  .services-section-spacer {
+    height: 150px;
+  }
+
+  .services-heading {
+    margin-top: 0px;
+  }
+
+  .services-content .right-side {
+    display: none;
+  }
+
+  .services-content .left-side {
+    width: 100%;
+  }
+
+  .services-content .services-inner-content {
+    width: 90%;
+    height: 90%;
+  }
+}
