@@ -252,6 +252,14 @@ Applied to any project that should be animated on scroll. */
     right: 10%;
   }
 
+  .project-1 .scrolling-text-wrapper {
+    top: 45%;
+  }
+
+  .project-1 .scrolling-text-wrapper p {
+    font-size: 50px;
+  }
+
   .project-4 .project-content img {
     width: 25px;
   }
