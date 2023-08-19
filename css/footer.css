@@ -31,3 +31,11 @@
 .footer-content .copyright-notice {
   font-size: 14px;
 }
+
+/* Responsive Design */
+
+@media (width < 1000px) {
+  .footer .footer-content {
+    width: 100%;
+  }
+}
