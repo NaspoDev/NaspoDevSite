@@ -47,7 +47,7 @@ make up for the header's height.
 
 /* Responsive Design */
 
-@media (width < 500px) {
+@media (width < 1000px) {
   .header {
     width: 100vw;
     justify-content: space-between;

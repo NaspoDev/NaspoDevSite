@@ -104,3 +104,9 @@
     opacity: 0;
   }
 }
+
+@media (width < 1000px) {
+  .about-section-spacer {
+    height: 150px;
+  }
+}
