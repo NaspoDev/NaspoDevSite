@@ -233,6 +233,26 @@ Applied to any project that should be animated on scroll. */
   .projects .projects-content .projects-grid {
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: auto;
+  }
+
+  .projects-grid .project-1 {
+    position: relative;
+  }
+
+  .project-1 .project-content h2 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+
+  .project-1 .project-content img {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+  }
+
+  .project-4 .project-content img {
+    width: 25px;
   }
 }
