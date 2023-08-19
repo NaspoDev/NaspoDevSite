@@ -190,4 +190,10 @@ Hides them initially. */
     width: 100vw;
     overflow: hidden;
   }
+
+  .hidden-horizontal {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+  }
 }

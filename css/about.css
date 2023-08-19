@@ -105,8 +105,29 @@
   }
 }
 
+/* Responsive Design */
+
 @media (width < 1000px) {
   .about-section-spacer {
     height: 150px;
+  }
+
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .about-content .left-side,
+  .about-content .right-side {
+    width: 100%;
+    height: 50%;
+  }
+
+  .about-content .content-container {
+    width: 80%;
+    height: 80%;
+  }
+
+  .about-content .grid-item {
+    width: 50px;
   }
 }
