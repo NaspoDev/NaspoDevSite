@@ -48,7 +48,16 @@ make up for the header's height.
 /* Responsive Design */
 
 @media (width < 500px) {
-  .header,
+  .header {
+    width: 100vw;
+    justify-content: space-between;
+    padding: 20px 5%;
+  }
+
+  .navigation li:not(:last-child) {
+    display: none;
+  }
+
   .header-space {
     display: none;
   }
