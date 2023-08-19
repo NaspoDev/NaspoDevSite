@@ -73,3 +73,19 @@
 .contact-form .submit-button {
   align-self: flex-end;
 }
+
+/* Responsive Design */
+
+@media (width < 1000px) {
+  .contact-text {
+    width: 90%;
+  }
+
+  .contact-text br {
+    display: none;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
