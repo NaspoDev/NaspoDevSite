@@ -222,3 +222,17 @@ Applied to any project that should be animated on scroll. */
 .project-4 .project-content img {
   width: 5%;
 }
+
+/* Responsive Design */
+
+@media (width < 1000px) {
+  .projects .projects-content .project-description-area {
+    display: none;
+  }
+
+  .projects .projects-content .projects-grid {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+  }
+}
