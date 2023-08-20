@@ -175,7 +175,7 @@
 
 /* Responsive Design */
 
-@media (width <= 1000px) {
+@media (width < 1200px) {
   .home .right-side {
     display: none;
   }
@@ -217,7 +217,7 @@
   }
 }
 
-@media (width >= 1001px) and (width <= 1500px) {
+@media (width >= 1200px) and (width <= 1500px) {
   .home .left-side .content-container {
     width: 70%;
   }

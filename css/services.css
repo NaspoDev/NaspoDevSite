@@ -213,7 +213,7 @@
 
 /* Responsive Design */
 
-@media (width <= 1000px) {
+@media (width < 1200px) {
   .services-section-spacer {
     height: 150px;
   }
@@ -236,8 +236,8 @@
   }
 }
 
-@media (width >= 1001px) and (width <= 1500px) {
-  .services-content .services-display {
-    width: 85%;
+@media (width >= 1200px) and (width <= 1500px) {
+  .services-content .services-inner-content {
+    width: 90%;
   }
 }

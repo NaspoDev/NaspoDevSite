@@ -107,7 +107,7 @@
 
 /* Responsive Design */
 
-@media (width <= 1000px) {
+@media (width < 1200px) {
   .about-section-spacer {
     height: 150px;
   }
@@ -132,7 +132,13 @@
   }
 }
 
-@media (width >= 1001px) and (width <= 1500px) {
+@media (width >= 800px) and (width < 1200px) {
+  .about-content .left-side .content-container {
+    justify-content: center;
+  }
+}
+
+@media (width >= 1200px) and (width <= 1500px) {
   .about .about-content .left-side .content-container,
   .about .about-content .right-side .content-container {
     width: 60%;

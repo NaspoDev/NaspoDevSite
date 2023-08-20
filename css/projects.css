@@ -225,7 +225,7 @@ Applied to any project that should be animated on scroll. */
 
 /* Responsive Design */
 
-@media (width <= 1000px) {
+@media (width < 1200px) {
   .projects .projects-content .project-description-area {
     display: none;
   }
@@ -265,7 +265,25 @@ Applied to any project that should be animated on scroll. */
   }
 }
 
-@media (width >= 1001px) and (width <= 1500px) {
+@media (width >= 800px) and (width < 1200px) {
+  /* .projects {
+    height: auto;
+  } */
+
+  /* .projects-heading {
+    border: 1px solid red;
+    margin-bottom: 40px;
+  } */
+
+  .projects-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    border: 1px solid red;
+  }
+}
+
+@media (width >= 1200px) and (width <= 1500px) {
   .projects-grid .project-content img {
     width: 8%;
   }

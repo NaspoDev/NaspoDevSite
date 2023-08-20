@@ -190,7 +190,7 @@ Hides them initially. */
   display: none;
 }
 
-@media (width <= 1000px) {
+@media (width < 1200px) {
   .mobile-only {
     display: block;
   }
@@ -207,7 +207,7 @@ Hides them initially. */
   }
 }
 
-@media (width >= 1001px) and (width <= 1500px) {
+@media (width >= 1200px) and (width <= 1500px) {
   .mobile-only {
     display: block;
   }
