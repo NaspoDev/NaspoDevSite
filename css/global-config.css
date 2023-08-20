@@ -185,7 +185,16 @@ Hides them initially. */
 
 /* Responsive Design */
 
+/* applied to html elements that are only meant for the responsive display */
+.mobile-only {
+  display: none;
+}
+
 @media (width < 1000px) {
+  .mobile-only {
+    display: block;
+  }
+
   section {
     width: 100vw;
     overflow: hidden;
