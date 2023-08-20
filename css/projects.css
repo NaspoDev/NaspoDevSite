@@ -264,3 +264,14 @@ Applied to any project that should be animated on scroll. */
     width: 10%;
   }
 }
+
+@media (width >= 1001px) and (width <= 1500px) {
+  .projects-grid .project-content img {
+    width: 8%;
+  }
+
+  .project-2 .project-content img,
+  .project-3 .project-content img {
+    width: 20%;
+  }
+}
