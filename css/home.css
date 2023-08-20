@@ -248,3 +248,35 @@
     height: 25%;
   }
 }
+
+@media (width > 1500px) and (width < 1800px) {
+  .home .left-side .content-container {
+    width: 50%;
+  }
+
+  .home .left-side .content-container .animation-text-container {
+    width: auto;
+    height: 50%;
+  }
+
+  .home .left-side .content-container h2 {
+    font-size: 48px;
+  }
+
+  .home .left-side .content-container h1 {
+    font-size: 72px;
+  }
+
+  .home .left-side .animation-text-container .cursor {
+    display: none;
+  }
+
+  .home .right-side .content-container {
+    width: 60%;
+  }
+
+  .home .right-side .square-decor {
+    width: 30%;
+    height: 25%;
+  }
+}

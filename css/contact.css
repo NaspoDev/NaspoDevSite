@@ -99,3 +99,13 @@
     width: 50%;
   }
 }
+
+@media (width > 1500px) and (width < 1800px) {
+  .contact-text {
+    width: 40%;
+  }
+
+  .contact-form {
+    width: 40%;
+  }
+}

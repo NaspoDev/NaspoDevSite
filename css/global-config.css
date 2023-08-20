@@ -212,3 +212,9 @@ Hides them initially. */
     display: block;
   }
 }
+
+@media (width > 1500px) and (width < 1800px) {
+  .mobile-only {
+    display: block;
+  }
+}
