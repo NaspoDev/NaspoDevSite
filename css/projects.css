@@ -225,7 +225,7 @@ Applied to any project that should be animated on scroll. */
 
 /* Responsive Design */
 
-@media (width < 1000px) {
+@media (width <= 1000px) {
   .projects .projects-content .project-description-area {
     display: none;
   }

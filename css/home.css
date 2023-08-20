@@ -175,7 +175,7 @@
 
 /* Responsive Design */
 
-@media (width < 1000px) {
+@media (width <= 1000px) {
   .home .right-side {
     display: none;
   }

@@ -107,7 +107,7 @@
 
 /* Responsive Design */
 
-@media (width < 1000px) {
+@media (width <= 1000px) {
   .about-section-spacer {
     height: 150px;
   }

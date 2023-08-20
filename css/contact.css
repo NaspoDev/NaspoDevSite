@@ -76,7 +76,7 @@
 
 /* Responsive Design */
 
-@media (width < 1000px) {
+@media (width <= 1000px) {
   .contact-text {
     width: 90%;
   }
