@@ -131,3 +131,10 @@
     width: 50px;
   }
 }
+
+@media (width >= 1001px) and (width <= 1500px) {
+  .about .about-content .left-side .content-container,
+  .about .about-content .right-side .content-container {
+    width: 60%;
+  }
+}
