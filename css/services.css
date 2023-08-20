@@ -235,3 +235,9 @@
     height: 90%;
   }
 }
+
+@media (width >= 1001px) and (width <= 1500px) {
+  .services-content .services-display {
+    width: 85%;
+  }
+}
