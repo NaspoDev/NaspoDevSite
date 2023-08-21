@@ -250,4 +250,8 @@
   .services-content .services-inner-content {
     width: 90%;
   }
+
+  .services-content .right-side {
+    justify-content: flex-end;
+  }
 }
