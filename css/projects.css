@@ -266,20 +266,23 @@ Applied to any project that should be animated on scroll. */
 }
 
 @media (width >= 800px) and (width < 1200px) {
-  /* .projects {
-    height: auto;
-  } */
+  .projects {
+    height: 900px;
+  }
 
-  /* .projects-heading {
-    border: 1px solid red;
-    margin-bottom: 40px;
-  } */
+  .projects-heading {
+    margin-top: 0px;
+  }
 
   .projects-grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    border: 1px solid red;
+    margin-top: 30px;
+    height: auto;
+    margin-bottom: 0px;
+  }
+
+  .projects-grid .project-container:not(.project-1) {
+    width: 100%;
+    height: 20%;
   }
 }
 

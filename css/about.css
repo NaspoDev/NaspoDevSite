@@ -136,6 +136,10 @@
   .about-content .left-side .content-container {
     justify-content: center;
   }
+
+  .about {
+    border: 1px solid blue;
+  }
 }
 
 @media (width >= 1200px) and (width <= 1500px) {
