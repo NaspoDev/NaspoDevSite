@@ -90,6 +90,16 @@
   }
 }
 
+@media (width >= 800px) and (width < 1200px) {
+  .contact-text {
+    width: 60%;
+  }
+
+  .contact-form {
+    width: 60%;
+  }
+}
+
 @media (width >= 1200px) and (width <= 1500px) {
   .contact-text {
     width: 50%;
