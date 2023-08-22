@@ -218,3 +218,34 @@ Hides them initially. */
     display: block;
   }
 }
+
+/* Responsive Design - Old Syntax (for some IOS clients) */
+
+@media (max-width: 1199px) {
+  .mobile-only {
+    display: block;
+  }
+
+  section {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .hidden-horizontal {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1799px) {
+  .mobile-only {
+    display: block;
+  }
+}

@@ -39,3 +39,11 @@
     width: 100%;
   }
 }
+
+/* Responsive Design - Old Syntax (for some IOS clients) */
+
+@media (max-width: 1199px) {
+  .footer .footer-content {
+    width: 100%;
+  }
+}

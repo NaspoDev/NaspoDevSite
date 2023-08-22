@@ -255,3 +255,48 @@
     justify-content: flex-end;
   }
 }
+
+/* Responsive Design - Old Syntax (for some IOS clients) */
+
+@media (max-width: 1199px) {
+  .services-section-spacer {
+    height: 150px;
+  }
+
+  .services-heading {
+    margin-top: 0px;
+  }
+
+  .services-content .right-side {
+    display: none;
+  }
+
+  .services-content .left-side {
+    width: 100%;
+  }
+
+  .services-content .services-inner-content {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .services-section-spacer {
+    height: 200px;
+  }
+
+  .services {
+    height: 850px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .services-content .services-inner-content {
+    width: 90%;
+  }
+
+  .services-content .right-side {
+    justify-content: flex-end;
+  }
+}

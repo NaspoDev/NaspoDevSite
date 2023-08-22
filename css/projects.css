@@ -296,3 +296,77 @@ Applied to any project that should be animated on scroll. */
     width: 20%;
   }
 }
+
+/* Responsive Design - Old Syntax (for some IOS clients) */
+
+@media (max-width: 1199px) {
+  .projects .projects-content .project-description-area {
+    display: none;
+  }
+
+  .projects .projects-content .projects-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .projects-grid .project-1 {
+    position: relative;
+  }
+
+  .project-1 .project-content h2 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+
+  .project-1 .project-content img {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+  }
+
+  .project-1 .scrolling-text-wrapper {
+    top: 45%;
+  }
+
+  .project-1 .scrolling-text-wrapper p {
+    font-size: 50px;
+  }
+
+  .project-4 .project-content img {
+    width: 10%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .projects {
+    height: 900px;
+  }
+
+  .projects-heading {
+    margin-top: 0px;
+  }
+
+  .projects-grid {
+    margin-top: 30px;
+    height: auto;
+    margin-bottom: 0px;
+  }
+
+  .projects-grid .project-container:not(.project-1) {
+    width: 100%;
+    height: 20%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .projects-grid .project-content img {
+    width: 8%;
+  }
+
+  .project-2 .project-content img,
+  .project-3 .project-content img {
+    width: 20%;
+  }
+}

@@ -62,3 +62,21 @@ make up for the header's height.
     display: none;
   }
 }
+
+/* Responsive Design - Old Syntax (for some IOS clients) */
+
+@media (max-width: 1199px) {
+  .header {
+    width: 100vw;
+    justify-content: space-between;
+    padding: 20px 5%;
+  }
+
+  .navigation li:not(:last-child) {
+    display: none;
+  }
+
+  .header-space {
+    display: none;
+  }
+}

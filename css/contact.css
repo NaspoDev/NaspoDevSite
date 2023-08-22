@@ -119,3 +119,49 @@
     width: 40%;
   }
 }
+
+/* Responsive Design - Old Syntax (for some IOS clients) */
+
+@media (max-width: 1199px) {
+  .contact-text {
+    width: 90%;
+  }
+
+  .contact-text br {
+    display: none;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .contact-text {
+    width: 60%;
+  }
+
+  .contact-form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .contact-text {
+    width: 50%;
+  }
+
+  .contact-form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1799px) {
+  .contact-text {
+    width: 40%;
+  }
+
+  .contact-form {
+    width: 40%;
+  }
+}
