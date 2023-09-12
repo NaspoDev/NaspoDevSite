@@ -27,6 +27,14 @@ let observer = new IntersectionObserver(
 export function run() {
   fillGridItems();
   createGridSlots(false);
+
+  // if there are more grid items than grid slots, log a warning.
+  if (gridItems.length > gridSlots.length) {
+    console.warn(
+      "Warning: Not enough grid slots for all grid items. Modifying createGirdSlots() call or adding more slots to the grid may fix this."
+    );
+  }
+
   setGridItemPositions();
   observer.observe(techGrid);
 }
@@ -83,18 +91,20 @@ function createGridSlots(full) {
 
 // For each grid item, assign it a random slot.
 function setGridItemPositions() {
+  // copy of gridSlots array to remove slots after occupying them.
+  let gridSlotsCopy = [...gridSlots];
+
   for (let i = 0; i < gridItems.length; i++) {
     let gridSlot = undefined;
-    while (true) {
-      gridSlot = gridSlots[Math.floor(Math.random() * gridSlots.length)];
-      if (!gridSlot.occupied) {
-        break;
-      }
-    }
 
+    // set gridSlot to a random slot from the gridSlotsCopy array.
+    gridSlot = gridSlotsCopy[Math.floor(Math.random() * gridSlotsCopy.length)];
+
+    // set the grid item's position to that of the gridSlot.
     gridItems[i].style.gridRow = gridSlot.getRowFormatted();
     gridItems[i].style.gridColumn = gridSlot.getColumnFormatted();
-    gridSlot.occupied = true;
+    // remove the now occupied gridSlot from the gridSlotsCopy array.
+    gridSlotsCopy.splice(gridSlotsCopy.indexOf(gridSlot), 1);
   }
 }
 
