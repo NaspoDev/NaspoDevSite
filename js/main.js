@@ -19,7 +19,7 @@ const APP = {
     console.log("Listeners initialized!");
   },
   runScripts() {
-    runWelcomeScript();
+    // runWelcomeScript();
     runTechGridScript();
     runScrollAnimations();
     runProjectsScript();

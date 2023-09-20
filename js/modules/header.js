@@ -1,14 +1,25 @@
 /* 
 Header Module
 Handles header scroll functionality.
-Disappears on scroll down, appears on scroll up.
 */
 
-let lastScrollTop = 0;
+// for stickyHeaeder()
 let header = document.getElementById("header-div");
+let stickyOffset = header.offsetTop;
+
+// for adjustHeader()
+let lastScrollTop = header.offsetTop;
 let headerHeight = header.offsetHeight;
 
-// Adjusts header position on based on scroll behaviour.
+export function stickyHeader() {
+  if (window.scrollY >= stickyOffset) {
+    console.log("add the sticky class!");
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
 export function adjustHeader() {
   if (window.scrollY > lastScrollTop) {
     header.style.top = `-${headerHeight}px`;

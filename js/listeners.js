@@ -1,21 +1,19 @@
 // Handles general listeners for the website.
 
 // Imports
-import { adjustHeader } from "./modules/header.js";
+import { stickyHeader, adjustHeader } from "./modules/header.js";
 
 // Capturing elements
-const cursor = document.getElementById("cursor");
 const contactForm = document.getElementById("contact-form");
 
 export function initializeListeners() {
   // Document click event
-  document.addEventListener("click", () => {
-    cursor.remove();
-  });
+  document.addEventListener("click", () => {});
 
   // Window scroll event
   window.addEventListener("scroll", () => {
-    cursor.remove();
+    console.log("SCROLLING!");
+    stickyHeader();
     adjustHeader();
   });
 
@@ -24,7 +22,7 @@ export function initializeListeners() {
     contactForm.reset();
   });
 
-  squareDecorListeners();
+  // squareDecorListeners();
 }
 
 // Handles square decor animations (home section).
