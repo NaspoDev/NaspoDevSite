@@ -1,19 +1,23 @@
 // Runs opening animations on the home screen page. (Typewriter effect)
 
 // elements involved in the animation. id is the id of the element, text is the text to be typed out.
-const elements = [
-  { id: "welcome-animation-span", text: "Hey there" },
-  { id: "welcome-animation-h2", text: ", I'm" },
-  { id: "welcome-animation-h1", text: "Naspo" },
+const printStatementComponents = [
+  { id: "print-statement-print", text: "print" },
+  { id: "print-statement-bracket-1", text: "(" },
+  { id: "print-statement-text", text: '"Hey there, I\'m\\nNaspo"' },
+  { id: "print-statement-bracket-2", text: ")" },
 ];
 
+const cursor = document.getElementById("cursor");
+
 let index = 0;
-const speed = 70;
+const speed = 100;
 
 export function run() {
   runAnimations();
 }
 
+// Delay the execution of the thread by "ms" milliseconds
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -32,14 +36,12 @@ async function typeWriterEffect(id, text) {
 
 // async function to run calls to typeWriterEffect for each element.
 async function runAnimations() {
-  for (const element of elements) {
-    // If the element is the h2, add an extra delay after typing the comma.
-    if (element.text === ", I'm") {
-      await typeWriterEffect(element.id, element.text.charAt(0));
-      await delay(90);
-      await typeWriterEffect(element.id, element.text.substring(1));
-    } else {
-      await typeWriterEffect(element.id, element.text);
-    }
+  // run typewriter effect for printStatementComponents
+  for (const element of printStatementComponents) {
+    await typeWriterEffect(element.id, element.text);
   }
+
+  // wait 2 seconds then remove the cursor
+  await delay(2000);
+  cursor.remove();
 }

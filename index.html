@@ -25,13 +25,63 @@
     <section id="home">
       <div class="home">
         <div class="print-statement-container">
-          <h2 class="print-statement code-font">
-            <span style="color: rgb(98, 151, 231)">print</span
-            ><span style="color: goldenrod">(</span
-            ><span style="color: rgb(108, 214, 114)"
-              >"Hey there, I'm\nNaspo"</span
-            ><span style="color: goldenrod">)</span>
+          <!-- Print Statement. Displayed with typewriter effect through js -->
+          <h2 class="print-statement code-font" id="print-statement">
+            <span
+              id="print-statement-print"
+              style="color: rgb(98, 151, 231)"
+            ></span
+            ><span
+              id="print-statement-bracket-1"
+              style="color: goldenrod"
+            ></span
+            ><span
+              id="print-statement-text"
+              style="color: rgb(108, 214, 114)"
+            ></span
+            ><span
+              id="print-statement-bracket-2"
+              style="color: goldenrod"
+            ></span>
           </h2>
+          <h3 class="cursor" id="cursor">&nbsp;</h3>
+        </div>
+
+        <!-- Run terminal display -->
+        <div class="terminal-display">
+          <div class="info-bar">
+            <div class="left-side">
+              <div class="run-title-container">
+                <h3>Run</h3>
+              </div>
+              <div class="running-file-container">
+                <img src="/images/logos/python_logo.png" alt="Python Logo" />
+                <p>welcome.py</p>
+              </div>
+            </div>
+            <div class="right-side">
+              <div class="options-button">
+                <img
+                  src="/images/home/terminal_options_button.png"
+                  alt="Options"
+                />
+                <img src="/images/home/terminal_close_icon.png" alt="Close" />
+              </div>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <p class="file-path">
+              C:\Users\naspo\NaspoDevSite\portfolio\welcome.py
+            </p>
+            <div class="welcome-text-container">
+              <h2>Hey there, I'm</h2>
+              <h1>Naspo</h1>
+            </div>
+            <br />
+            <p class="process-exit-statement">
+              Process finished with exit code 0
+            </p>
+          </div>
         </div>
       </div>
     </section>

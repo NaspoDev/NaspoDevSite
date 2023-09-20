@@ -6,6 +6,31 @@
   padding: 30px 10% 0% 10%;
 }
 
+.home .print-statement-container .print-statement {
+  display: inline-block;
+}
+
+.home .print-statement-container .cursor {
+  display: inline-block;
+  background-color: rgb(98, 151, 231);
+  width: 3px;
+  font-size: 28px;
+  animation: blink 1s infinite;
+}
+
+/* for cursor animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Responsive Design */
 
 @media (width < 1200px) {
