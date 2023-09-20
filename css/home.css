@@ -113,11 +113,63 @@
 }
 
 .terminal-display .terminal-body .welcome-text-container {
-  border: 1px solid red;
-  height: 400px;
+  height: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.terminal-display .terminal-body .welcome-text-container h2 {
+  font-size: 80px;
+}
+
+.terminal-display .terminal-body .welcome-text-container h1 {
+  font-size: 200px;
+}
+
+.terminal-display .terminal-body .welcome-text-container .random-font {
+  opacity: 0;
+}
+
+@keyframes welcome-script-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fonts for welcome-text-container */
+@font-face {
+  font-family: "bonbon";
+  src: url(/fonts/home_section_fonts/bonbon/Bonbon-Regular.ttf);
+}
+
+@font-face {
+  font-family: "carrinady";
+  src: url(/fonts/home_section_fonts/carrinady/Carrinady.ttf);
+}
+
+@font-face {
+  font-family: "fantaisieartistique";
+  src: url(/fonts/home_section_fonts/fantaisieartistique/FantaisieArtistique.ttf);
+}
+
+@font-face {
+  font-family: "potra";
+  src: url(/fonts/home_section_fonts/potra/Potra.ttf);
+}
+
+@font-face {
+  font-family: "press-start";
+  src: url(/fonts/home_section_fonts/press_start/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+  font-family: "spastic_nerfbag";
+  src: url(/fonts/home_section_fonts/spastic_nerfbag/SpasticNerfbag.ttf);
 }
 
 /* Responsive Design */

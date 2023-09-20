@@ -8,6 +8,18 @@ const printStatementComponents = [
   { id: "print-statement-bracket-2", text: ")" },
 ];
 
+const welcomeTextSpans = document.querySelectorAll(".random-font");
+const welcomeTextFonts = [
+  "bonbon",
+  "carrinady",
+  "fantaisieartistique",
+  "potra",
+  "press-start",
+  "spastic_nerfbag",
+];
+
+const maxAnimationDelay = 15; // max animation delay for welcome text (in seconds)
+
 const cursor = document.getElementById("cursor");
 
 let index = 0;
@@ -34,6 +46,18 @@ async function typeWriterEffect(id, text) {
   }
 }
 
+// Displays each character of welcome-text with a random font and random animation delay.
+function displayWelcomeText() {
+  for (const span of welcomeTextSpans) {
+    span.style.fontFamily =
+      welcomeTextFonts[Math.round(Math.random() * welcomeTextFonts.length)];
+    span.style.opacity = 1;
+    span.style.animation = `welcome-script-fadein ${
+      Math.random() * maxAnimationDelay
+    }s`;
+  }
+}
+
 // async function to run calls to typeWriterEffect for each element.
 async function runAnimations() {
   // run typewriter effect for printStatementComponents
@@ -43,5 +67,8 @@ async function runAnimations() {
 
   // wait 2 seconds then remove the cursor
   await delay(2000);
+  // TODO: add a loading animation thing
   cursor.remove();
+
+  displayWelcomeText();
 }
