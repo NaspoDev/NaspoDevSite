@@ -21,8 +21,17 @@ let observer = new IntersectionObserver(
       hideGridItems();
     }
   },
-  { threshold: 0.7 }
+  { threshold: getThreshold() }
 );
+
+// Returns the threshold for the intersection observer based on the screen width.
+function getThreshold() {
+  if (window.innerWidth < 1200) {
+    return 0.4;
+  } else {
+    return 0.7;
+  }
+}
 
 export function run() {
   fillGridItems();
