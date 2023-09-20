@@ -260,6 +260,19 @@ Applied to any project that should be animated on scroll. */
     font-size: 50px;
   }
 
+  .project-2 .scrolling-text-wrapper,
+  .project-3 .scrolling-text-wrapper,
+  .project-4 .scrolling-text-wrapper {
+    display: none;
+  }
+
+  .projects-grid .project-hidden {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: 0.5s;
+  }
+
   .project-4 .project-content img {
     width: 10%;
   }
@@ -332,6 +345,19 @@ Applied to any project that should be animated on scroll. */
 
   .project-1 .scrolling-text-wrapper p {
     font-size: 50px;
+  }
+
+  .project-2 .scrolling-text-wrapper,
+  .project-3 .scrolling-text-wrapper,
+  .project-4 .scrolling-text-wrapper {
+    display: none;
+  }
+
+  .projects-grid .project-hidden {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: 0.5s;
   }
 
   .project-4 .project-content img {

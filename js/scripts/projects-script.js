@@ -93,9 +93,11 @@ function applyScrollingText(project) {
     project.gridItem
       .querySelector(".scrolling-text-wrapper")
       .classList.add(scrollingTextClass);
-    // hiding project title & image
-    project.gridItem.querySelector(".project-content h2").style.opacity = 0;
-    project.gridItem.querySelector(".project-content img").style.opacity = 0;
+    // hiding project title & image (if not on mobile display)
+    if (window.innerWidth >= 1200) {
+      project.gridItem.querySelector(".project-content h2").style.opacity = 0;
+      project.gridItem.querySelector(".project-content img").style.opacity = 0;
+    }
     // removing scrolling text from first project
     document
       .querySelector(".project-1 .scrolling-text-wrapper")
