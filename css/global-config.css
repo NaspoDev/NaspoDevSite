@@ -23,6 +23,12 @@ html {
   src: url(/fonts/inter/static/Inter-ExtraLight.ttf);
 }
 
+/* Code font */
+@font-face {
+  font-family: "Code";
+  src: url(/fonts/source_code_pro/static/SourceCodePro-Regular.ttf);
+}
+
 /* Variables */
 :root {
   /* text colors */
@@ -120,6 +126,10 @@ button:hover {
   left: 10%;
   top: 70%;
   z-index: -1;
+}
+
+.code-font {
+  font-family: "Code";
 }
 
 /* Whenever a waves section spaces from Haikei is used. */

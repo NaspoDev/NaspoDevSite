@@ -1,9 +1,9 @@
 /* === Home === */
 
 .home {
-  height: 800px;
+  height: 100vh;
   display: flex;
-  /* padding: 5% 10%; */
+  padding: 30px 10% 0% 10%;
 }
 
 /* Responsive Design */
