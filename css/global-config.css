@@ -38,6 +38,7 @@ html {
 
   /* theme colors */
   --theme-color-blue: #39bde2;
+  --theme-color-terminal-blue: rgb(98, 151, 231);
   --button-hover-color: #05aad8;
   --theme-color-grey: #595959;
 
