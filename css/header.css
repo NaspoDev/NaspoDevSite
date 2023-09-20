@@ -10,7 +10,7 @@
   align-items: center;
   padding: 30px 10%;
   z-index: 100;
-  background-color: var(--background-color-grey);
+  background-color: var(--background-color-dark);
   transition: 0.5s;
 }
 
