@@ -1,0 +1,167 @@
+// Contact Section
+
+.contact {
+  height: 750px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contact-text {
+      width: 30%;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .contact-form {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+
+      .form-field {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        background-color: var(--theme-color-grey);
+        border: none;
+        padding-left: 8px;
+        opacity: 0.5;
+        transition: all 0.3s;
+
+        // Standard, Chrome/Opera/Safari, Firefox
+        &::placeholder,
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder {
+          color: var(--text-color-grey);
+          opacity: 1;
+        }
+
+        &:focus {
+          outline: none;
+          opacity: 1;
+          border: 1px solid var(--theme-color-blue);
+        }
+      }
+
+      .message-field {
+        padding-top: 8px;
+        height: 100px;
+      }
+
+      // Added (through js) to a form-field when it has been filled out.
+      .field-filled {
+        opacity: 1;
+      }
+
+      .submit-button {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+// duplicate code? do I still need this?
+// .contact-form .form-field::-webkit-input-placeholder {
+//   // Chrome/Opera/Safari
+//   color: var(--text-color-grey);
+//   opacity: 1;
+// }
+
+// Responsive Design
+
+@media (width < 1200px) {
+  .contact-text {
+    width: 90%;
+  }
+
+  .contact-text br {
+    display: none;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
+
+@media (width >= 800px) and (width < 1200px) {
+  .contact-text {
+    width: 60%;
+  }
+
+  .contact-form {
+    width: 60%;
+  }
+}
+
+@media (width >= 1200px) and (width <= 1500px) {
+  .contact-text {
+    width: 50%;
+  }
+
+  .contact-form {
+    width: 50%;
+  }
+}
+
+@media (width > 1500px) and (width < 1800px) {
+  .contact-text {
+    width: 40%;
+  }
+
+  .contact-form {
+    width: 40%;
+  }
+}
+
+// Responsive Design - Old Syntax (for some IOS clients)
+
+@media (max-width: 1199px) {
+  .contact-text {
+    width: 90%;
+  }
+
+  .contact-text br {
+    display: none;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .contact-text {
+    width: 60%;
+  }
+
+  .contact-form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .contact-text {
+    width: 50%;
+  }
+
+  .contact-form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1799px) {
+  .contact-text {
+    width: 40%;
+  }
+
+  .contact-form {
+    width: 40%;
+  }
+}
