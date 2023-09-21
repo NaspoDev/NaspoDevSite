@@ -1,10 +1,12 @@
+@import "variables";
+
 // === Projects ===
 
 .projects {
   height: 1000px;
   display: grid;
   grid-template-rows: auto 1fr;
-  background-color: var(--background-color-dark);
+  background-color: $background-color-dark;
 
   .projects-heading {
     margin-top: 100px;
@@ -97,7 +99,7 @@
             display: inline-block;
             font-size: 40px;
             padding-right: 5px;
-            color: var(--text-color-black);
+            color: $text-color-black;
           }
         }
 
@@ -130,8 +132,8 @@
         grid-column: 1 / 2;
 
         .project-content {
-          background-color: var(--project-item-color-blue);
-          border: 100px solid var(--project-item-color-blue);
+          background-color: $project-item-color-blue;
+          border: 100px solid $project-item-color-blue;
 
           h2 {
             font-size: 28px;
@@ -149,7 +151,7 @@
 
           p {
             font-size: 80px;
-            color: var(--text-color-grey);
+            color: $text-color-grey;
           }
         }
       }
@@ -159,11 +161,11 @@
         grid-column: 2 / 3;
 
         .project-content {
-          background-color: var(--project-item-color-white);
-          border: 60px solid var(--project-item-color-white);
+          background-color: $project-item-color-white;
+          border: 60px solid $project-item-color-white;
 
           h2 {
-            color: var(--text-color-black);
+            color: $text-color-black;
             font-size: 22px;
           }
 
@@ -178,11 +180,11 @@
         grid-column: 3 / 4;
 
         .project-content {
-          background-color: var(--project-item-color-purple);
-          border: 60px solid var(--project-item-color-purple);
+          background-color: $project-item-color-purple;
+          border: 60px solid $project-item-color-purple;
 
           h2 {
-            color: var(--text-color-black);
+            color: $text-color-black;
             font-size: 22px;
           }
 
@@ -197,11 +199,11 @@
         grid-column: 2 / 4;
 
         .project-content {
-          background-color: var(--project-item-color-yellow);
-          border: 60px solid var(--project-item-color-yellow);
+          background-color: $project-item-color-yellow;
+          border: 60px solid $project-item-color-yellow;
 
           h2 {
-            color: var(--text-color-black);
+            color: $text-color-black;
             font-size: 22px;
           }
 

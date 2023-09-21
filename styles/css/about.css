@@ -45,8 +45,8 @@
 
   /* text shadow trickery to create a text border 
     1px bg color to left, top, right, and bottom */
-  text-shadow: -1px 0 var(--text-color-white), 0 1px var(--text-color-white),
-    1px 0 var(--text-color-white), 0 -1px var(--text-color-white);
+  text-shadow: -1px 0 $text-color-white, 0 1px $text-color-white,
+    1px 0 $text-color-white, 0 -1px $text-color-white;
 
   margin-bottom: 30px;
 }

@@ -80,7 +80,7 @@
 }
 
 .terminal-display .info-bar .run-title-container .text {
-  color: var(--text-color-grey);
+  color: $text-color-grey;
   opacity: 0.8;
 }
 
@@ -109,7 +109,7 @@
 
 .terminal-display .terminal-body .file-path,
 .terminal-display .terminal-body .process-exit-statement {
-  color: var(--text-color-white);
+  color: $text-color-white;
 }
 
 .terminal-display .terminal-body .welcome-text-container {

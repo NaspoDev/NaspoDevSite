@@ -8,7 +8,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   overflow-y: hidden;
-  background-color: var(--background-color-dark);
+  background-color: #090a0b;
 }
 .about .about-content {
   display: flex;
@@ -33,12 +33,12 @@
   z-index: 2;
 }
 .about .about-content .left-side .content-container h2 {
-  color: var(--background-color-dark);
-  text-shadow: -1px 0 var(--text-color-white), 0 1px var(--text-color-white), 1px 0 var(--text-color-white), 0 -1px var(--text-color-white);
+  color: #090a0b;
+  text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
   margin-bottom: 30px;
 }
 .about .about-content .left-side .content-container h2 span {
-  text-shadow: -1px 0 var(--theme-color-blue), 0 1px var(--theme-color-blue), 1px 0 var(--theme-color-blue), 0 -1px var(--theme-color-blue);
+  text-shadow: -1px 0 #39bde2, 0 1px #39bde2, 1px 0 #39bde2, 0 -1px #39bde2;
 }
 .about .about-content .right-side {
   display: flex;

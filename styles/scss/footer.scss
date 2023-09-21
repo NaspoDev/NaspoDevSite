@@ -1,10 +1,12 @@
+@import "variables";
+
 // Footer Section
 
 .footer {
   height: 150px;
   display: flex;
   justify-content: center;
-  background-color: var(--background-color-dark);
+  background-color: $background-color-dark;
 
   .footer-content {
     height: 100%;

@@ -1,3 +1,5 @@
+@import "variables";
+
 // === Services ===
 
 .services-section-spacer {
@@ -104,7 +106,7 @@
           .line-decor {
             width: 2px;
             height: 80%;
-            background-color: var(--text-color-grey);
+            background-color: $text-color-grey;
             border-radius: 10px;
             box-shadow: 0 0 10px #9ecaed;
           }
@@ -190,7 +192,7 @@
 
           p {
             padding: 0;
-            color: var(--theme-color-blue);
+            color: $theme-color-blue;
           }
 
           img {

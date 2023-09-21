@@ -1,3 +1,5 @@
+@import "variables";
+
 // === Global Configurations ===
 
 * {
@@ -30,32 +32,10 @@ html {
   src: url(/fonts/source_code_pro/static/SourceCodePro-Regular.ttf);
 }
 
-// --- Variables ---
-// text colors
-$text-color-grey: #e8e6e6;
-$text-color-white: #ffffff;
-$text-color-black: #000000;
-
-// theme colors
-$theme-color-blue: #39bde2;
-$theme-color-terminal-blue: rgb(98, 151, 231);
-$button-hover-color: #05aad8;
-$theme-color-grey: #595959;
-
-// background colors
-$background-color-grey: #28282b;
-$background-color-dark: #090a0b;
-
-// projects section
-$project-item-color-blue: #4042cf;
-$project-item-color-white: #f7f7f7;
-$project-item-color-purple: #ddbcff;
-$project-item-color-yellow: #fcf4a3;
-
 // prettier-ignore
 h1, h2, h3, h4, h5, h6, li, a {
       font-family: "Inter Bold";
-      color: var(--text-color-white);
+      color: $text-color-white;
     }
 
 h1 {
@@ -73,7 +53,7 @@ h3 {
 // prettier-ignore
 p, button, input, textarea {
     font-family: "Inter Extra-Light";
-    color: var(--text-color-grey);
+    color: $text-color-grey;
     font-size: 18px;
   }
 
@@ -92,7 +72,7 @@ img {
 }
 
 body {
-  background-color: var(--background-color-grey);
+  background-color: $background-color-grey;
   overflow-x: hidden;
 }
 
@@ -100,16 +80,16 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border: 1px solid var(--theme-color-blue);
+  border: 1px solid $theme-color-blue;
   border-radius: 5px;
   padding: 10px 20px;
   transition: 0.5s;
 }
 
 button:hover {
-  background-color: var(--theme-color-blue);
-  color: var(--text-color-black);
-  box-shadow: 0px 0px 20px 1px var(--theme-color-blue);
+  background-color: $theme-color-blue;
+  color: $text-color-black;
+  box-shadow: 0px 0px 20px 1px $theme-color-blue;
 }
 
 // underline style: Custom underline styling for heading elements
@@ -121,7 +101,7 @@ button:hover {
 .underline-style::before {
   position: absolute;
   content: "";
-  border-bottom: 18px solid var(--theme-color-blue);
+  border-bottom: 18px solid $theme-color-blue;
   width: 95%;
   left: 10%;
   top: 70%;

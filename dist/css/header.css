@@ -12,7 +12,7 @@
   align-items: center;
   padding: 30px 10%;
   z-index: 100;
-  background-color: var(--background-color-dark);
+  background-color: #090a0b;
   transition: 0.5s;
 }
 .header-space .header .logo {
@@ -28,7 +28,7 @@
   transition: all 0.3s ease 0s;
 }
 .header-space .header .navigation li a:hover {
-  color: var(--theme-color-blue);
+  color: #39bde2;
 }
 .header-space .header .sticky {
   position: fixed;

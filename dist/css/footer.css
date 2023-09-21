@@ -2,7 +2,7 @@
   height: 150px;
   display: flex;
   justify-content: center;
-  background-color: var(--background-color-dark);
+  background-color: #090a0b;
 }
 .footer .footer-content {
   height: 100%;

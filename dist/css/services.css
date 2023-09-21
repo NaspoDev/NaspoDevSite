@@ -85,7 +85,7 @@
 .services .services-content .left-side .services-display .line-decor-container .line-decor {
   width: 2px;
   height: 80%;
-  background-color: var(--text-color-grey);
+  background-color: #e8e6e6;
   border-radius: 10px;
   box-shadow: 0 0 10px #9ecaed;
 }
@@ -152,7 +152,7 @@
 }
 .services .services-content .right-side .work-with-me .call-to-action p {
   padding: 0;
-  color: var(--theme-color-blue);
+  color: #39bde2;
 }
 .services .services-content .right-side .work-with-me .call-to-action img {
   width: 20px;

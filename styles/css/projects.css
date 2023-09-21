@@ -123,7 +123,7 @@ Applied to any project that should be animated on scroll. */
   display: inline-block;
   font-size: 40px;
   padding-right: 5px;
-  color: var(--text-color-black);
+  color: $text-color-black;
 }
 
 /* text scrolling animation */
@@ -163,7 +163,7 @@ Applied to any project that should be animated on scroll. */
 }
 .project-1 .scrolling-text-wrapper p {
   font-size: 80px;
-  color: var(--text-color-grey);
+  color: $text-color-grey;
 }
 
 .projects-grid .project2 {
@@ -177,7 +177,7 @@ Applied to any project that should be animated on scroll. */
 }
 
 .project-2 .project-content h2 {
-  color: var(--text-color-black);
+  color: $text-color-black;
   font-size: 22px;
 }
 
@@ -196,7 +196,7 @@ Applied to any project that should be animated on scroll. */
 }
 
 .project-3 .project-content h2 {
-  color: var(--text-color-black);
+  color: $text-color-black;
   font-size: 22px;
 }
 
@@ -215,7 +215,7 @@ Applied to any project that should be animated on scroll. */
 }
 
 .project-4 .project-content h2 {
-  color: var(--text-color-black);
+  color: $text-color-black;
   font-size: 22px;
 }
 
