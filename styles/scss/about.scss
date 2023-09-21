@@ -1,0 +1,193 @@
+// === About ===
+
+// * Remove if you don't end up needing
+.about-section-spacer {
+  background-image: url(/images/section_transition_svgs/about-section-waves-transition.svg);
+  height: 350px;
+}
+
+.about {
+  height: 900px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow-y: hidden;
+  background-color: var(--background-color-dark);
+
+  .about-content {
+    display: flex;
+    position: relative;
+
+    // general content-container styling for both left and right sides of about-content
+    .content-container {
+      width: 60%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      p {
+        line-height: 2;
+      }
+    }
+
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+      .content-container {
+        h2 {
+          color: var(--background-color-dark);
+
+          // text shadow trickery to create a text border
+          // 1px bg color to left, top, right, and bottom
+          text-shadow: -1px 0 var(--text-color-white),
+            0 1px var(--text-color-white), 1px 0 var(--text-color-white),
+            0 -1px var(--text-color-white);
+
+          margin-bottom: 30px;
+
+          span {
+            text-shadow: -1px 0 var(--theme-color-blue),
+              0 1px var(--theme-color-blue), 1px 0 var(--theme-color-blue),
+              0 -1px var(--theme-color-blue);
+          }
+        }
+      }
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+      .content-container {
+        p {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+.about-content .tech-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  gap: 20px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0% 5% 0% 5%;
+}
+
+.about-content .grid-item {
+  width: 150px;
+  opacity: 0; // initially hidden, animation script deals with visibility
+}
+
+// Fade in animation
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+// Fade out animation
+@keyframes fadeout {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// Responsive Design
+
+@media (width < 1200px) {
+  .about-section-spacer {
+    height: 150px;
+  }
+
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .about-content .left-side,
+  .about-content .right-side {
+    width: 100%;
+    height: 50%;
+  }
+
+  .about-content .content-container {
+    width: 80%;
+    height: 80%;
+  }
+
+  .about-content .grid-item {
+    width: 50px;
+  }
+}
+
+@media (width >= 800px) and (width < 1200px) {
+  .about-content .left-side .content-container {
+    justify-content: center;
+  }
+}
+
+@media (width >= 1200px) and (width <= 1500px) {
+  .about .about-content .left-side .content-container,
+  .about .about-content .right-side .content-container {
+    width: 60%;
+  }
+}
+
+// Responsive Design - Old Syntax (for some IOS clients)
+
+@media (max-width: 1199px) {
+  .about-section-spacer {
+    height: 150px;
+  }
+
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .about-content .left-side,
+  .about-content .right-side {
+    width: 100%;
+    height: 50%;
+  }
+
+  .about-content .content-container {
+    width: 80%;
+    height: 80%;
+  }
+
+  .about-content .grid-item {
+    width: 50px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .about-content .left-side .content-container {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .about .about-content .left-side .content-container,
+  .about .about-content .right-side .content-container {
+    width: 60%;
+  }
+}
