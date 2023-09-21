@@ -1,0 +1,207 @@
+// === Home ===
+
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 10% 0% 10%;
+  overflow: hidden;
+
+  // Print Statement Container
+  .print-statement-container {
+    .print-statement {
+      display: inline-block;
+    }
+
+    .cursor {
+      display: inline-block;
+      background-color: var(--theme-color-terminal-blue);
+      width: 3px;
+      font-size: 28px;
+      animation: blink 1s infinite;
+    }
+  }
+
+  // Terminal Display
+  .terminal-display {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    box-shadow: 0px 0px 20px 1px var(--background-color-dark);
+
+    .info-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      overflow: hidden;
+      border-top: 1px solid var(--theme-color-grey);
+      border-bottom: 1px solid var(--theme-color-grey);
+
+      // left and right side general styling
+      .left-side,
+      .right-side {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .info-bar-item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        padding: 0px 15px;
+
+        &:hover:not(.run-title-container) {
+          background-color: var(--theme-color-grey);
+        }
+      }
+
+      .left-side {
+        justify-content: flex-start;
+
+        .run-title-container {
+          .text {
+            color: var(--text-color-grey);
+            opacity: 0.8;
+          }
+        }
+
+        .running-file-container {
+          display: flex;
+          flex-direction: row;
+          gap: 7px;
+          border-bottom: 4px solid var(--theme-color-terminal-blue);
+
+          img {
+            width: 20px;
+          }
+        }
+
+        .right-side {
+          justify-content: flex-end;
+
+          .options-button-container {
+            img {
+              height: 30px;
+            }
+          }
+
+          .close-button-container {
+            img {
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    .terminal-body {
+      padding-top: 50px;
+
+      .file-path,
+      .process-exit-statement {
+        color: var(--text-color-white);
+      }
+
+      .welcome-text-container {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          font-size: 80px;
+        }
+
+        h1 {
+          font-size: 200px;
+        }
+
+        .random-font {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+// for cursor animation
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// for welcome text animation
+@keyframes welcome-script-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Fonts for welcome-text-container
+@font-face {
+  font-family: "bonbon";
+  src: url(/fonts/home_section_fonts/bonbon/Bonbon-Regular.ttf);
+}
+
+@font-face {
+  font-family: "carrinady";
+  src: url(/fonts/home_section_fonts/carrinady/Carrinady.ttf);
+}
+
+@font-face {
+  font-family: "fantaisieartistique";
+  src: url(/fonts/home_section_fonts/fantaisieartistique/FantaisieArtistique.ttf);
+}
+
+@font-face {
+  font-family: "potra";
+  src: url(/fonts/home_section_fonts/potra/Potra.ttf);
+}
+
+@font-face {
+  font-family: "press-start";
+  src: url(/fonts/home_section_fonts/press_start/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+  font-family: "spastic_nerfbag";
+  src: url(/fonts/home_section_fonts/spastic_nerfbag/SpasticNerfbag.ttf);
+}
+
+// Responsive Design
+
+@media (width < 1200px) {
+}
+
+@media (width >= 1200px) and (width <= 1500px) {
+}
+
+@media (width > 1500px) and (width < 1800px) {
+}
+
+// Responsive Design - Old Syntax (for some IOS clients)
+
+@media (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+}
+
+@media (min-width: 1501px) and (max-width: 1799px) {
+}
