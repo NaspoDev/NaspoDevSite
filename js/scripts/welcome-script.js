@@ -19,7 +19,6 @@ const welcomeTextFonts = [
 ];
 
 const maxAnimationDelay = 15; // max animation delay for welcome text (in seconds)
-
 const cursor = document.getElementById("cursor");
 
 let index = 0;
