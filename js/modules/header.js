@@ -13,7 +13,6 @@ let headerHeight = header.offsetHeight;
 
 export function stickyHeader() {
   if (window.scrollY >= stickyOffset) {
-    console.log("add the sticky class!");
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");

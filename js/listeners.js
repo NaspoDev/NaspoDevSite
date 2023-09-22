@@ -12,7 +12,6 @@ export function initializeListeners() {
 
   // Window scroll event
   window.addEventListener("scroll", () => {
-    console.log("SCROLLING!");
     stickyHeader();
     adjustHeader();
   });
