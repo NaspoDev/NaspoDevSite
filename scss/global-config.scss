@@ -1,4 +1,5 @@
-/* === Global Configurations === */
+@import "utility/variables";
+// === Global Configurations ===
 
 * {
   margin: 0;
@@ -11,53 +12,30 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Bolder font face, mainly used for headings. */
+// --- Fonts ---
+// Bolder font face, mainly used for headings.
 @font-face {
   font-family: "Inter Bold";
   src: url(/fonts/inter/static/Inter-Bold.ttf);
 }
 
-/* Lighter font face, mainly used for paragraphs. */
+// Lighter font face, mainly used for paragraphs.
 @font-face {
   font-family: "Inter Extra-Light";
   src: url(/fonts/inter/static/Inter-ExtraLight.ttf);
 }
 
-/* Code font */
+// Code font
 @font-face {
   font-family: "Code";
   src: url(/fonts/source_code_pro/static/SourceCodePro-Regular.ttf);
 }
 
-/* Variables */
-:root {
-  /* text colors */
-  --text-color-grey: #e8e6e6;
-  --text-color-white: #ffffff;
-  --text-color-black: #000000;
-
-  /* theme colors */
-  --theme-color-blue: #39bde2;
-  --theme-color-terminal-blue: rgb(98, 151, 231);
-  --button-hover-color: #05aad8;
-  --theme-color-grey: #595959;
-
-  /* background colors */
-  --background-color-grey: #28282b;
-  --background-color-dark: #090a0b;
-
-  /* projects section */
-  --project-item-color-blue: #4042cf;
-  --project-item-color-white: #f7f7f7;
-  --project-item-color-purple: #ddbcff;
-  --project-item-color-yellow: #fcf4a3;
-}
-
-/* prettier-ignore */
+// prettier-ignore
 h1, h2, h3, h4, h5, h6, li, a {
-    font-family: "Inter Bold";
-    color: var(--text-color-white);
-  }
+      font-family: "Inter Bold";
+      color: $text-color-white;
+    }
 
 h1 {
   font-size: 48px;
@@ -71,17 +49,17 @@ h3 {
   font-size: 24px;
 }
 
-/* prettier-ignore */
+// prettier-ignore
 p, button, input, textarea {
-  font-family: "Inter Extra-Light";
-  color: var(--text-color-grey);
-  font-size: 18px;
-}
+    font-family: "Inter Extra-Light";
+    color: $text-color-grey;
+    font-size: 18px;
+  }
 
-/* prettier-ignore */
+// prettier-ignore
 input, textarea {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
 
 a {
   text-decoration: none;
@@ -93,7 +71,7 @@ img {
 }
 
 body {
-  background-color: var(--background-color-grey);
+  background-color: $background-color-grey;
   overflow-x: hidden;
 }
 
@@ -101,28 +79,28 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border: 1px solid var(--theme-color-blue);
+  border: 1px solid $theme-color-blue;
   border-radius: 5px;
   padding: 10px 20px;
   transition: 0.5s;
 }
 
 button:hover {
-  background-color: var(--theme-color-blue);
-  color: var(--text-color-black);
-  box-shadow: 0px 0px 20px 1px var(--theme-color-blue);
+  background-color: $theme-color-blue;
+  color: $text-color-black;
+  box-shadow: 0px 0px 20px 1px $theme-color-blue;
 }
 
-/* underline style: Custom underline styling for heading elements*/
+// underline style: Custom underline styling for heading elements
 .underline-style {
   position: relative;
-  z-index: 1; /* to make sure other element layers dont intercept text and underline */
+  z-index: 1; // to make sure other element layers dont intercept text and underline
 }
 
 .underline-style::before {
   position: absolute;
   content: "";
-  border-bottom: 18px solid var(--theme-color-blue);
+  border-bottom: 18px solid $theme-color-blue;
   width: 95%;
   left: 10%;
   top: 70%;
@@ -133,7 +111,7 @@ button:hover {
   font-family: "Code";
 }
 
-/* Whenever a waves section spaces from Haikei is used. */
+// Whenever a waves section spaces from Haikei is used.
 .waves-spacer {
   aspect-ratio: 900/600;
   width: 100%;
@@ -143,7 +121,7 @@ button:hover {
   background-size: cover;
 }
 
-/* title (heading) of each section. Ex. "About" */
+// title (heading) of each section. Ex. "About"
 .section-heading {
   width: 100%;
   height: 100px;
@@ -163,12 +141,12 @@ button:hover {
   float: right;
 }
 
-/* General Scroll Animation Classes: */
-/* Hidden classes are applied elements that should be animated on scroll. 
-Hides them initially. */
-/* Show classes are applied through js as needed for the scroll animation. */
+// General Scroll Animation Classes:
+// Hidden classes are applied elements that should be animated on scroll.
+// Hides them initially.
+// Show classes are applied through js as needed for the scroll animation.
 
-/* For horizontal scroll animations. */
+// For horizontal scroll animations.
 .hidden-horizontal {
   opacity: 0;
   filter: blur(5px);
@@ -181,7 +159,7 @@ Hides them initially. */
   transform: translateX(0);
 }
 
-/* For vertical scroll animations. */
+// For vertical scroll animations.
 .hidden-vertical {
   opacity: 0;
   filter: blur(5px);
@@ -194,9 +172,9 @@ Hides them initially. */
   transform: translateY(0);
 }
 
-/* Responsive Design */
+// --- Responsive Design: Global Settings ---
 
-/* applied to html elements that are only meant for the responsive display */
+// applied to html elements that are only meant for the responsive display
 .mobile-only {
   display: none;
 }
@@ -230,7 +208,7 @@ Hides them initially. */
   }
 }
 
-/* Responsive Design - Old Syntax (for some IOS clients) */
+// Responsive Design - Old Syntax (for some IOS clients)
 
 @media (max-width: 1199px) {
   .mobile-only {

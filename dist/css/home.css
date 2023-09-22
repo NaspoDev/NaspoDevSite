@@ -64,13 +64,13 @@
 .home .terminal-display .info-bar .left-side .running-file-container img {
   width: 20px;
 }
-.home .terminal-display .info-bar .left-side .right-side {
+.home .terminal-display .info-bar .right-side {
   justify-content: flex-end;
 }
-.home .terminal-display .info-bar .left-side .right-side .options-button-container img {
+.home .terminal-display .info-bar .right-side .options-button-container img {
   height: 30px;
 }
-.home .terminal-display .info-bar .left-side .right-side .close-button-container img {
+.home .terminal-display .info-bar .right-side .close-button-container img {
   height: 25px;
 }
 .home .terminal-display .terminal-body {
