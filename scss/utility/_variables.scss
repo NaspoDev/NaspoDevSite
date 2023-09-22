@@ -25,3 +25,48 @@ $project-item-color-blue: #4042cf;
 $project-item-color-white: #f7f7f7;
 $project-item-color-purple: #ddbcff;
 $project-item-color-yellow: #fcf4a3;
+
+// Variables in class form for JS interactivity
+// text colors
+.text-color-grey {
+  color: $text-color-grey;
+}
+.text-color-white {
+  color: $text-color-white;
+}
+.text-color-black {
+  color: $text-color-black;
+}
+
+// theme colors
+.theme-color-blue1 {
+  color: $theme-color-blue1;
+}
+.theme-color-blue2 {
+  color: $theme-color-blue2;
+}
+.theme-color-blue3 {
+  color: $theme-color-blue3;
+}
+
+.theme-color-purple1 {
+  color: $theme-color-purple1;
+}
+.theme-color-purple2 {
+  color: $theme-color-purple2;
+}
+
+.theme-color-terminal-blue {
+  color: $theme-color-terminal-blue;
+}
+.theme-color-grey {
+  color: $theme-color-grey;
+}
+
+// background colors
+.background-color-grey {
+  background-color: $background-color-grey;
+}
+.background-color-dark {
+  background-color: $background-color-dark;
+}
