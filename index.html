@@ -48,7 +48,7 @@
         </div>
 
         <!-- Run terminal display -->
-        <div class="terminal-display">
+        <div class="terminal-display" id="terminal-display">
           <div class="info-bar">
             <div class="left-side">
               <div class="run-title-container info-bar-item">
@@ -57,6 +57,12 @@
               <div class="running-file-container info-bar-item">
                 <img src="/images/logos/python_logo.png" alt="Python Logo" />
                 <p>welcome</p>
+              </div>
+              <div
+                class="loading-circle-container info-bar-item hidden"
+                id="loading-circle-container"
+              >
+                <img src="/images/home/loading-gif.gif" alt="Loading" />
               </div>
             </div>
             <div class="right-side">
@@ -72,7 +78,7 @@
             </div>
           </div>
           <div class="terminal-body">
-            <p class="file-path code-font">
+            <p class="file-path code-font hidden" id="file-path">
               C:\Users\naspo\NaspoDevSite\portfolio\welcome.py
             </p>
             <div class="welcome-text-container">
@@ -99,7 +105,10 @@
               </h1>
             </div>
             <br />
-            <p class="process-exit-statement code-font">
+            <p
+              class="process-exit-statement code-font hidden"
+              id="process-exit-statement"
+            >
               Process finished with exit code 0
             </p>
           </div>

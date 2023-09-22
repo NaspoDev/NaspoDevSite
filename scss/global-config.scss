@@ -141,6 +141,11 @@ button:hover {
   float: right;
 }
 
+// Used to hide an element.
+.hidden {
+  opacity: 0;
+}
+
 // General Scroll Animation Classes:
 // Hidden classes are applied elements that should be animated on scroll.
 // Hides them initially.

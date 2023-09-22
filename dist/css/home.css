@@ -64,6 +64,9 @@
 .home .terminal-display .info-bar .left-side .running-file-container img {
   width: 20px;
 }
+.home .terminal-display .info-bar .left-side .loading-circle-container img {
+  height: 30px;
+}
 .home .terminal-display .info-bar .right-side {
   justify-content: flex-end;
 }
