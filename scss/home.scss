@@ -1,5 +1,7 @@
 @import "utility/variables";
 
+// Local Variables
+
 // === Home ===
 
 .home {
@@ -107,6 +109,7 @@
       .file-path,
       .process-exit-statement {
         color: $text-color-white;
+        padding-left: 15px;
       }
 
       .welcome-text-container {

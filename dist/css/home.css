@@ -79,6 +79,7 @@
 .home .terminal-display .terminal-body .file-path,
 .home .terminal-display .terminal-body .process-exit-statement {
   color: #ffffff;
+  padding-left: 15px;
 }
 .home .terminal-display .terminal-body .welcome-text-container {
   height: 80%;
