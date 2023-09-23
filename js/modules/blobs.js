@@ -1,33 +1,53 @@
 // Animated svg blob class
 
-// List of blob objects
-let blobs = [];
+const blobClass = "blob"; // Class of blob svgs
+export let blobs = []; // List of blob objects
 
+// Blob object class
 class Blob {
-  constructor(frame1PathId, frame2PathId) {
-    this.frame1Id = frame1Id;
-    this.frame2Id = frame2Id;
+  constructor(element, pathId1, pathId2) {
+    this.element = element;
+    this.pathId1 = pathId1;
+    this.pathId2 = pathId2;
+    this.animateBlob();
   }
+  // animates using KUTE.js library
   animateBlob() {
     const tween = KUTE.fromTo(
-      this.frame1Id,
-      { path: this.frame1Id },
-      { path: this.frame2Id },
-      { repeat: 999, duration: 500, yoyo: true }
+      `#${this.pathId1}`,
+      { path: `#${this.pathId1}` },
+      { path: `#${this.pathId2}` },
+      { repeat: 999, duration: 3000, yoyo: true }
     );
 
     tween.start();
   }
 }
 
-let blobsElements = document.querySelectorAll(".blob");
+let blobElements = document.querySelectorAll(`.${blobClass}`);
 
 export function initializeBlobs() {
-  console.log(typeof blobsElements[0]);
-  // for (const blob in blobsElements) {
-  //   let pathElements = blob.querySelectorAll("path");
-  //   if (pathElements.length == 2) {
-  //     blobs.push(new Blob(pathElements[0].id, pathElements[1].id));
-  //   }
-  // }
+  for (const blob of blobElements) {
+    // get the path elements of the blob svg (should be 2)
+    let pathElements = blob.querySelectorAll("path");
+
+    // check that there are 2 path elements
+    if (!pathElements.length == 2) {
+      console.error(
+        `Too many or too few path elements in ${blob} svg! Animation will not work.`
+      );
+    } else {
+      // check that both path elements have an id
+      for (const pathElement of pathElements) {
+        if (!pathElement.id) {
+          console.error(
+            `Path element ${pathElement} must have an id for blob animation!`
+          );
+        }
+      }
+
+      // initialize the blob object
+      blobs.push(new Blob(blob, pathElements[0].id, pathElements[1].id));
+    }
+  }
 }

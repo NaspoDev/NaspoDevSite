@@ -101,12 +101,13 @@
 .home .terminal-display .terminal-body .welcome-text-container .random-font {
   opacity: 0;
 }
-
-#home-blob-1 {
+.home .blob {
   position: absolute;
+  z-index: -1;
+}
+.home .blob-1 {
   top: 50px;
   left: -200px;
-  z-index: -1;
 }
 
 @keyframes blink {

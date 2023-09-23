@@ -138,13 +138,17 @@
       }
     }
   }
-}
 
-#home-blob-1 {
-  position: absolute;
-  top: 50px;
-  left: -200px;
-  z-index: -1;
+  // Blob decor styling
+  .blob {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .blob-1 {
+    top: 50px;
+    left: -200px;
+  }
 }
 
 // for cursor animation
