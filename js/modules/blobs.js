@@ -17,7 +17,7 @@ class Blob {
       `#${this.pathId1}`,
       { path: `#${this.pathId1}` },
       { path: `#${this.pathId2}` },
-      { repeat: 999, duration: 3000, yoyo: true }
+      { repeat: 999, duration: 4000, yoyo: true }
     );
 
     tween.start();

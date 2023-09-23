@@ -1,4 +1,5 @@
 import * as utils from "../modules/utility.js";
+import { blobs } from "../modules/blobs.js";
 
 // Runs opening animations on the home screen page. (Typewriter effect)
 
@@ -48,6 +49,7 @@ export async function runWelcomeScript() {
 
   // display the welcome text
   displayWelcomeText();
+  blobs.forEach((blob) => utils.showElement(blob.element));
 
   // wait a third of the max animation delay. (also convert to milliseconds)
   await utils.delay((maxAnimationDelay / 3) * 1000);
