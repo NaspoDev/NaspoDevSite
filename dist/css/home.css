@@ -22,7 +22,7 @@
   display: grid;
   grid-template-rows: 70px 1fr;
   box-shadow: 0px 0px 20px 1px #090a0b;
-  background-color: #28282b;
+  background-color: rgba(9, 10, 11, 0.6);
 }
 .home .terminal-display .info-bar {
   display: flex;

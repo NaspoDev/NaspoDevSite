@@ -32,7 +32,7 @@
     display: grid;
     grid-template-rows: 70px 1fr;
     box-shadow: 0px 0px 20px 1px $background-color-dark;
-    background-color: $background-color-grey;
+    background-color: rgba($background-color-dark, 0.6);
 
     .info-bar {
       display: flex;
