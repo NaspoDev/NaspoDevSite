@@ -6,6 +6,7 @@ import { run as runProjectsScript } from "./scripts/projects-script.js";
 import { run as runServicesScript } from "./scripts/services-script.js";
 import { run as runContactScript } from "./scripts/contact-script.js";
 
+import { initializeBlobs } from "./modules/blobs.js";
 // Main application functions on startup.
 const APP = {
   date: new Date(),
@@ -25,6 +26,8 @@ const APP = {
     runProjectsScript();
     runServicesScript();
     runContactScript();
+
+    initializeBlobs();
     console.log("Startup scripts executed!");
   },
 };
