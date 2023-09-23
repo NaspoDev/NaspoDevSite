@@ -101,6 +101,13 @@
   opacity: 0;
 }
 
+#visual {
+  position: absolute;
+  top: 50px;
+  left: -200px;
+  z-index: -1;
+}
+
 @keyframes blink {
   0% {
     opacity: 1;

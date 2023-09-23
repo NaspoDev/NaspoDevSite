@@ -11,6 +11,7 @@
       type="image/png"
     />
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="dist/css/global-config.css" />
     <link rel="stylesheet" href="dist/css/header.css" />
     <link rel="stylesheet" href="dist/css/home.css" />
@@ -19,6 +20,9 @@
     <link rel="stylesheet" href="dist/css/services.css" />
     <link rel="stylesheet" href="dist/css/contact.css" />
     <link rel="stylesheet" href="dist/css/footer.css" />
+
+    <!-- Kute.js library (svg animations) -->
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
   </head>
   <body>
     <!-- Home Section -->
@@ -113,6 +117,47 @@
             </p>
           </div>
         </div>
+
+        <!-- Blobs Decor -->
+        <svg
+          id="visual"
+          viewBox="0 0 900 600"
+          width="900"
+          height="600"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+        >
+          <g transform="translate(490.6848709244826 299.4274416891673)">
+            <path
+              id="blob1-pt1"
+              d="M119 -134.7C150.3 -87.7 169.2 -43.8 170.9 1.8C172.7 47.4 157.4 94.8 126.1 137.8C94.8 180.8 47.4 219.4 -8 227.4C-63.4 235.4 -126.8 212.8 -176.8 169.8C-226.8 126.8 -263.4 63.4 -249.4 14C-235.4 -35.4 -170.7 -70.7 -120.7 -117.7C-70.7 -164.7 -35.4 -223.4 4.2 -227.6C43.8 -231.8 87.7 -181.7 119 -134.7"
+              fill="#9d44c0"
+            ></path>
+          </g>
+
+          <g
+            transform="translate(448.6930356663961 249.30507643469213)"
+            style="animation: hidden"
+          >
+            <path
+              id="blob1-pt2"
+              d="M127.1 -108.4C170.8 -83.4 216.4 -41.7 228.4 12C240.4 65.8 218.9 131.5 175.2 181.5C131.5 231.5 65.8 265.8 4.9 260.8C-55.9 255.9 -111.7 211.7 -154.6 161.7C-197.4 111.7 -227.2 55.9 -229 -1.8C-230.7 -59.4 -204.5 -118.8 -161.6 -143.8C-118.8 -168.8 -59.4 -159.4 -8.8 -150.6C41.7 -141.7 83.4 -133.4 127.1 -108.4"
+              fill="#9d44c0"
+            ></path>
+          </g>
+        </svg>
+
+        <script>
+          const tween = KUTE.fromTo(
+            "#blob1-pt1",
+            { path: "#blob1-pt1" },
+            { path: "#blob1-pt2" },
+            { repeat: 999, duration: 5000, yoyo: true }
+          );
+
+          tween.start();
+        </script>
       </div>
     </section>
 

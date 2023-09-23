@@ -139,6 +139,13 @@
   }
 }
 
+#visual {
+  position: absolute;
+  top: 50px;
+  left: -200px;
+  z-index: -1;
+}
+
 // for cursor animation
 @keyframes blink {
   0% {
