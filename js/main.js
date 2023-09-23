@@ -1,5 +1,5 @@
 import { initializeListeners } from "./listeners.js";
-import { run as runWelcomeScript } from "./scripts/welcome-script.js";
+import { runWelcomeScript } from "./scripts/welcome-script.js";
 import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
 import { run as runScrollAnimations } from "./scripts/scroll-animations.js";
 import { run as runProjectsScript } from "./scripts/projects-script.js";
@@ -30,5 +30,4 @@ const APP = {
 };
 
 // Run the application.
-// (Waiting for DOMContentLoaded event is not necessary because the scripts are loaded at the end of the body tag).
 APP.init();

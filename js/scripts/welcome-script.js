@@ -30,8 +30,28 @@ const maxAnimationDelay = 15; // max animation delay for welcome text (in second
 let index = 0; // index for typeWriterEffect()
 const speed = 100; // speed for typewriter effect (in milliseconds)
 
-export function run() {
-  runAnimations();
+// Main function to run the welcome script. Handles flow of the script.
+export async function runWelcomeScript() {
+  // run typewriter effect for printStatementComponents
+  for (const element of printStatementComponents) {
+    await typeWriterEffect(element.id, element.text);
+  }
+
+  // Displaying and hiding certain elements after certain delays to simulate loading.
+  await utils.delay(200);
+  utils.showElement(loadingCircle);
+  await utils.delay(1000);
+  cursor.remove();
+  utils.hideElement(loadingCircle);
+  utils.showElement(filePath);
+  await utils.delay(200);
+
+  // display the welcome text
+  displayWelcomeText();
+
+  // wait a third of the max animation delay. (also convert to milliseconds)
+  await utils.delay((maxAnimationDelay / 3) * 1000);
+  utils.showElement(processExitStatement);
 }
 
 // async function to type out text in a typewriter effect.
@@ -56,25 +76,4 @@ function displayWelcomeText() {
       Math.random() * maxAnimationDelay
     }s`;
   }
-}
-
-// async function to run calls to typeWriterEffect for each element.
-async function runAnimations() {
-  // run typewriter effect for printStatementComponents
-  for (const element of printStatementComponents) {
-    await typeWriterEffect(element.id, element.text);
-  }
-
-  await utils.delay(200);
-  utils.showElement(loadingCircle);
-  await utils.delay(1000);
-  cursor.remove();
-  utils.hideElement(loadingCircle);
-  utils.showElement(filePath);
-  await utils.delay(200);
-
-  displayWelcomeText();
-  // wait a third of the max animation delay. (also convert to milliseconds)
-  await utils.delay((maxAnimationDelay / 3) * 1000);
-  utils.showElement(processExitStatement);
 }
