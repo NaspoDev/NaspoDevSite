@@ -20,7 +20,7 @@ const processExitStatement = document.getElementById("process-exit-statement");
 const cursor = document.getElementById("cursor");
 
 // typeWriterEffect() variables
-const maxAnimationDelay = 15; // max animation delay for welcome text (in seconds)
+const maxAnimationDelay = 10; // max animation delay for welcome text (in seconds)
 let index = 0; // index for typeWriterEffect()
 const speed = 100; // speed for typewriter effect (in milliseconds)
 
@@ -61,6 +61,7 @@ export async function runWelcomeScript() {
   await utils.delay((maxAnimationDelay / 3) * 1000);
   utils.showElement(processExitStatement); // display process exit statement
 
+  await utils.delay(1500);
   textGlitchEffect(); // run the glitch effect
 }
 
@@ -96,13 +97,11 @@ async function textGlitchEffect() {
   let randomLetter =
     welcomeTextLetters[Math.floor(Math.random() * welcomeTextLetters.length)];
   let glitchFont = glitchFonts[Math.floor(Math.random() * glitchFonts.length)];
-  console.log(`Glitch font: ${glitchFont}`);
 
-  let delay =
-    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000;
-  console.log(`Delay: ${delay}`);
   // wait for a delay between min and max repeat delay before executing the effect
-  await utils.delay(delay);
+  await utils.delay(
+    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000
+  );
 
   // set font to glitch font
   randomLetter.style.fontFamily = glitchFont;
