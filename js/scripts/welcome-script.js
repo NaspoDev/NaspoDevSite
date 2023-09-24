@@ -11,17 +11,8 @@ const printStatementComponents = [
   { id: "print-statement-bracket-2", text: ")" },
 ];
 
-const welcomeTextFonts = [
-  "bonbon",
-  "carrinady",
-  "fantaisieartistique",
-  "potra",
-  "press-start",
-  "spastic_nerfbag",
-];
-
 // elements
-const welcomeTextSpans = document.querySelectorAll(".random-font");
+const welcomeTextLetters = document.querySelectorAll(".welcome-text-letter");
 const loadingCircle = document.getElementById("loading-circle-container");
 const filePath = document.getElementById("file-path");
 const processExitStatement = document.getElementById("process-exit-statement");
@@ -70,12 +61,10 @@ async function typeWriterEffect(id, text) {
 
 // Displays each character of welcome-text with a random font and random animation delay.
 function displayWelcomeText() {
-  for (const span of welcomeTextSpans) {
-    span.style.fontFamily =
-      welcomeTextFonts[Math.round(Math.random() * welcomeTextFonts.length)];
-    span.style.opacity = 1;
-    span.style.animation = `welcome-script-fadein ${
+  for (const letter of welcomeTextLetters) {
+    letter.style.animation = `welcome-script-fadein ${
       Math.random() * maxAnimationDelay
     }s`;
+    utils.showElement(letter);
   }
 }
