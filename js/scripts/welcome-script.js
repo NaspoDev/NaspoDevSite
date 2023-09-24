@@ -29,7 +29,7 @@ const glitchFonts = ["Glitch Goblin", "Blue Screen"]; // font face for glitch ef
 const naspoLetters = document.querySelectorAll(
   ".welcome-text-container h1 .welcome-text-letter"
 );
-const minRepeatDelay = 0.2; // minimum delay between repeat of glitch effect (in seconds)
+const minRepeatDelay = 0.05; // minimum delay between repeat of glitch effect (in seconds)
 const maxRepeatDelay = 0.6; // maximum delay between repeat of glitch effect (in seconds)
 const minResetDelay = 0.3; // minimum delay before resetting the font (in seconds)
 const maxResetDelay = 0.6; // maximum delay before resetting the font (in seconds)
