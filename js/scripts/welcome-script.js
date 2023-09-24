@@ -25,13 +25,15 @@ let index = 0; // index for typeWriterEffect()
 const speed = 100; // speed for typewriter effect (in milliseconds)
 
 // textGlitchEffect() variables
-const glitchFont = "Glitch Goblin"; // font face for glitch effect font
+const glitchFonts = ["Glitch Goblin", "Blue Screen"]; // font face for glitch effect font
 const naspoLetters = document.querySelectorAll(
   ".welcome-text-container h1 .welcome-text-letter"
 );
-const minRepeatDelay = 0.3; // minimum delay between repeat of glitch effect (in seconds)
+const minRepeatDelay = 0.2; // minimum delay between repeat of glitch effect (in seconds)
 const maxRepeatDelay = 0.6; // maximum delay between repeat of glitch effect (in seconds)
-const maxIterations = 4; // maximum number of iterations of the glitch effect
+const minResetDelay = 0.3; // minimum delay before resetting the font (in seconds)
+const maxResetDelay = 0.6; // maximum delay before resetting the font (in seconds)
+const maxIterations = 8; // maximum number of iterations of the glitch effect
 let iteration = 0;
 
 // Main function to run the welcome script. Handles flow of the script.
@@ -91,20 +93,24 @@ async function textGlitchEffect() {
     return;
   }
 
-  // wait for a delay between min and max repeat delay before executing the effect
-  console.log(
-    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000
-  );
-  await utils.delay(
-    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000
-  );
-
   let randomLetter =
     welcomeTextLetters[Math.floor(Math.random() * welcomeTextLetters.length)];
-  randomLetter.style.fontFamily = glitchFont; // set font to glitch font
+  let glitchFont = glitchFonts[Math.floor(Math.random() * glitchFonts.length)];
+  console.log(`Glitch font: ${glitchFont}`);
 
-  // wait for a small delay, then reset the font
-  await utils.delay(400);
+  let delay =
+    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000;
+  console.log(`Delay: ${delay}`);
+  // wait for a delay between min and max repeat delay before executing the effect
+  await utils.delay(delay);
+
+  // set font to glitch font
+  randomLetter.style.fontFamily = glitchFont;
+
+  // wait for a small delay before resetting the font
+  await utils.delay(
+    (Math.random() * (maxResetDelay - minResetDelay) + minResetDelay) * 1000
+  );
   randomLetter.style.fontFamily = "inherit";
 
   iteration++;
