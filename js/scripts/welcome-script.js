@@ -3,7 +3,8 @@ import { blobs } from "../modules/blobs.js";
 
 // Runs opening animations on the home screen page. (Typewriter effect)
 
-// elements involved in the animation. id is the id of the element, text is the text to be typed out.
+// print statement to by typed out with typewriter effect
+// id: id of element, text: text to type out
 const printStatementComponents = [
   { id: "print-statement-print", text: "print" },
   { id: "print-statement-bracket-1", text: "(" },
@@ -18,9 +19,20 @@ const filePath = document.getElementById("file-path");
 const processExitStatement = document.getElementById("process-exit-statement");
 const cursor = document.getElementById("cursor");
 
+// typeWriterEffect() variables
 const maxAnimationDelay = 15; // max animation delay for welcome text (in seconds)
 let index = 0; // index for typeWriterEffect()
 const speed = 100; // speed for typewriter effect (in milliseconds)
+
+// textGlitchEffect() variables
+const glitchFont = "Glitch Goblin"; // font face for glitch effect font
+const naspoLetters = document.querySelectorAll(
+  ".welcome-text-container h1 .welcome-text-letter"
+);
+const minRepeatDelay = 0.3; // minimum delay between repeat of glitch effect (in seconds)
+const maxRepeatDelay = 0.6; // maximum delay between repeat of glitch effect (in seconds)
+const maxIterations = 4; // maximum number of iterations of the glitch effect
+let iteration = 0;
 
 // Main function to run the welcome script. Handles flow of the script.
 export async function runWelcomeScript() {
@@ -40,11 +52,14 @@ export async function runWelcomeScript() {
 
   // display the welcome text
   displayWelcomeText();
+  // display blobs
   blobs.forEach((blob) => utils.showElement(blob.element));
 
   // wait a third of the max animation delay. (also convert to milliseconds)
   await utils.delay((maxAnimationDelay / 3) * 1000);
-  utils.showElement(processExitStatement);
+  utils.showElement(processExitStatement); // display process exit statement
+
+  textGlitchEffect(); // run the glitch effect
 }
 
 // async function to type out text in a typewriter effect.
@@ -67,4 +82,31 @@ function displayWelcomeText() {
     }s`;
     utils.showElement(letter);
   }
+}
+
+// Randomly change the font of letters from "Naspo" in welcome text.
+// Creates a glitch effect.
+async function textGlitchEffect() {
+  if (iteration >= maxIterations) {
+    return;
+  }
+
+  // wait for a delay between min and max repeat delay before executing the effect
+  console.log(
+    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000
+  );
+  await utils.delay(
+    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000
+  );
+
+  let randomLetter =
+    welcomeTextLetters[Math.floor(Math.random() * welcomeTextLetters.length)];
+  randomLetter.style.fontFamily = glitchFont; // set font to glitch font
+
+  // wait for a small delay, then reset the font
+  await utils.delay(400);
+  randomLetter.style.fontFamily = "inherit";
+
+  iteration++;
+  textGlitchEffect(); // repeat the effect
 }
