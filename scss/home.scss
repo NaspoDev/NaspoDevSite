@@ -94,6 +94,15 @@
       .right-side {
         justify-content: flex-end;
 
+        .section-button {
+          transition: opacity 1s;
+
+          // when hidden (with .hidden class) also disable pointer events
+          &.hidden {
+            pointer-events: none;
+          }
+        }
+
         .options-button-container {
           img {
             height: 30px;

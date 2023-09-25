@@ -18,6 +18,7 @@ const loadingCircle = document.getElementById("loading-circle-container");
 const filePath = document.getElementById("file-path");
 const processExitStatement = document.getElementById("process-exit-statement");
 const cursor = document.getElementById("cursor");
+const sectionButtons = document.querySelectorAll(".section-button");
 
 // typeWriterEffect() variables
 const maxAnimationDelay = 10; // max animation delay for welcome text (in seconds)
@@ -60,6 +61,10 @@ export async function runWelcomeScript() {
   // wait a third of the max animation delay. (also convert to milliseconds)
   await utils.delay((maxAnimationDelay / 3) * 1000);
   utils.showElement(processExitStatement); // display process exit statement
+  // show the section buttons
+  for (const sectionButton of sectionButtons) {
+    utils.showElement(sectionButton);
+  }
 
   await utils.delay(1500);
   textGlitchEffect(); // run the glitch effect

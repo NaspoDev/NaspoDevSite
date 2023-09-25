@@ -71,6 +71,12 @@
 .home .terminal-display .info-bar .right-side {
   justify-content: flex-end;
 }
+.home .terminal-display .info-bar .right-side .section-button {
+  transition: opacity 1s;
+}
+.home .terminal-display .info-bar .right-side .section-button.hidden {
+  pointer-events: none;
+}
 .home .terminal-display .info-bar .right-side .options-button-container img {
   height: 30px;
 }
