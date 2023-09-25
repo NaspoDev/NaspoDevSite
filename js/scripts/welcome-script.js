@@ -1,7 +1,9 @@
-import * as utils from "../modules/utility.js";
-import { blobs } from "../modules/blobs.js";
+// Control flow for the opening animations and processes on the home screen page.
 
-// Runs opening animations on the home screen page. (Typewriter effect)
+// Imports
+import * as utils from "../utility/utility.js";
+import { typeWriterEffect } from "../utility/typewriter.js";
+import { blobs } from "../modules/blobs.js";
 
 // print statement to by typed out with typewriter effect
 // id: id of element, text: text to type out
@@ -20,16 +22,12 @@ const processExitStatement = document.getElementById("process-exit-statement");
 const cursor = document.getElementById("cursor");
 const sectionButtons = document.querySelectorAll(".section-button");
 
-// typeWriterEffect() variables
 const maxAnimationDelay = 10; // max animation delay for welcome text (in seconds)
-let index = 0; // index for typeWriterEffect()
-const speed = 100; // speed for typewriter effect (in milliseconds)
+
+const typeWriterSpeed = 100; // speed for typewriter effect (in milliseconds)
 
 // textGlitchEffect() variables
 const glitchFonts = ["Glitch Goblin", "Blue Screen"]; // font face for glitch effect font
-const naspoLetters = document.querySelectorAll(
-  ".welcome-text-container h1 .welcome-text-letter"
-);
 const minRepeatDelay = 0.05; // minimum delay between repeat of glitch effect (in seconds)
 const maxRepeatDelay = 0.6; // maximum delay between repeat of glitch effect (in seconds)
 const minResetDelay = 0.3; // minimum delay before resetting the font (in seconds)
@@ -41,7 +39,7 @@ let iteration = 0;
 export async function runWelcomeScript() {
   // run typewriter effect for printStatementComponents
   for (const element of printStatementComponents) {
-    await typeWriterEffect(element.id, element.text);
+    await typeWriterEffect(element.id, element.text, typeWriterSpeed);
   }
 
   // Displaying and hiding certain elements after certain delays to simulate loading.
@@ -68,18 +66,6 @@ export async function runWelcomeScript() {
 
   await utils.delay(1500);
   textGlitchEffect(); // run the glitch effect
-}
-
-// async function to type out text in a typewriter effect.
-async function typeWriterEffect(id, text) {
-  if (index < text.length) {
-    document.getElementById(id).innerHTML += text.charAt(index);
-    index++;
-    await utils.delay(speed);
-    await typeWriterEffect(id, text);
-  } else {
-    index = 0;
-  }
 }
 
 // Displays each character of welcome-text with a random font and random animation delay.
