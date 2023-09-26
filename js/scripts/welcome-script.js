@@ -3,6 +3,7 @@
 // Imports
 import * as utils from "../utility/utility.js";
 import { typeWriterEffect } from "../utility/typewriter.js";
+import { textGlitchEffect } from "../utility/text-glitch.js";
 import { blobs } from "../modules/blobs.js";
 
 // print statement to by typed out with typewriter effect
@@ -15,25 +16,16 @@ const printStatementComponents = [
 ];
 
 // elements
-const welcomeTextLetters = document.querySelectorAll(".welcome-text-letter");
+const cursor = document.getElementById("cursor");
 const loadingCircle = document.getElementById("loading-circle-container");
 const filePath = document.getElementById("file-path");
+const welcomeTextLetters = document.querySelectorAll(".welcome-text-letter");
 const processExitStatement = document.getElementById("process-exit-statement");
-const cursor = document.getElementById("cursor");
 const sectionButtons = document.querySelectorAll(".section-button");
 
 const maxAnimationDelay = 10; // max animation delay for welcome text (in seconds)
-
 const typeWriterSpeed = 100; // speed for typewriter effect (in milliseconds)
-
-// textGlitchEffect() variables
-const glitchFonts = ["Glitch Goblin", "Blue Screen"]; // font face for glitch effect font
-const minRepeatDelay = 0.05; // minimum delay between repeat of glitch effect (in seconds)
-const maxRepeatDelay = 0.6; // maximum delay between repeat of glitch effect (in seconds)
-const minResetDelay = 0.3; // minimum delay before resetting the font (in seconds)
-const maxResetDelay = 0.6; // maximum delay before resetting the font (in seconds)
-const maxIterations = 8; // maximum number of iterations of the glitch effect
-let iteration = 0;
+const textGlitchIterations = 8; // number of iterations for glitch effect
 
 // Main function to run the welcome script. Handles flow of the script.
 export async function runWelcomeScript() {
@@ -65,7 +57,7 @@ export async function runWelcomeScript() {
   }
 
   await utils.delay(1500);
-  textGlitchEffect(); // run the glitch effect
+  textGlitchEffect(welcomeTextLetters, textGlitchIterations); // run the glitch effect
 }
 
 // Displays each character of welcome-text with a random font and random animation delay.
@@ -76,33 +68,4 @@ function displayWelcomeText() {
     }s`;
     utils.showElement(letter);
   }
-}
-
-// Randomly change the font of letters from "Naspo" in welcome text.
-// Creates a glitch effect.
-async function textGlitchEffect() {
-  if (iteration >= maxIterations) {
-    return;
-  }
-
-  let randomLetter =
-    welcomeTextLetters[Math.floor(Math.random() * welcomeTextLetters.length)];
-  let glitchFont = glitchFonts[Math.floor(Math.random() * glitchFonts.length)];
-
-  // wait for a delay between min and max repeat delay before executing the effect
-  await utils.delay(
-    (Math.random() * (maxRepeatDelay - minRepeatDelay) + minRepeatDelay) * 1000
-  );
-
-  // set font to glitch font
-  randomLetter.style.fontFamily = glitchFont;
-
-  // wait for a small delay before resetting the font
-  await utils.delay(
-    (Math.random() * (maxResetDelay - minResetDelay) + minResetDelay) * 1000
-  );
-  randomLetter.style.fontFamily = "inherit";
-
-  iteration++;
-  textGlitchEffect(); // repeat the effect
 }
