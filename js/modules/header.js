@@ -1,25 +1,25 @@
-/* 
-Header Module
-Handles header scroll functionality.
-*/
+// Header Module. Handles header's scroll functionality.
 
-// for stickyHeaeder()
-let header = document.getElementById("header-div");
-let stickyOffset = header.offsetTop;
+const headerSpace = document.querySelector(".header-space");
+const header = document.getElementById("header-div");
 
-// for adjustHeader()
-let lastScrollTop = header.offsetTop;
-let headerHeight = header.offsetHeight;
+const headerHeight = header.offsetHeight;
+const headerTopLimit = headerSpace.getBoundingClientRect().top;
+let lastScrollTop = headerTopLimit + headerHeight;
 
-export function stickyHeader() {
-  if (window.scrollY >= stickyOffset) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
+// Adjusts header position on based on scroll behaviour.
 export function adjustHeader() {
+  if (window.scrollY > headerTopLimit) {
+    if (!(header.style.position === "fixed")) {
+      header.style.position = "fixed";
+    }
+  } else {
+    if (!(header.style.position === "sticky")) {
+      header.style.position = "sticky";
+    }
+    return;
+  }
+
   if (window.scrollY > lastScrollTop) {
     header.style.top = `-${headerHeight}px`;
   } else {
