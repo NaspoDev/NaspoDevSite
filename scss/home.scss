@@ -67,6 +67,8 @@
         justify-content: flex-start;
 
         .run-title-container {
+          cursor: default;
+
           .text {
             color: $text-color-grey;
             opacity: 0.8;
@@ -78,6 +80,7 @@
           flex-direction: row;
           gap: 7px;
           border-bottom: 4px solid $theme-color-terminal-blue;
+          cursor: default;
 
           img {
             width: 20px;
@@ -110,6 +113,8 @@
         }
 
         .close-button-container {
+          cursor: pointer;
+
           img {
             height: 25px;
           }

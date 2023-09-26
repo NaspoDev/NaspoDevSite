@@ -52,6 +52,9 @@
 .home .terminal-display .info-bar .left-side {
   justify-content: flex-start;
 }
+.home .terminal-display .info-bar .left-side .run-title-container {
+  cursor: default;
+}
 .home .terminal-display .info-bar .left-side .run-title-container .text {
   color: #e8e6e6;
   opacity: 0.8;
@@ -61,6 +64,7 @@
   flex-direction: row;
   gap: 7px;
   border-bottom: 4px solid rgb(98, 151, 231);
+  cursor: default;
 }
 .home .terminal-display .info-bar .left-side .running-file-container img {
   width: 20px;
@@ -79,6 +83,9 @@
 }
 .home .terminal-display .info-bar .right-side .options-button-container img {
   height: 30px;
+}
+.home .terminal-display .info-bar .right-side .close-button-container {
+  cursor: pointer;
 }
 .home .terminal-display .info-bar .right-side .close-button-container img {
   height: 25px;
