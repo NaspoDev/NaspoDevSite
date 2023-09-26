@@ -79,16 +79,16 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border: 1px solid $theme-color-blue1;
+  border: 1px solid $theme-color-blue;
   border-radius: 5px;
   padding: 10px 20px;
   transition: 0.5s;
 }
 
 button:hover {
-  background-color: $theme-color-blue1;
+  background-color: $theme-color-blue;
   color: $text-color-black;
-  box-shadow: 0px 0px 20px 1px $theme-color-blue1;
+  box-shadow: 0px 0px 20px 1px $theme-color-blue;
 }
 
 // underline style: Custom underline styling for heading elements
@@ -100,7 +100,7 @@ button:hover {
 .underline-style::before {
   position: absolute;
   content: "";
-  border-bottom: 18px solid $theme-color-blue1;
+  border-bottom: 18px solid $theme-color-blue;
   width: 95%;
   left: 10%;
   top: 70%;
