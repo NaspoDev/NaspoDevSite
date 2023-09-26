@@ -1,7 +1,7 @@
 // Typewriter effect utility module.
 
 // Imports
-import * as utils from "./utility.js";
+import * as utils from "./utils.js";
 
 let index = 0; // index for typeWriterEffect()
 

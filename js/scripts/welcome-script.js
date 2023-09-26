@@ -1,7 +1,7 @@
 // Control flow for the opening animations and processes on the home screen page.
 
 // Imports
-import * as utils from "../utility/utility.js";
+import * as utils from "../utility/utils.js";
 import { typeWriterEffect } from "../utility/typewriter.js";
 import { textGlitchEffect } from "../utility/text-glitch.js";
 import { blobs } from "../modules/blobs.js";

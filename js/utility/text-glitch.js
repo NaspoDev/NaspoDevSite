@@ -1,7 +1,7 @@
 // Text glitch effect module
 
 // Imports
-import * as utils from "./utility.js";
+import * as utils from "./utils.js";
 
 // array of glitch font faces
 const glitchFonts = ["Glitch Goblin", "Blue Screen"];
