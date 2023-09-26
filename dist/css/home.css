@@ -111,6 +111,15 @@
 .home .terminal-display .terminal-body .welcome-text-container h1 {
   font-size: 200px;
 }
+.home .easter-egg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home .easter-egg p {
+  font-size: 25px;
+}
 .home .blob {
   position: absolute;
   z-index: -1;

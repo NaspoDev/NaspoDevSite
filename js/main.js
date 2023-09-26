@@ -1,5 +1,6 @@
 // Listener imports
 import { addGlobalListeners } from "./listeners/global-listeners.js";
+import { addHomeListeners } from "./listeners/home-listeners.js";
 
 // Script imports
 import { runWelcomeScript } from "./scripts/welcome-script.js";
@@ -22,6 +23,7 @@ const APP = {
   },
   addListeners() {
     addGlobalListeners();
+    addHomeListeners();
     console.log("Listeners initialized!");
   },
   runScripts() {
