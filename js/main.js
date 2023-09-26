@@ -1,4 +1,7 @@
-import { initializeListeners } from "./listeners.js";
+// Listener imports
+import { addGlobalListeners } from "./listeners/global-listeners.js";
+
+// Script imports
 import { runWelcomeScript } from "./scripts/welcome-script.js";
 import { run as runTechGridScript } from "./scripts/tech-grid-script.js";
 import { run as runScrollAnimations } from "./scripts/scroll-animations.js";
@@ -6,7 +9,9 @@ import { run as runProjectsScript } from "./scripts/projects-script.js";
 import { run as runServicesScript } from "./scripts/services-script.js";
 import { run as runContactScript } from "./scripts/contact-script.js";
 
+// Module imports
 import { initializeBlobs } from "./modules/blobs.js";
+
 // Main application functions on startup.
 const APP = {
   date: new Date(),
@@ -16,7 +21,7 @@ const APP = {
     this.runScripts();
   },
   addListeners() {
-    initializeListeners();
+    addGlobalListeners();
     console.log("Listeners initialized!");
   },
   runScripts() {
