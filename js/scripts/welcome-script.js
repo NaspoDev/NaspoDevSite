@@ -23,11 +23,12 @@ const welcomeTextLetters = document.querySelectorAll(".welcome-text-letter");
 const processExitStatement = document.getElementById("process-exit-statement");
 const sectionButtons = document.querySelectorAll(".section-button");
 
+// variables
 const maxAnimationDelay = 10; // max animation delay for welcome text (in seconds)
 const typeWriterSpeed = 100; // speed for typewriter effect (in milliseconds)
 const textGlitchIterations = 8; // number of iterations for glitch effect
 
-// Main function to run the welcome script. Handles flow of the script.
+// Main function to run the welcome script. Handles flow of the processes.
 export async function runWelcomeScript() {
   // run typewriter effect for printStatementComponents
   for (const element of printStatementComponents) {
@@ -60,7 +61,7 @@ export async function runWelcomeScript() {
   textGlitchEffect(welcomeTextLetters, textGlitchIterations); // run the glitch effect
 }
 
-// Displays each character of welcome-text with a random font and random animation delay.
+// Displays each character of welcome-text with a random animation delay.
 function displayWelcomeText() {
   for (const letter of welcomeTextLetters) {
     letter.style.animation = `welcome-script-fadein ${
