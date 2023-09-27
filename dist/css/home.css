@@ -128,8 +128,6 @@
   font-size: 25px;
 }
 .home .blob {
-  position: absolute;
-  z-index: -1;
   transition: 5s;
 }
 .home .blob-1 {

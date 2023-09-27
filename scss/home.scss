@@ -172,9 +172,8 @@
   }
 
   // Blob decor styling
+  // adding a transition blobs in home section for welcome animations
   .blob {
-    position: absolute;
-    z-index: -1;
     transition: 5s;
   }
 

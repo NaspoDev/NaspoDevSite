@@ -121,6 +121,11 @@ button:hover {
   background-size: cover;
 }
 
+.blob {
+  position: absolute;
+  z-index: -1;
+}
+
 // title (heading) of each section. Ex. "About"
 .section-heading {
   width: 100%;

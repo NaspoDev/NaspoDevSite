@@ -8,6 +8,7 @@
   height: 1000px;
   display: grid;
   grid-template-rows: auto 1fr;
+  position: relative;
 }
 .services .services-heading {
   margin-top: 50px;
@@ -157,6 +158,12 @@
 .services .services-content .right-side .work-with-me .call-to-action img {
   width: 20px;
   margin-left: 5px;
+}
+.services .services-blob {
+  top: 200px;
+  right: -300px;
+  width: 900px;
+  opacity: 0.7;
 }
 
 @keyframes floating {
