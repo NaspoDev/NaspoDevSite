@@ -4,8 +4,11 @@
 let formFields = document.querySelectorAll(".contact-form .form-field");
 const fieldFilledClass = "field-filled";
 
-// Adds blur event listeners to all form-fields
-function addListeners() {
+export function addContactListeners() {
+  // Adds blur event listeners to all form-fields.
+  /* blur event is triggered when an element loses focus.
+When a form-field loses focus, check if it has a value, so that
+the "field-filled" class can be added or removed accordingly. */
   formFields.forEach((element) => {
     element.addEventListener("blur", () => {
       checkValue(element);
@@ -24,8 +27,4 @@ function checkValue(formField) {
   } else {
     formField.classList.remove(fieldFilledClass);
   }
-}
-
-export function run() {
-  addListeners();
 }
