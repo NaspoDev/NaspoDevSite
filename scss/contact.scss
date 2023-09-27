@@ -74,6 +74,7 @@
   }
 }
 
+// for some reason this needs to be defined with raw css
 .contact-form .form-field::-webkit-input-placeholder {
   // Chrome/Opera/Safari
   color: $text-color-grey;
