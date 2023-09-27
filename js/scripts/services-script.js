@@ -13,6 +13,6 @@ const lineDecorObserver = new IntersectionObserver((entries) => {
   });
 });
 
-export function run() {
+export function runServicesScript() {
   lineDecorObserver.observe(lineDecor);
 }

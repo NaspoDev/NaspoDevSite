@@ -33,7 +33,7 @@ function getThreshold() {
   }
 }
 
-export function run() {
+export function runTechGridScript() {
   fillGridItems();
   createGridSlots(false);
 

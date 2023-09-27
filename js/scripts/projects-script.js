@@ -40,7 +40,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-export function run() {
+export function runProjectsScript() {
   initProjects();
   initListeners();
   observeProjects();
