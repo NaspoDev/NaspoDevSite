@@ -5,6 +5,7 @@
   height: 750px;
   display: grid;
   grid-template-rows: auto 1fr;
+  position: relative;
 
   .contact-content {
     display: flex;
@@ -66,14 +67,18 @@
       }
     }
   }
+
+  .contact-blob {
+    bottom: 0px;
+    left: -350px;
+  }
 }
 
-// duplicate code? do I still need this?
-// .contact-form .form-field::-webkit-input-placeholder {
-//   // Chrome/Opera/Safari
-//   color: $text-color-grey;
-//   opacity: 1;
-// }
+.contact-form .form-field::-webkit-input-placeholder {
+  // Chrome/Opera/Safari
+  color: $text-color-grey;
+  opacity: 1;
+}
 
 // Responsive Design
 

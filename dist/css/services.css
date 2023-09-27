@@ -102,6 +102,7 @@
   transform: scaleY(1);
 }
 .services .services-content .right-side .work-with-me {
+  z-index: 3;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -160,10 +161,9 @@
   margin-left: 5px;
 }
 .services .services-blob {
-  top: 200px;
-  right: -300px;
-  width: 900px;
-  opacity: 0.7;
+  top: -100px;
+  right: -400px;
+  z-index: 2;
 }
 
 @keyframes floating {
