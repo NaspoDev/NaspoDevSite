@@ -1,6 +1,7 @@
 .header-space {
   width: 100%;
   height: 89px;
+  background-color: #090a0b;
 }
 .header-space .header {
   position: sticky;
