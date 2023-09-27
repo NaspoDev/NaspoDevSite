@@ -84,14 +84,35 @@
   filter: blur(0px);
 }
 .projects .projects-content .projects-grid .project-hidden {
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: 0.5s;
+  transition: 1s;
 }
-.projects .projects-content .projects-grid .project-appear {
-  opacity: 1;
-  transform: scaleX(1);
+.projects .projects-content .projects-grid .project-hidden.project-1 {
+  transform: translateX(150px);
+  z-index: 4;
+}
+.projects .projects-content .projects-grid .project-hidden.project-2 {
+  transform: translateX(-100px);
+  z-index: 3;
+}
+.projects .projects-content .projects-grid .project-hidden.project-3 {
+  transform: translateX(-200px);
+  z-index: 2;
+}
+.projects .projects-content .projects-grid .project-hidden.project-4 {
+  transform: translateX(-200px);
+  z-index: 1;
+}
+.projects .projects-content .projects-grid .project-appear.project-1 {
+  transform: translateX(0);
+}
+.projects .projects-content .projects-grid .project-appear.project-2 {
+  transform: translateX(0);
+}
+.projects .projects-content .projects-grid .project-appear.project-3 {
+  transform: translateX(0);
+}
+.projects .projects-content .projects-grid .project-appear.project-4 {
+  transform: translateX(0);
 }
 .projects .projects-content .projects-grid .project-1 {
   grid-row: 1/3;

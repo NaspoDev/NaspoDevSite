@@ -36,7 +36,7 @@ const verticalObserver = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-export function run() {
+export function initializeScrollAnimations() {
   hiddenHorizontalElements.forEach((element) =>
     horizontalObserver.observe(element)
   );
