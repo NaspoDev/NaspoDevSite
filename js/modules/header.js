@@ -12,8 +12,6 @@ let lastScrollTop = headerTopLimit + headerHeight;
 // Adjusts header position on based on scroll behaviour.
 export function adjustHeader() {
   if (window.scrollY > headerTopLimit) {
-    console.log(`window.scrollY: ${window.scrollY}`);
-    console.log(`headerTopLimit: ${headerTopLimit}`);
     if (!(header.style.position === "fixed")) {
       header.style.position = "fixed";
     }
