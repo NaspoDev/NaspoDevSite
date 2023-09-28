@@ -60,13 +60,11 @@
       // Projects Grid - General configs
 
       .project-container {
-        transition: 0.5s;
         overflow: hidden;
         position: relative;
 
         &:hover {
           cursor: pointer;
-          transform: scale(0.95);
         }
 
         .project-content {
@@ -152,6 +150,13 @@
         &.project-4 {
           transform: translateX(0);
         }
+      }
+
+      // adding the hover effect after appear animation styles so that it
+      // won't be overridden.
+      .project-container:hover {
+        transition: 0.5s;
+        transform: scale(0.95);
       }
 
       // Projects Grid - Project specific configs
