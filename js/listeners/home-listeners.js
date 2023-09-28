@@ -40,7 +40,6 @@ export function addHomeListeners() {
   });
 
   window.addEventListener("click", (event) => {
-    console.log(event.target);
     if (!terminalOptionsDropdown.classList.contains("hidden")) {
       if (
         event.target !== terminalOptionsButton &&
