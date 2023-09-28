@@ -204,4 +204,40 @@
 @font-face {
   font-family: "Blue Screen";
   src: url(/fonts/home_section_fonts/blue_screen/BlueScreenPersonalUseRegular-0W1M9.ttf);
+}
+@media (max-width: 1199px) {
+  .home .terminal-display {
+    overflow: hidden;
+  }
+  .home .terminal-display .info-bar {
+    justify-content: flex-start;
+  }
+  .home .terminal-display .info-bar .left-side {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home .terminal-display .info-bar .right-side .section-button {
+    display: none;
+  }
+  .home .terminal-display .terminal-body .file-path {
+    display: none;
+  }
+  .home .terminal-display .terminal-body .welcome-text-container h2 {
+    font-size: 50px;
+  }
+  .home .terminal-display .terminal-body .welcome-text-container h1 {
+    font-size: 100px;
+  }
+  .home .terminal-display .terminal-body .process-exit-statement {
+    font-size: 16px;
+  }
+  .home .blob {
+    width: 500px;
+  }
+  .home .blob-1 {
+    left: -200px;
+  }
+  .home .blob-2 {
+    right: -200px;
+  }
 }/*# sourceMappingURL=home.css.map */

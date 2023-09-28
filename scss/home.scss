@@ -267,22 +267,67 @@
 
 // Responsive Design
 
-@media (width < 1200px) {
+// < 800px
+@media (max-width: 799) {
 }
 
-@media (width >= 1200px) and (width <= 1500px) {
-}
-
-@media (width > 1500px) and (width < 1800px) {
-}
-
-// Responsive Design - Old Syntax (for some IOS clients)
-
+// < 1200px
 @media (max-width: 1199px) {
+  .home {
+    .terminal-display {
+      overflow: hidden;
+      .info-bar {
+        justify-content: flex-start;
+
+        .left-side {
+          width: fit-content;
+        }
+        .right-side {
+          .section-button {
+            display: none;
+          }
+        }
+      }
+
+      .terminal-body {
+        .file-path {
+          display: none;
+        }
+
+        .welcome-text-container {
+          h2 {
+            font-size: 50px;
+          }
+
+          h1 {
+            font-size: 100px;
+          }
+        }
+
+        .process-exit-statement {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .blob {
+      width: 500px;
+    }
+
+    .blob-1 {
+      left: -200px;
+    }
+
+    .blob-2 {
+      right: -200px;
+    }
+  }
 }
 
+// 1200px - 1500px
 @media (min-width: 1200px) and (max-width: 1500px) {
 }
 
+// 1501px - 1799px
 @media (min-width: 1501px) and (max-width: 1799px) {
 }
