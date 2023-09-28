@@ -29,7 +29,7 @@ function getThreshold() {
   if (window.innerWidth < 1200) {
     return 0.4;
   } else {
-    return 0.7;
+    return 0.6;
   }
 }
 
