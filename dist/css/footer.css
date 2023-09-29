@@ -22,6 +22,9 @@
 .footer .footer-content .link-container img {
   width: 40px;
 }
+.footer .footer-content .link-container .java-icon {
+  width: 33px;
+}
 .footer .footer-content .copyright-notice {
   font-size: 14px;
 }
