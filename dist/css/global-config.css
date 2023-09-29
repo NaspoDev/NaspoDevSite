@@ -164,30 +164,6 @@ button:hover {
   display: none;
 }
 
-@media (width < 1200px) {
-  .mobile-only {
-    display: block;
-  }
-  section {
-    width: 100vw;
-    overflow: hidden;
-  }
-  .hidden-horizontal {
-    opacity: 1;
-    filter: blur(0px);
-    transform: translateX(0);
-  }
-}
-@media (width >= 1200px) and (width <= 1500px) {
-  .mobile-only {
-    display: block;
-  }
-}
-@media (width > 1500px) and (width < 1800px) {
-  .mobile-only {
-    display: block;
-  }
-}
 @media (max-width: 1199px) {
   .mobile-only {
     display: block;
