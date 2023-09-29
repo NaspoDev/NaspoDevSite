@@ -267,27 +267,6 @@
 
 // Responsive Design
 
-// < 800px
-@media (max-width: 799px) {
-  .home {
-    padding: 30px 5% 0% 5%;
-
-    .terminal-display {
-      .info-bar {
-        justify-content: flex-start;
-
-        .left-side {
-          display: none;
-        }
-        .right-side {
-          width: clamp(100px, 50%, 200px);
-          justify-content: space-between;
-        }
-      }
-    }
-  }
-}
-
 // < 1200px
 @media (max-width: 1199px) {
   .home {
@@ -340,10 +319,63 @@
   }
 }
 
-// 1200px - 1500px
-@media (min-width: 1200px) and (max-width: 1500px) {
+// < 800px
+@media (max-width: 799px) {
+  .home {
+    padding: 30px 5% 0% 5%;
+
+    .print-statement-container {
+      .print-statement {
+        font-size: 30px;
+      }
+
+      .cursor {
+        display: none;
+      }
+    }
+
+    .terminal-display {
+      .info-bar {
+        justify-content: space-between;
+
+        .left-side {
+          width: fit-content;
+
+          .running-file-container {
+            display: none;
+          }
+        }
+        .right-side {
+          width: auto;
+        }
+      }
+
+      .terminal-body {
+        .welcome-text-container {
+          h2 {
+            font-size: 50px;
+          }
+
+          h1 {
+            font-size: 100px;
+          }
+        }
+
+        // .process-exit-statement {
+        //   font-size: 15px;
+        // }
+      }
+    }
+
+    .blob {
+      width: 500px;
+    }
+  }
 }
 
-// 1501px - 1799px
-@media (min-width: 1501px) and (max-width: 1799px) {
+// 1200px - 1500px
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .blob {
+    width: 700px;
+  }
 }

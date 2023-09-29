@@ -205,21 +205,6 @@
   font-family: "Blue Screen";
   src: url(/fonts/home_section_fonts/blue_screen/BlueScreenPersonalUseRegular-0W1M9.ttf);
 }
-@media (max-width: 799px) {
-  .home {
-    padding: 30px 5% 0% 5%;
-  }
-  .home .terminal-display .info-bar {
-    justify-content: flex-start;
-  }
-  .home .terminal-display .info-bar .left-side {
-    display: none;
-  }
-  .home .terminal-display .info-bar .right-side {
-    width: clamp(100px, 50%, 200px);
-    justify-content: space-between;
-  }
-}
 @media (max-width: 1199px) {
   .home .terminal-display {
     overflow: hidden;
@@ -251,5 +236,43 @@
   }
   .home .blob-2 {
     right: -200px;
+  }
+}
+@media (max-width: 799px) {
+  .home {
+    padding: 30px 5% 0% 5%;
+  }
+  .home .print-statement-container .print-statement {
+    font-size: 30px;
+  }
+  .home .print-statement-container .cursor {
+    display: none;
+  }
+  .home .terminal-display .info-bar {
+    justify-content: space-between;
+  }
+  .home .terminal-display .info-bar .left-side {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home .terminal-display .info-bar .left-side .running-file-container {
+    display: none;
+  }
+  .home .terminal-display .info-bar .right-side {
+    width: auto;
+  }
+  .home .terminal-display .terminal-body .welcome-text-container h2 {
+    font-size: 50px;
+  }
+  .home .terminal-display .terminal-body .welcome-text-container h1 {
+    font-size: 100px;
+  }
+  .home .blob {
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .blob {
+    width: 700px;
   }
 }/*# sourceMappingURL=home.css.map */
