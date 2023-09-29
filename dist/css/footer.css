@@ -26,11 +26,6 @@
   font-size: 14px;
 }
 
-@media (width < 1200px) {
-  .footer .footer-content {
-    width: 100%;
-  }
-}
 @media (max-width: 1199px) {
   .footer .footer-content {
     width: 100%;
