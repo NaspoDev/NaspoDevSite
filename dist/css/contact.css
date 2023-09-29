@@ -62,73 +62,42 @@
   opacity: 1;
 }
 
-@media (width < 1200px) {
-  .contact-text {
-    width: 90%;
-  }
-  .contact-text br {
-    display: none;
-  }
-  .contact-form {
-    width: 90%;
-  }
-}
-@media (width >= 800px) and (width < 1200px) {
-  .contact-text {
-    width: 60%;
-  }
-  .contact-form {
-    width: 60%;
-  }
-}
-@media (width >= 1200px) and (width <= 1500px) {
-  .contact-text {
-    width: 50%;
-  }
-  .contact-form {
-    width: 50%;
-  }
-}
-@media (width > 1500px) and (width < 1800px) {
-  .contact-text {
-    width: 40%;
-  }
-  .contact-form {
-    width: 40%;
-  }
-}
 @media (max-width: 1199px) {
-  .contact-text {
+  .contact .contact-content .contact-text {
     width: 90%;
   }
-  .contact-text br {
+  .contact .contact-content .contact-text br {
     display: none;
   }
-  .contact-form {
+  .contact .contact-content .contact-form {
     width: 90%;
+  }
+  .contact .contact-blob {
+    width: 500px;
+    left: -200px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .contact-text {
+  .contact .contact-content .contact-text {
     width: 60%;
   }
-  .contact-form {
+  .contact .contact-content .contact-form {
     width: 60%;
   }
 }
 @media (min-width: 1200px) and (max-width: 1500px) {
-  .contact-text {
+  .contact .contact-content .contact-text {
     width: 50%;
   }
-  .contact-form {
+  .contact .contact-content .contact-form {
     width: 50%;
   }
 }
 @media (min-width: 1501px) and (max-width: 1799px) {
-  .contact-text {
+  .contact .contact-content .contact-text {
     width: 40%;
   }
-  .contact-form {
+  .contact .contact-content .contact-form {
     width: 40%;
   }
 }/*# sourceMappingURL=contact.css.map */
