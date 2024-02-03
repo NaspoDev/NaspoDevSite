@@ -174,7 +174,8 @@
           }
 
           img {
-            width: 6%;
+            filter: invert(100%); // inverting the color of the image
+            width: 7%;
           }
         }
 
@@ -223,7 +224,8 @@
           }
 
           img {
-            width: 12%;
+            filter: invert(100%); // inverting the color of the image
+            width: 11%;
           }
         }
       }

@@ -128,7 +128,8 @@
   font-size: 28px;
 }
 .projects .projects-content .projects-grid .project-1 .project-content img {
-  width: 6%;
+  filter: invert(100%);
+  width: 7%;
 }
 .projects .projects-content .projects-grid .project-1 .scrolling-text-wrapper {
   animation: scroll 18s linear infinite;
@@ -166,7 +167,8 @@
   font-size: 22px;
 }
 .projects .projects-content .projects-grid .project-3 .project-content img {
-  width: 12%;
+  filter: invert(100%);
+  width: 11%;
 }
 .projects .projects-content .projects-grid .project-4 {
   grid-row: 2/3;
