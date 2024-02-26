@@ -97,7 +97,7 @@
         justify-content: flex-end;
 
         .section-button {
-          transition: opacity 1s;
+          transition: opacity 3s;
 
           // when hidden (with .hidden class) also disable pointer events
           &.hidden {

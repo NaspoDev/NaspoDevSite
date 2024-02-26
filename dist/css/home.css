@@ -75,7 +75,7 @@
   justify-content: flex-end;
 }
 .home .terminal-display .info-bar .right-side .section-button {
-  transition: opacity 1s;
+  transition: opacity 3s;
 }
 .home .terminal-display .info-bar .right-side .section-button.hidden {
   pointer-events: none;

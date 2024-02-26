@@ -24,18 +24,18 @@ const processExitStatement = document.getElementById("process-exit-statement");
 const sectionButtons = document.querySelectorAll(".section-button");
 
 // variables
-const maxAnimationDelay = 10; // max animation delay for welcome text (in seconds)
+const maxAnimationDelay = 5; // max animation delay for welcome text (in seconds)
 const typeWriterSpeed = 100; // speed for typewriter effect (in milliseconds)
 const textGlitchIterations = 8; // number of iterations for glitch effect
 
 // Main function to run the welcome script. Handles flow of the processes.
 export async function runWelcomeScript() {
-  // run typewriter effect for printStatementComponents
+  // STEP #1: run typewriter effect for printStatementComponents
   for (const element of printStatementComponents) {
     await typeWriterEffect(element.id, element.text, typeWriterSpeed);
   }
 
-  // Displaying and hiding certain elements after certain delays to simulate loading.
+  // STEP #2: Displaying and hiding certain elements after certain delays to simulate loading.
   await utils.delay(200);
   utils.showElement(loadingCircle);
   await utils.delay(1000);
@@ -44,19 +44,22 @@ export async function runWelcomeScript() {
   utils.showElement(filePath);
   await utils.delay(200);
 
+  // STEP #3: Display core elements (welcome text, section buttons, blobs).
   // display the welcome text
   displayWelcomeText();
-  // display blobs
-  blobs.forEach((blob) => utils.showElement(blob.element));
-
-  // wait a third of the max animation delay. (also convert to milliseconds)
-  await utils.delay((maxAnimationDelay / 3) * 1000);
-  utils.showElement(processExitStatement); // display process exit statement
   // show the section buttons
   for (const sectionButton of sectionButtons) {
     utils.showElement(sectionButton);
   }
+  // display blobs
+  blobs.forEach((blob) => utils.showElement(blob.element));
 
+  // STEP #4: Display the process exit statement.
+  // wait a third of the max animation delay. (also convert to milliseconds)
+  await utils.delay((maxAnimationDelay / 3) * 1000);
+  utils.showElement(processExitStatement); // display process exit statement
+
+  // STEP #5: Run the text glitch effect on the welcome text.
   await utils.delay(1500);
   textGlitchEffect(welcomeTextLetters, textGlitchIterations); // run the glitch effect
 }
