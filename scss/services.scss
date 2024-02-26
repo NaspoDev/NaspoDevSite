@@ -1,4 +1,5 @@
 @import "utility/variables";
+@import "utility/mixins";
 // === Services ===
 
 .services-section-spacer {
@@ -87,6 +88,55 @@
       .line-decor-show {
         opacity: 1;
         transform: scaleY(1);
+      }
+    }
+
+    // Specific service styling
+
+    .service-1 {
+      .service-heading-area {
+        @include flexCenter(column);
+      }
+
+      .service-content {
+        @include flexCenter;
+
+        .service-description-list {
+          width: 50%;
+
+          li {
+            @include flexCenter;
+            height: 40px;
+            border: 1px solid red;
+            font-size: 22px;
+            font-family: "Inter Extra-Light";
+            background-repeat: no-repeat;
+
+            &:nth-child(1) {
+              background-image: url(/images/services/web_development/paint_palette.png);
+              background-size: 40px auto;
+            }
+
+            &:nth-child(2) {
+              background-image: url(/images/services/web_development/coding_icon.png);
+              background-size: 40px auto;
+            }
+
+            &:nth-child(3) {
+              background-image: url(/images/services/web_development/server.png);
+              background-size: 40px auto;
+            }
+
+            &:nth-child(4) {
+              background-image: url(/images/services/web_development/wrench.png);
+              background-size: 40px auto;
+            }
+          }
+        }
+
+        .work-showcase {
+          width: 50%;
+        }
       }
     }
   }

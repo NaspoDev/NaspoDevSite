@@ -72,6 +72,51 @@
   opacity: 1;
   transform: scaleY(1);
 }
+.services .services-content .service-1 .service-heading-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services .services-content .service-1 .service-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.services .services-content .service-1 .service-content .service-description-list {
+  width: 50%;
+}
+.services .services-content .service-1 .service-content .service-description-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 1px solid red;
+  font-size: 22px;
+  font-family: "Inter Extra-Light";
+  background-repeat: no-repeat;
+}
+.services .services-content .service-1 .service-content .service-description-list li:nth-child(1) {
+  background-image: url(/images/services/web_development/paint_palette.png);
+  background-size: 40px auto;
+}
+.services .services-content .service-1 .service-content .service-description-list li:nth-child(2) {
+  background-image: url(/images/services/web_development/coding_icon.png);
+  background-size: 40px auto;
+}
+.services .services-content .service-1 .service-content .service-description-list li:nth-child(3) {
+  background-image: url(/images/services/web_development/server.png);
+  background-size: 40px auto;
+}
+.services .services-content .service-1 .service-content .service-description-list li:nth-child(4) {
+  background-image: url(/images/services/web_development/wrench.png);
+  background-size: 40px auto;
+}
+.services .services-content .service-1 .service-content .work-showcase {
+  width: 50%;
+}
 .services .services-blob {
   top: -100px;
   right: -400px;
