@@ -15,150 +15,62 @@
 }
 .services .services-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  border: 1px solid red;
 }
-.services .services-content .left-side,
-.services .services-content .right-side {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.services .services-content .services-inner-content {
-  width: 80%;
-  height: 80%;
-  margin-top: 40px;
-  display: flex;
-}
-.services .services-content .left-side .services-display {
-  align-items: center;
-  position: relative;
-}
-.services .services-content .left-side .services-display .service {
-  width: 40%;
+.services .services-content .service {
+  width: 45%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
-  position: absolute;
+  border: 1px solid blue;
 }
-.services .services-content .left-side .services-display .service img {
+.services .services-content .service img {
   width: 150px;
   margin-bottom: 30px;
 }
-.services .services-content .left-side .services-display .service h2 {
+.services .services-content .service h2 {
   font-size: 22px;
   margin-bottom: 20px;
 }
-.services .services-content .left-side .services-display .service p {
+.services .services-content .service p {
   font-size: 18px;
   line-height: 1.5;
 }
-.services .services-content .left-side .services-display .service h2,
-.services .services-content .left-side .services-display .service p {
+.services .services-content .service h2,
+.services .services-content .service p {
   text-align: center;
 }
-.services .services-content .left-side .services-display .service .floating {
+.services .services-content .service .floating {
   animation: floating 4s ease-in-out infinite;
   animation-delay: 1s;
 }
-.services .services-content .left-side .services-display .service-1 {
-  top: 0%;
-  left: 0%;
-}
-.services .services-content .left-side .services-display .service-2 {
-  position: static;
-  margin-left: auto;
-}
-.services .services-content .left-side .services-display .service-3 {
-  bottom: 0%;
-  left: 0%;
-}
-.services .services-content .left-side .services-display .line-decor-container {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
+.services .services-content .line-decor-container {
+  width: 10%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.services .services-content .left-side .services-display .line-decor-container .line-decor {
+.services .services-content .line-decor-container .line-decor {
   width: 2px;
   height: 80%;
   background-color: #e8e6e6;
   border-radius: 10px;
   box-shadow: 0 0 10px #9ecaed;
 }
-.services .services-content .left-side .services-display .line-decor-container .line-decor-hidden {
+.services .services-content .line-decor-container .line-decor-hidden {
   transition: all 3s;
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top;
   transition-delay: 200ms;
 }
-.services .services-content .left-side .services-display .line-decor-container .line-decor-show {
+.services .services-content .line-decor-container .line-decor-show {
   opacity: 1;
   transform: scaleY(1);
-}
-.services .services-content .right-side .work-with-me {
-  z-index: 3;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.services .services-content .right-side .work-with-me h2 {
-  margin-bottom: 40px;
-}
-.services .services-content .right-side .work-with-me p {
-  font-size: 22px;
-  text-align: center;
-  line-height: 1.5;
-  padding: 0px 100px 0px 100px;
-}
-.services .services-content .right-side .work-with-me .paragraph-1 {
-  margin-bottom: 60px;
-}
-.services .services-content .right-side .work-with-me ul {
-  margin-bottom: 50px;
-}
-.services .services-content .right-side .work-with-me ul li {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  font-family: "Inter Extra-Light";
-  font-size: 22px;
-  margin-bottom: 20px;
-  padding-left: 60px;
-  background-repeat: no-repeat;
-}
-.services .services-content .right-side .work-with-me ul li:nth-child(1) {
-  background-image: url(/images/services/other/request_icon.png);
-  background-size: 38px auto;
-}
-.services .services-content .right-side .work-with-me ul li:nth-child(2) {
-  background-image: url(/images/services/other/people_icon.png);
-  background-size: 40px auto;
-}
-.services .services-content .right-side .work-with-me ul li:nth-child(3) {
-  background-image: url(/images/services/other/handshake_icon.png);
-  background-size: 50px auto;
-}
-.services .services-content .right-side .work-with-me .paragraph-2 {
-  margin-bottom: 60px;
-}
-.services .services-content .right-side .work-with-me .call-to-action {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.services .services-content .right-side .work-with-me .call-to-action p {
-  padding: 0;
-  color: #39bde2;
-}
-.services .services-content .right-side .work-with-me .call-to-action img {
-  width: 20px;
-  margin-left: 5px;
 }
 .services .services-blob {
   top: -100px;
