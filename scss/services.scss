@@ -113,38 +113,53 @@
           color: $text-color-grey;
         }
 
-        .service-description-list {
+        .service-description-list-heading,
+        .showcase-heading {
+          margin-bottom: 25px;
+          color: $text-color-grey;
+          // font-size: 20px;
+          font-weight: lighter;
+          font-family: "Inter Medium";
+        }
+
+        .service-description-list-container {
           width: 50%;
 
-          li {
-            @include flexCenter(row, flex-start, center);
-            height: 50px;
-            font-size: 22px;
-            font-family: "Inter Medium";
-            color: $text-color-grey;
+          .service-description-list {
+            width: 90%;
+            border: 2px solid $theme-color-blue;
+            border-radius: 10px;
 
-            margin-bottom: 30px;
-            padding-left: 70px;
-            background-repeat: no-repeat;
+            li {
+              @include flexCenter(row, flex-start, center);
+              height: 50px;
+              font-size: 20px;
+              font-family: "Inter Medium";
+              color: $text-color-grey;
 
-            &:nth-child(1) {
-              background-image: url(/images/services/web_development/paint_palette.png);
-              background-size: auto 50px;
-            }
+              margin-bottom: 20px;
+              padding-left: 70px;
+              background-repeat: no-repeat;
 
-            &:nth-child(2) {
-              background-image: url(/images/services/web_development/coding_icon.png);
-              background-size: auto 40px;
-            }
+              &:nth-child(1) {
+                background-image: url(/images/services/web_development/paint_palette.png);
+                background-size: auto 50px;
+              }
 
-            &:nth-child(3) {
-              background-image: url(/images/services/web_development/server.png);
-              background-size: auto 40px;
-            }
+              &:nth-child(2) {
+                background-image: url(/images/services/web_development/coding_icon.png);
+                background-size: auto 40px;
+              }
 
-            &:nth-child(4) {
-              background-image: url(/images/services/web_development/wrench.png);
-              background-size: auto 40px;
+              &:nth-child(3) {
+                background-image: url(/images/services/web_development/server.png);
+                background-size: auto 40px;
+              }
+
+              &:nth-child(4) {
+                background-image: url(/images/services/web_development/wrench.png);
+                background-size: auto 40px;
+              }
             }
           }
         }
@@ -152,13 +167,6 @@
         .website-showcase {
           width: 50%;
           @include flexCenter(column, flex-start, flex-start);
-
-          .showcase-heading {
-            margin-bottom: 25px;
-            color: $text-color-grey;
-            font-size: 20px;
-            font-weight: lighter;
-          }
 
           .showcased-website {
             .website-heading-area {
