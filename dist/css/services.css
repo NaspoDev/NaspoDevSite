@@ -167,6 +167,18 @@
   justify-content: center;
   align-items: center;
 }
+.services .services-content .service-1 .service-content .carousel .carousel-nav-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.services .services-content .service-1 .service-content .carousel .carousel-nav-buttons-container button {
+  border: none;
+  background-color: none;
+  color: #39bde2;
+}
 .services .services-blob {
   top: -100px;
   right: -400px;

@@ -173,6 +173,7 @@
               button {
                 border: none;
                 background-color: $project-item-color-blue;
+                // background-color: $theme-color-blue;
 
                 &:hover {
                   box-shadow: none;
@@ -184,6 +185,17 @@
 
             .carousel-active {
               @include flexCenter(column);
+            }
+          }
+
+          .carousel-nav-buttons-container {
+            @include flexCenter(row);
+            gap: 20px;
+
+            button {
+              border: none;
+              background-color: none;
+              color: $theme-color-blue;
             }
           }
         }
