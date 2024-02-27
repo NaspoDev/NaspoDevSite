@@ -90,8 +90,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  border: 1px solid red;
+  align-items: flex-start;
 }
 .services .services-content .service-1 .service-content h2,
 .services .services-content .service-1 .service-content h3,
@@ -109,6 +108,7 @@
   align-items: center;
   height: 50px;
   font-size: 22px;
+  font-family: "Inter Medium";
   color: #e8e6e6;
   margin-bottom: 30px;
   padding-left: 70px;
@@ -130,54 +130,49 @@
   background-image: url(/images/services/web_development/wrench.png);
   background-size: auto 40px;
 }
-.services .services-content .service-1 .service-content .carousel {
+.services .services-content .service-1 .service-content .website-showcase {
   width: 50%;
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
-.services .services-content .service-1 .service-content .carousel .carousel-inner {
-  width: 90%;
-  border-radius: 10px;
-  border: 2px solid rgb(98, 151, 231);
-}
-.services .services-content .service-1 .service-content .carousel .carousel-inner .carousel-item {
-  width: 100%;
-  gap: 40px;
-  padding: 15px 30px;
-  display: none;
-}
-.services .services-content .service-1 .service-content .carousel .carousel-inner .carousel-item p {
-  line-height: 1.5;
-}
-.services .services-content .service-1 .service-content .carousel .carousel-inner .carousel-item button {
-  border: none;
-  background-color: #4042cf;
-}
-.services .services-content .service-1 .service-content .carousel .carousel-inner .carousel-item button:hover {
-  box-shadow: none;
+.services .services-content .service-1 .service-content .website-showcase .showcase-heading {
+  margin-bottom: 25px;
   color: #e8e6e6;
-  transform: scale(0.95);
+  font-size: 20px;
+  font-weight: lighter;
 }
-.services .services-content .service-1 .service-content .carousel .carousel-inner .carousel-active {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.services .services-content .service-1 .service-content .carousel .carousel-nav-buttons-container {
+.services .services-content .service-1 .service-content .website-showcase .showcased-website .website-heading-area {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  margin-bottom: 5px;
 }
-.services .services-content .service-1 .service-content .carousel .carousel-nav-buttons-container button {
-  border: none;
-  background-color: none;
+.services .services-content .service-1 .service-content .website-showcase .showcased-website .website-heading-area .website-title {
+  font-family: "Inter Medium";
+  font-size: 22px;
+  color: #ffffff;
+}
+.services .services-content .service-1 .service-content .website-showcase .showcased-website .website-heading-area i {
+  font-size: 20px;
+  margin-left: 10px;
   color: #39bde2;
+}
+.services .services-content .service-1 .service-content .website-showcase .showcased-website .website-heading-area i:hover {
+  transform: scale(1.2);
+  text-shadow: 0px 0px 20px #39bde2;
+}
+.services .services-content .service-1 .service-content .website-showcase .showcased-website .website-description {
+  line-height: 1.5;
+}
+.services .services-content .service-1 .service-content .website-showcase .showcased-website-separator {
+  width: 100%;
+  height: 2px;
+  background-color: #39bde2;
+  border-radius: 5px;
+  margin: 20px 0;
 }
 .services .services-blob {
   top: -100px;

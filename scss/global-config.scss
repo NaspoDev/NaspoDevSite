@@ -19,6 +19,12 @@ html {
   src: url(/fonts/inter/static/Inter-Bold.ttf);
 }
 
+// Font-weight middle-ground. Typically used for sub-headings.
+@font-face {
+  font-family: "Inter Medium";
+  src: url(/fonts/inter/static/Inter-Medium.ttf);
+}
+
 // Lighter font face, mainly used for paragraphs.
 @font-face {
   font-family: "Inter Extra-Light";
