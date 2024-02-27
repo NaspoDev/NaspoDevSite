@@ -21,36 +21,42 @@
   .services-content {
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
 
     // General service styling
     .service {
-      width: 45%;
+      width: 48%;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid blue;
+      @include flexCenter(column, flex-start, center);
+      padding-top: 30px;
 
-      img {
-        width: 150px;
-        margin-bottom: 30px;
+      .service-heading-area {
+        @include flexCenter(column);
+        margin-bottom: 50px;
+
+        img {
+          width: 150px;
+          margin-bottom: 30px;
+        }
+
+        h2 {
+          font-size: 28px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 22px;
+          line-height: 1.5;
+        }
+
+        h2,
+        p {
+          text-align: center;
+        }
       }
 
-      h2 {
-        font-size: 22px;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: 18px;
-        line-height: 1.5;
-      }
-
-      h2,
-      p {
-        text-align: center;
+      .service-content {
+        width: 100%;
+        height: auto;
       }
 
       // Floating effect for service images
@@ -62,7 +68,8 @@
 
     // Line decor
     .line-decor-container {
-      width: 10%;
+      width: auto;
+      flex: 1; // fill the space between the two services
       height: 100%;
       display: flex;
       justify-content: center;
@@ -94,48 +101,91 @@
     // Specific service styling
 
     .service-1 {
-      .service-heading-area {
-        @include flexCenter(column);
-      }
+      padding-left: 5%;
 
       .service-content {
         @include flexCenter;
+        border: 1px solid red;
+
+        h2,
+        h3,
+        h4,
+        p {
+          color: $text-color-grey;
+        }
 
         .service-description-list {
           width: 50%;
 
           li {
-            @include flexCenter;
-            height: 40px;
-            border: 1px solid red;
+            @include flexCenter(row, flex-start, center);
+            height: 50px;
             font-size: 22px;
-            font-family: "Inter Extra-Light";
+            // font-family: "Inter Extra-Light";
+            color: $text-color-grey;
+
+            margin-bottom: 30px;
+            padding-left: 70px;
             background-repeat: no-repeat;
 
             &:nth-child(1) {
               background-image: url(/images/services/web_development/paint_palette.png);
-              background-size: 40px auto;
+              background-size: auto 50px;
             }
 
             &:nth-child(2) {
               background-image: url(/images/services/web_development/coding_icon.png);
-              background-size: 40px auto;
+              background-size: auto 40px;
             }
 
             &:nth-child(3) {
               background-image: url(/images/services/web_development/server.png);
-              background-size: 40px auto;
+              background-size: auto 40px;
             }
 
             &:nth-child(4) {
               background-image: url(/images/services/web_development/wrench.png);
-              background-size: 40px auto;
+              background-size: auto 40px;
             }
           }
         }
 
-        .work-showcase {
+        .carousel {
           width: 50%;
+          border: 1px solid green;
+          @include flexCenter(column, flex-start, center);
+
+          .carousel-inner {
+            width: 90%;
+            border-radius: 10px;
+            border: 2px solid $theme-color-terminal-blue;
+
+            .carousel-item {
+              width: 100%;
+              gap: 40px;
+              padding: 15px 30px;
+              display: none;
+
+              p {
+                line-height: 1.5;
+              }
+
+              button {
+                border: none;
+                background-color: $project-item-color-blue;
+
+                &:hover {
+                  box-shadow: none;
+                  color: $text-color-grey;
+                  transform: scale(0.95);
+                }
+              }
+            }
+
+            .carousel-active {
+              @include flexCenter(column);
+            }
+          }
         }
       }
     }
