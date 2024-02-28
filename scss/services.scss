@@ -215,6 +215,34 @@
         }
       }
     }
+
+    .service-2 {
+      padding-right: 5%;
+
+      .service-content {
+        @include flexCenter(column);
+
+        .image-display {
+          @include flexCenter(row, space-between, center);
+          width: 80%;
+
+          img {
+            width: 100px;
+          }
+        }
+
+        .service-description {
+          text-align: center;
+          margin-top: 50px;
+          line-height: 1.5;
+          padding: 0px 50px;
+
+          span {
+            font-family: "Inter Medium";
+          }
+        }
+      }
+    }
   }
 
   .services-blob {

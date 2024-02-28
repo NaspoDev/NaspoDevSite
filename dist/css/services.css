@@ -193,6 +193,34 @@
   border-radius: 5px;
   margin: 20px 0;
 }
+.services .services-content .service-2 {
+  padding-right: 5%;
+}
+.services .services-content .service-2 .service-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services .services-content .service-2 .service-content .image-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.services .services-content .service-2 .service-content .image-display img {
+  width: 100px;
+}
+.services .services-content .service-2 .service-content .service-description {
+  text-align: center;
+  margin-top: 50px;
+  line-height: 1.5;
+  padding: 0px 50px;
+}
+.services .services-content .service-2 .service-content .service-description span {
+  font-family: "Inter Medium";
+}
 .services .services-blob {
   top: -100px;
   right: -400px;
