@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 30px 10% 0% 10%;
   overflow: hidden;
+  position: relative;
 }
 .home .print-statement-container .print-statement {
   display: inline-block;

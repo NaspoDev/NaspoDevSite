@@ -32,788 +32,777 @@
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
   </head>
   <body>
-    <!-- Home Section -->
-    <section id="home">
-      <div class="home">
-        <div class="print-statement-container">
-          <!-- Print Statement. Displayed with typewriter effect through js -->
-          <h2 class="print-statement code-font" id="print-statement">
-            <span
-              id="print-statement-print"
-              style="color: rgb(98, 151, 231)"
-            ></span
-            ><span
-              id="print-statement-bracket-1"
-              style="color: goldenrod"
-            ></span
-            ><span
-              id="print-statement-text"
-              style="color: rgb(108, 214, 114)"
-            ></span
-            ><span
-              id="print-statement-bracket-2"
-              style="color: goldenrod"
-            ></span>
-          </h2>
-          <h3 class="cursor" id="cursor">&nbsp;</h3>
-        </div>
+    <div class="body-content-wrapper">
+      <!-- Home Section -->
+      <section id="home">
+        <div class="home">
+          <div class="print-statement-container">
+            <!-- Print Statement. Displayed with typewriter effect through js -->
+            <h2 class="print-statement code-font" id="print-statement">
+              <span
+                id="print-statement-print"
+                style="color: rgb(98, 151, 231)"
+              ></span
+              ><span
+                id="print-statement-bracket-1"
+                style="color: goldenrod"
+              ></span
+              ><span
+                id="print-statement-text"
+                style="color: rgb(108, 214, 114)"
+              ></span
+              ><span
+                id="print-statement-bracket-2"
+                style="color: goldenrod"
+              ></span>
+            </h2>
+            <h3 class="cursor" id="cursor">&nbsp;</h3>
+          </div>
 
-        <!-- Run terminal display -->
-        <div class="terminal-display" id="terminal-display">
-          <div class="info-bar">
-            <div class="left-side">
-              <div class="run-title-container info-bar-item">
-                <h4 class="text">Run</h4>
+          <!-- Run terminal display -->
+          <div class="terminal-display" id="terminal-display">
+            <div class="info-bar">
+              <div class="left-side">
+                <div class="run-title-container info-bar-item">
+                  <h4 class="text">Run</h4>
+                </div>
+                <div class="running-file-container info-bar-item">
+                  <img src="/images/logos/python_logo.png" alt="Python Logo" />
+                  <p>welcome</p>
+                </div>
+                <div
+                  class="loading-circle-container info-bar-item hidden"
+                  id="loading-circle-container"
+                >
+                  <img src="/images/home/loading-gif.gif" alt="Loading" />
+                </div>
               </div>
-              <div class="running-file-container info-bar-item">
-                <img src="/images/logos/python_logo.png" alt="Python Logo" />
-                <p>welcome</p>
+              <div class="right-side">
+                <a
+                  href="#about"
+                  class="about-button section-button info-bar-item hidden"
+                >
+                  <p>About</p>
+                </a>
+                <a
+                  href="#projects"
+                  class="projects-button section-button info-bar-item hidden"
+                >
+                  <p>Projects</p>
+                </a>
+                <a
+                  href="#services"
+                  class="services-button section-button info-bar-item hidden"
+                >
+                  <p>Services</p>
+                </a>
+                <a
+                  href="#contact"
+                  class="contact-button section-button info-bar-item hidden"
+                >
+                  <p>Contact</p>
+                </a>
+                <div
+                  class="options-button-container info-bar-item"
+                  id="options-button-container"
+                >
+                  <img
+                    src="/images/home/terminal_options_button.png"
+                    alt="Options"
+                  />
+                  <div class="dropdown hidden" id="terminal-options-dropdown">
+                    <a
+                      class="dropdown-item"
+                      href="https://www.linkedin.com/in/athanasios-topaltsis/"
+                      target="_blank"
+                    >
+                      <p>LinkedIn</p></a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="https://github.com/NaspoDev"
+                      target="_blank"
+                      ><p>GitHub</p></a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="close-button-container info-bar-item"
+                  id="close-button-container"
+                >
+                  <img src="/images/home/terminal_close_icon.png" alt="Close" />
+                </div>
               </div>
-              <div
-                class="loading-circle-container info-bar-item hidden"
-                id="loading-circle-container"
+            </div>
+            <div class="terminal-body">
+              <p class="file-path code-font hidden" id="file-path">
+                C:\Users\naspo\NaspoDevSite\portfolio\welcome.py
+              </p>
+              <div class="welcome-text-container">
+                <h2>
+                  <span class="welcome-text-letter hidden">H</span
+                  ><span class="welcome-text-letter hidden">e</span
+                  ><span class="welcome-text-letter hidden">y</span>
+                  <span class="welcome-text-letter hidden">t</span
+                  ><span class="welcome-text-letter hidden">h</span
+                  ><span class="welcome-text-letter hidden">e</span
+                  ><span class="welcome-text-letter hidden">r</span
+                  ><span class="welcome-text-letter hidden">e</span
+                  ><span class="welcome-text-letter hidden">,</span>
+                  <div class="welcome-text-im">
+                    <span class="welcome-text-letter hidden">I</span
+                    ><span class="welcome-text-letter hidden">'</span
+                    ><span class="welcome-text-letter hidden">m</span>
+                  </div>
+                </h2>
+                <h1>
+                  <span class="welcome-text-letter hidden">N</span
+                  ><span class="welcome-text-letter hidden">a</span
+                  ><span class="welcome-text-letter hidden">s</span
+                  ><span class="welcome-text-letter hidden">p</span
+                  ><span class="welcome-text-letter hidden">o</span>
+                </h1>
+              </div>
+              <br />
+              <p
+                class="process-exit-statement code-font hidden"
+                id="process-exit-statement"
               >
-                <img src="/images/home/loading-gif.gif" alt="Loading" />
+                Process finished with exit code 0
+              </p>
+            </div>
+          </div>
+          <div class="easter-egg hidden" id="terminal-easter-egg">
+            <p>You're not supposed to be here...</p>
+          </div>
+
+          <!-- Blobs Decor -->
+          <!-- blob 1 -->
+          <svg
+            class="blob blob-1 hidden"
+            viewBox="0 0 900 600"
+            width="900"
+            height="600"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+          >
+            <g transform="translate(454.22393352321967 337.8101948853539)">
+              <path
+                id="home-blob1-frame1"
+                d="M107 -120.7C143.4 -70.7 180.7 -35.4 187.5 6.8C194.4 49 170.7 98.1 134.4 129.7C98.1 161.4 49 175.7 0.9 174.7C-47.1 173.8 -94.3 157.6 -129.6 125.9C-164.9 94.3 -188.5 47.1 -195.2 -6.7C-201.9 -60.6 -191.8 -121.2 -156.5 -171.2C-121.2 -221.2 -60.6 -260.6 -12.6 -248C35.4 -235.4 70.7 -170.7 107 -120.7"
+                fill="#39bde2"
+              ></path>
+            </g>
+            <g
+              transform="translate(497.2932595296176 330.14718876844177)"
+              style="visibility: hidden"
+            >
+              <path
+                id="home-blob1-frame2"
+                d="M134.8 -149.7C159.8 -109.8 154.9 -54.9 147.3 -7.7C139.6 39.6 129.2 79.2 104.2 107.9C79.2 136.5 39.6 154.3 -7.1 161.3C-53.7 168.4 -107.5 164.8 -153.5 136.1C-199.5 107.5 -237.7 53.7 -246.2 -8.5C-254.7 -70.7 -233.4 -141.4 -187.4 -181.3C-141.4 -221.1 -70.7 -230 -7.9 -222.1C54.9 -214.3 109.8 -189.5 134.8 -149.7"
+                fill="#39bde2"
+              ></path>
+            </g>
+          </svg>
+          <!-- blob 2 -->
+          <svg
+            class="blob blob-2 hidden"
+            viewBox="0 0 900 600"
+            width="900"
+            height="600"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+          >
+            <g transform="translate(488.394668836368 327.03736769234985)">
+              <path
+                id="home-blob2-frame1"
+                d="M129.3 -143.7C159.7 -99 170.8 -49.5 175.7 4.8C180.5 59.2 179 118.3 148.7 151.2C118.3 184 59.2 190.5 11.9 178.6C-35.4 166.7 -70.7 136.4 -120.7 103.5C-170.7 70.7 -235.4 35.4 -250.8 -15.4C-266.2 -66.2 -232.5 -132.5 -182.5 -177.1C-132.5 -221.8 -66.2 -244.9 -8.4 -236.5C49.5 -228.2 99 -188.3 129.3 -143.7"
+                fill="#ddbcff"
+              ></path>
+            </g>
+            <g
+              transform="translate(431.0273566966923 310.1397159157047)"
+              style="visibility: hidden"
+            >
+              <path
+                id="home-blob2-frame2"
+                d="M178.1 -174.8C214.8 -141.4 217.4 -70.7 199.7 -17.7C182 35.4 144 70.7 107.4 101.5C70.7 132.4 35.4 158.7 -14 172.7C-63.4 186.7 -126.8 188.5 -153.6 157.6C-180.5 126.8 -170.7 63.4 -170.4 0.4C-170 -62.7 -179.1 -125.4 -152.2 -158.7C-125.4 -192.1 -62.7 -196 4 -200C70.7 -204 141.4 -208.1 178.1 -174.8"
+                fill="#ddbcff"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- HEADER -->
+      <section id="header">
+        <div class="header-space">
+          <div class="header" id="header-div">
+            <a class="logo" href="/">NaspoDev</a>
+            <ul class="navigation">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="about">
+          <div class="about-heading section-heading">
+            <h1 class="underline-style">About Me</h1>
+          </div>
+          <div class="about-content">
+            <div class="left-side">
+              <div class="content-container">
+                <h2 class="hidden-horizontal">
+                  Hi, nice to meet you! <br />
+                  My name is <span>Athanasios Topaltsis.</span>
+                </h2>
+                <p class="hidden-horizontal">
+                  I am a student currently studying Information Technology at
+                  York University, in Canada.
+                </p>
               </div>
             </div>
             <div class="right-side">
-              <a
-                href="#about"
-                class="about-button section-button info-bar-item hidden"
-              >
-                <p>About</p>
-              </a>
-              <a
-                href="#projects"
-                class="projects-button section-button info-bar-item hidden"
-              >
-                <p>Projects</p>
-              </a>
-              <a
-                href="#services"
-                class="services-button section-button info-bar-item hidden"
-              >
-                <p>Services</p>
-              </a>
-              <a
-                href="#contact"
-                class="contact-button section-button info-bar-item hidden"
-              >
-                <p>Contact</p>
-              </a>
-              <div
-                class="options-button-container info-bar-item"
-                id="options-button-container"
-              >
-                <img
-                  src="/images/home/terminal_options_button.png"
-                  alt="Options"
-                />
-
-                <div class="dropdown hidden" id="terminal-options-dropdown">
+              <div class="content-container">
+                <p class="hidden-horizontal">
+                  I am passionate for technology, specifically software
+                  development. I love to spend my free time coding and working
+                  on personal projects. I am always putting out my best work and
+                  love learning new things.
+                </p>
+                <div class="button linkedin-button-wrapper hidden-horizontal">
                   <a
-                    class="dropdown-item"
                     href="https://www.linkedin.com/in/athanasios-topaltsis/"
                     target="_blank"
                   >
-                    <p>LinkedIn</p></a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="https://github.com/NaspoDev"
-                    target="_blank"
-                    ><p>GitHub</p></a
-                  >
+                    <button>LinkedIn</button>
+                  </a>
                 </div>
+              </div>
+            </div>
+            <!-- Tech Grid -->
+            <div class="tech-grid" id="tech-grid">
+              <img
+                src="images/logos/java_logo.svg"
+                alt="Java Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/python_logo.png"
+                alt="Python Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/javascript_logo.png"
+                alt="JavaScript Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/html_logo.png"
+                alt="HTML Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/css_logo.png"
+                alt="CSS Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/git_logo.png"
+                alt="Git Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/spigotmc_logo.png"
+                alt="Spigot Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/aws_logo.png"
+                alt="AWS Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/node_js_logo.png"
+                alt="NodeJS Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/typescript_logo.webp"
+                alt="TypeScript Logo"
+                class="grid-item"
+              />
+              <img
+                src="images/logos/sass_logo.webp"
+                alt="SASS Logo"
+                class="grid-item"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <div class="projects">
+          <div class="projects-heading section-heading">
+            <h1 class="underline-style">Projects</h1>
+          </div>
+
+          <div class="projects-content">
+            <!-- Projects Description Area -->
+            <div class="project-description-area">
+              <div
+                class="project-description landing-description displayed-description"
+                id="landing-description"
+              >
+                <h3>Personal Projects</h3>
+                <p>
+                  I love working on personal projects. I am always trying to
+                  improve my skills and learn new things. I dedicate lots of my
+                  free time to coding and working on projects, and am usually
+                  always working on something.
+                </p>
               </div>
               <div
-                class="close-button-container info-bar-item"
-                id="close-button-container"
+                class="project-description big-item-description"
+                id="project-1-description"
               >
-                <img src="/images/home/terminal_close_icon.png" alt="Close" />
+                <h3>To-Do WebApp</h3>
+                <p>
+                  A full-stack to-do web application built with React and
+                  Express. It stores user data in a MySQL database and uses
+                  local storage to restore the data when the user returns to the
+                  site.
+                </p>
+              </div>
+              <div
+                class="project-description small-item-1-description"
+                id="project-2-description"
+              >
+                <h3>Password Generator</h3>
+                <p>
+                  A simple yet efficient password generator. You can generate
+                  secure passwords, and measure the security of your existing
+                  passwords with the validator.
+                </p>
+              </div>
+              <div
+                class="project-description small-item-2-description"
+                id="project-3-description"
+              >
+                <h3>DeltaRealms</h3>
+                <p>
+                  I ran a small game server business, managing a team of about
+                  15 staff members plus contractors. I was the Operations Lead,
+                  overseeing and managing every aspect of the company. From IT
+                  and Software Development, to Moderation and Community
+                  Management, Administration, Marketing, and more.
+                </p>
+              </div>
+              <div
+                class="project-description long-item-description"
+                id="project-4-description"
+              >
+                <h3>Spigot Plugins (Minecraft Plugins)</h3>
+                <p>
+                  I create and maintain both feature-focused, and patch-style
+                  plugins that server administrators can implement to their
+                  servers. My software has thousands of downloads and many
+                  positive reviews.
+                </p>
               </div>
             </div>
-          </div>
-          <div class="terminal-body">
-            <p class="file-path code-font hidden" id="file-path">
-              C:\Users\naspo\NaspoDevSite\portfolio\welcome.py
-            </p>
-            <div class="welcome-text-container">
-              <h2>
-                <span class="welcome-text-letter hidden">H</span
-                ><span class="welcome-text-letter hidden">e</span
-                ><span class="welcome-text-letter hidden">y</span>
-                <span class="welcome-text-letter hidden">t</span
-                ><span class="welcome-text-letter hidden">h</span
-                ><span class="welcome-text-letter hidden">e</span
-                ><span class="welcome-text-letter hidden">r</span
-                ><span class="welcome-text-letter hidden">e</span
-                ><span class="welcome-text-letter hidden">,</span>
-                <div class="welcome-text-im">
-                  <span class="welcome-text-letter hidden">I</span
-                  ><span class="welcome-text-letter hidden">'</span
-                  ><span class="welcome-text-letter hidden">m</span>
-                </div>
-              </h2>
-              <h1>
-                <span class="welcome-text-letter hidden">N</span
-                ><span class="welcome-text-letter hidden">a</span
-                ><span class="welcome-text-letter hidden">s</span
-                ><span class="welcome-text-letter hidden">p</span
-                ><span class="welcome-text-letter hidden">o</span>
-              </h1>
-            </div>
-            <br />
-            <p
-              class="process-exit-statement code-font hidden"
-              id="process-exit-statement"
-            >
-              Process finished with exit code 0
-            </p>
-          </div>
-        </div>
 
-        <div class="easter-egg hidden" id="terminal-easter-egg">
-          <p>You're not supposed to be here...</p>
-        </div>
-
-        <!-- Blobs Decor -->
-        <!-- blob 1 -->
-        <svg
-          class="blob blob-1 hidden"
-          viewBox="0 0 900 600"
-          width="900"
-          height="600"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-        >
-          <g transform="translate(454.22393352321967 337.8101948853539)">
-            <path
-              id="home-blob1-frame1"
-              d="M107 -120.7C143.4 -70.7 180.7 -35.4 187.5 6.8C194.4 49 170.7 98.1 134.4 129.7C98.1 161.4 49 175.7 0.9 174.7C-47.1 173.8 -94.3 157.6 -129.6 125.9C-164.9 94.3 -188.5 47.1 -195.2 -6.7C-201.9 -60.6 -191.8 -121.2 -156.5 -171.2C-121.2 -221.2 -60.6 -260.6 -12.6 -248C35.4 -235.4 70.7 -170.7 107 -120.7"
-              fill="#39bde2"
-            ></path>
-          </g>
-
-          <g
-            transform="translate(497.2932595296176 330.14718876844177)"
-            style="visibility: hidden"
-          >
-            <path
-              id="home-blob1-frame2"
-              d="M134.8 -149.7C159.8 -109.8 154.9 -54.9 147.3 -7.7C139.6 39.6 129.2 79.2 104.2 107.9C79.2 136.5 39.6 154.3 -7.1 161.3C-53.7 168.4 -107.5 164.8 -153.5 136.1C-199.5 107.5 -237.7 53.7 -246.2 -8.5C-254.7 -70.7 -233.4 -141.4 -187.4 -181.3C-141.4 -221.1 -70.7 -230 -7.9 -222.1C54.9 -214.3 109.8 -189.5 134.8 -149.7"
-              fill="#39bde2"
-            ></path>
-          </g>
-        </svg>
-
-        <!-- blob 2 -->
-        <svg
-          class="blob blob-2 hidden"
-          viewBox="0 0 900 600"
-          width="900"
-          height="600"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-        >
-          <g transform="translate(488.394668836368 327.03736769234985)">
-            <path
-              id="home-blob2-frame1"
-              d="M129.3 -143.7C159.7 -99 170.8 -49.5 175.7 4.8C180.5 59.2 179 118.3 148.7 151.2C118.3 184 59.2 190.5 11.9 178.6C-35.4 166.7 -70.7 136.4 -120.7 103.5C-170.7 70.7 -235.4 35.4 -250.8 -15.4C-266.2 -66.2 -232.5 -132.5 -182.5 -177.1C-132.5 -221.8 -66.2 -244.9 -8.4 -236.5C49.5 -228.2 99 -188.3 129.3 -143.7"
-              fill="#ddbcff"
-            ></path>
-          </g>
-
-          <g
-            transform="translate(431.0273566966923 310.1397159157047)"
-            style="visibility: hidden"
-          >
-            <path
-              id="home-blob2-frame2"
-              d="M178.1 -174.8C214.8 -141.4 217.4 -70.7 199.7 -17.7C182 35.4 144 70.7 107.4 101.5C70.7 132.4 35.4 158.7 -14 172.7C-63.4 186.7 -126.8 188.5 -153.6 157.6C-180.5 126.8 -170.7 63.4 -170.4 0.4C-170 -62.7 -179.1 -125.4 -152.2 -158.7C-125.4 -192.1 -62.7 -196 4 -200C70.7 -204 141.4 -208.1 178.1 -174.8"
-              fill="#ddbcff"
-            ></path>
-          </g>
-        </svg>
-      </div>
-    </section>
-
-    <!-- HEADER -->
-    <section id="header">
-      <div class="header-space">
-        <div class="header" id="header-div">
-          <a class="logo" href="/">NaspoDev</a>
-          <ul class="navigation">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-      <div class="about">
-        <div class="about-heading section-heading">
-          <h1 class="underline-style">About Me</h1>
-        </div>
-        <div class="about-content">
-          <div class="left-side">
-            <div class="content-container">
-              <h2 class="hidden-horizontal">
-                Hi, nice to meet you! <br />
-                My name is <span>Athanasios Topaltsis.</span>
-              </h2>
-              <p class="hidden-horizontal">
-                I am a student currently studying Information Technology at York
-                University, in Canada.
-              </p>
-            </div>
-          </div>
-
-          <div class="right-side">
-            <div class="content-container">
-              <p class="hidden-horizontal">
-                I am passionate for technology, specifically software
-                development. I love to spend my free time coding and working on
-                personal projects. I am always putting out my best work and love
-                learning new things.
-              </p>
-              <div class="button linkedin-button-wrapper hidden-horizontal">
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+              <div
+                class="project-container project-1 project-hidden"
+                id="project-1"
+              >
+                <a href="https://todo.naspoapps.com/" target="_blank">
+                  <div class="project-content">
+                    <h2>To-Do WebApp</h2>
+                    <img
+                      src="images/project_icons/checkmark_white.png"
+                      alt="Checkmark"
+                    />
+                  </div>
+                  <div class="scrolling-text-wrapper scrolling">
+                    <p>
+                      To-Do Web Application. To-Do Web Application. To-Do Web
+                      Application.
+                    </p>
+                    <p>
+                      To-Do Web Application. To-Do Web Application. To-Do Web
+                      Application.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="project-container project-2 project-hidden"
+                id="project-2"
+              >
                 <a
-                  href="https://www.linkedin.com/in/athanasios-topaltsis/"
+                  href="https://password-generator.naspoapps.com/"
                   target="_blank"
                 >
-                  <button>LinkedIn</button>
+                  <div class="project-content">
+                    <h2>Password Generator</h2>
+                    <img
+                      src="images/project_icons/lock_icon.png"
+                      alt="Lock Icon"
+                    />
+                  </div>
+                  <div class="scrolling-text-wrapper">
+                    <p>
+                      Password generator and validator. Password generator and
+                      validator. Password generator and validator.
+                    </p>
+                    <p>
+                      Password generator and validator. Password generator and
+                      validator. Password generator and validator.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="project-container project-3 project-hidden"
+                id="project-3"
+              >
+                <a href="https://www.youtube.com/@deltarealms" target="_blank">
+                  <div class="project-content">
+                    <h2>DeltaRealms</h2>
+                    <img
+                      src="images/project_icons/minecraft_block_icon_black.png"
+                      alt="Minecraft Block"
+                    />
+                  </div>
+                  <div class="scrolling-text-wrapper">
+                    <p>
+                      My former business. My former business. My former
+                      business.
+                    </p>
+                    <p>
+                      My former business. My former business. My former
+                      business.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="project-container project-4 project-hidden"
+                id="project-4"
+              >
+                <a
+                  href="https://www.spigotmc.org/members/naspo.757523/"
+                  target="_blank"
+                >
+                  <div class="project-content">
+                    <h2>Spigot Plugins</h2>
+                    <img
+                      src="images/project_icons/java_icon.png"
+                      alt="Java Icon"
+                    />
+                  </div>
+                  <div class="scrolling-text-wrapper">
+                    <p>
+                      Visit my Spigot page. Visit my Spigot page. Visit my
+                      Spigot page.
+                    </p>
+                    <p>
+                      Visit my Spigot page. Visit my Spigot page. Visit my
+                      Spigot page.
+                    </p>
+                  </div>
                 </a>
               </div>
             </div>
           </div>
-
-          <!-- Tech Grid -->
-          <div class="tech-grid" id="tech-grid">
-            <img
-              src="images/logos/java_logo.svg"
-              alt="Java Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/python_logo.png"
-              alt="Python Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/javascript_logo.png"
-              alt="JavaScript Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/html_logo.png"
-              alt="HTML Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/css_logo.png"
-              alt="CSS Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/git_logo.png"
-              alt="Git Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/spigotmc_logo.png"
-              alt="Spigot Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/aws_logo.png"
-              alt="AWS Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/node_js_logo.png"
-              alt="NodeJS Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/typescript_logo.webp"
-              alt="TypeScript Logo"
-              class="grid-item"
-            />
-            <img
-              src="images/logos/sass_logo.webp"
-              alt="SASS Logo"
-              class="grid-item"
-            />
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="projects">
-        <div class="projects-heading section-heading">
-          <h1 class="underline-style">Projects</h1>
-        </div>
+      <div class="waves-spacer services-section-spacer"></div>
 
-        <div class="projects-content">
-          <!-- Projects Description Area -->
-          <div class="project-description-area">
-            <div
-              class="project-description landing-description displayed-description"
-              id="landing-description"
-            >
-              <h3>Personal Projects</h3>
-              <p>
-                I love working on personal projects. I am always trying to
-                improve my skills and learn new things. I dedicate lots of my
-                free time to coding and working on projects, and am usually
-                always working on something.
-              </p>
-            </div>
-            <div
-              class="project-description big-item-description"
-              id="project-1-description"
-            >
-              <h3>To-Do WebApp</h3>
-              <p>
-                A full-stack to-do web application built with React and Express.
-                It stores user data in a MySQL database and uses local storage
-                to restore the data when the user returns to the site.
-              </p>
-            </div>
-            <div
-              class="project-description small-item-1-description"
-              id="project-2-description"
-            >
-              <h3>Password Generator</h3>
-              <p>
-                A simple yet efficient password generator. You can generate
-                secure passwords, and measure the security of your existing
-                passwords with the validator.
-              </p>
-            </div>
-            <div
-              class="project-description small-item-2-description"
-              id="project-3-description"
-            >
-              <h3>DeltaRealms</h3>
-              <p>
-                I ran a small game server business, managing a team of about 15
-                staff members plus contractors. I was the Operations Lead,
-                overseeing and managing every aspect of the company. From IT and
-                Software Development, to Moderation and Community Management,
-                Administration, Marketing, and more.
-              </p>
-            </div>
-            <div
-              class="project-description long-item-description"
-              id="project-4-description"
-            >
-              <h3>Spigot Plugins (Minecraft Plugins)</h3>
-              <p>
-                I create and maintain both feature-focused, and patch-style
-                plugins that server administrators can implement to their
-                servers. My software has thousands of downloads and many
-                positive reviews.
-              </p>
-            </div>
+      <!-- Services Section -->
+      <section id="services">
+        <div class="services">
+          <div class="services-heading section-heading">
+            <h1 class="underline-style">Services</h1>
           </div>
 
-          <!-- Projects Grid -->
-          <div class="projects-grid">
-            <div
-              class="project-container project-1 project-hidden"
-              id="project-1"
-            >
-              <a href="https://todo.naspoapps.com/" target="_blank">
-                <div class="project-content">
-                  <h2>To-Do WebApp</h2>
-                  <img
-                    src="images/project_icons/checkmark_white.png"
-                    alt="Checkmark"
-                  />
-                </div>
-                <div class="scrolling-text-wrapper scrolling">
-                  <p>
-                    To-Do Web Application. To-Do Web Application. To-Do Web
-                    Application.
-                  </p>
-                  <p>
-                    To-Do Web Application. To-Do Web Application. To-Do Web
-                    Application.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div
-              class="project-container project-2 project-hidden"
-              id="project-2"
-            >
-              <a
-                href="https://password-generator.naspoapps.com/"
-                target="_blank"
-              >
-                <div class="project-content">
-                  <h2>Password Generator</h2>
-                  <img
-                    src="images/project_icons/lock_icon.png"
-                    alt="Lock Icon"
-                  />
-                </div>
-                <div class="scrolling-text-wrapper">
-                  <p>
-                    Password generator and validator. Password generator and
-                    validator. Password generator and validator.
-                  </p>
-                  <p>
-                    Password generator and validator. Password generator and
-                    validator. Password generator and validator.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div
-              class="project-container project-3 project-hidden"
-              id="project-3"
-            >
-              <a href="https://www.youtube.com/@deltarealms" target="_blank">
-                <div class="project-content">
-                  <h2>DeltaRealms</h2>
-                  <img
-                    src="images/project_icons/minecraft_block_icon_black.png"
-                    alt="Minecraft Block"
-                  />
-                </div>
-                <div class="scrolling-text-wrapper">
-                  <p>
-                    My former business. My former business. My former business.
-                  </p>
-                  <p>
-                    My former business. My former business. My former business.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div
-              class="project-container project-4 project-hidden"
-              id="project-4"
-            >
-              <a
-                href="https://www.spigotmc.org/members/naspo.757523/"
-                target="_blank"
-              >
-                <div class="project-content">
-                  <h2>Spigot Plugins</h2>
-                  <img
-                    src="images/project_icons/java_icon.png"
-                    alt="Java Icon"
-                  />
-                </div>
-                <div class="scrolling-text-wrapper">
-                  <p>
-                    Visit my Spigot page. Visit my Spigot page. Visit my Spigot
-                    page.
-                  </p>
-                  <p>
-                    Visit my Spigot page. Visit my Spigot page. Visit my Spigot
-                    page.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="waves-spacer services-section-spacer"></div>
-
-    <!-- Services Section -->
-    <section id="services">
-      <div class="services">
-        <div class="services-heading section-heading">
-          <h1 class="underline-style">Services</h1>
-        </div>
-
-        <div class="services-content">
-          <!-- service 1 -->
-          <div class="service service-1" id="service-1">
-            <div class="service-heading-area">
-              <img
-                class="hidden-vertical floating service-icon"
-                src="images/services/services_icons/website_icon.png"
-                alt="Web Development"
-              />
-              <h2 class="hidden-vertical service-heading">Web Development</h2>
-              <p class="hidden-vertical service-subheading">
-                Custom website development for your business or personal use.
-              </p>
-            </div>
-
-            <div class="service-content">
-              <div class="service-description-list-container">
-                <h3 class="service-description-list-heading">
-                  I'll take care of everything.
-                </h3>
-                <ul class="service-description-list">
-                  <li>Website Design</li>
-                  <li>Development</li>
-                  <li>Deployment (with a custom domain name!)</li>
-                  <li>Maintenance & Upkeep</li>
-                </ul>
+          <div class="services-content">
+            <!-- service 1 -->
+            <div class="service service-1" id="service-1">
+              <div class="service-heading-area">
+                <img
+                  class="hidden-vertical floating service-icon"
+                  src="images/services/services_icons/website_icon.png"
+                  alt="Web Development"
+                />
+                <h2 class="hidden-vertical service-heading">Web Development</h2>
+                <p class="hidden-vertical service-subheading">
+                  Custom website development for your business or personal use.
+                </p>
               </div>
-
-              <div class="website-showcase">
-                <h3 class="showcase-heading">Some sites I've made:</h3>
-
-                <div class="website-showcase-content">
-                  <div class="showcased-website showcased-website-1">
-                    <div class="website-heading-area">
-                      <p class="website-title">CozyUpCafe</p>
-                      <a
-                        href="https://cozyupcafe.naspoapps.com/"
-                        target="_blank"
-                        ><i class="fa-solid fa-up-right-from-square"></i
-                      ></a>
+              <div class="service-content">
+                <div class="service-description-list-container">
+                  <h3 class="service-description-list-heading">
+                    I'll take care of everything.
+                  </h3>
+                  <ul class="service-description-list">
+                    <li>Website Design</li>
+                    <li>Development</li>
+                    <li>Deployment (with a custom domain name!)</li>
+                    <li>Maintenance & Upkeep</li>
+                  </ul>
+                </div>
+                <div class="website-showcase">
+                  <h3 class="showcase-heading">Some sites I've made:</h3>
+                  <div class="website-showcase-content">
+                    <div class="showcased-website showcased-website-1">
+                      <div class="website-heading-area">
+                        <p class="website-title">CozyUpCafe</p>
+                        <a
+                          href="https://cozyupcafe.naspoapps.com/"
+                          target="_blank"
+                          ><i class="fa-solid fa-up-right-from-square"></i
+                        ></a>
+                      </div>
+                      <p class="website-description">
+                        A website for a fictional cafe. Incorporates a warm,
+                        retro-modern design.
+                      </p>
                     </div>
-                    <p class="website-description">
-                      A website for a fictional cafe. Incorporates a warm,
-                      retro-modern design.
-                    </p>
-                  </div>
-
-                  <div class="showcased-website-separator"></div>
-
-                  <div class="showcased-website showcased-website-2">
-                    <div class="website-heading-area">
-                      <p class="website-title">Exipnos Hosting</p>
-                      <a
-                        href="https://exipnoshosting.naspoapps.com/"
-                        target="_blank"
-                        ><i class="fa-solid fa-up-right-from-square"></i
-                      ></a>
+                    <div class="showcased-website-separator"></div>
+                    <div class="showcased-website showcased-website-2">
+                      <div class="website-heading-area">
+                        <p class="website-title">Exipnos Hosting</p>
+                        <a
+                          href="https://exipnoshosting.naspoapps.com/"
+                          target="_blank"
+                          ><i class="fa-solid fa-up-right-from-square"></i
+                        ></a>
+                      </div>
+                      <p class="website-description">
+                        A website for a cloud hosting company, originally made
+                        for a university project. Incorporates a modern techy
+                        design. (Desktop view only).
+                      </p>
                     </div>
-                    <p class="website-description">
-                      A website for a cloud hosting company, originally made for
-                      a university project. Incorporates a modern techy design.
-                      (Desktop view only).
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Line decor sits in the middle (between the two services) -->
-          <div class="line-decor-container">
-            <div
-              class="line-decor line-decor-hidden"
-              id="services-line-decor"
-            ></div>
-          </div>
-
-          <!-- service 2 -->
-          <div class="service service-2" id="service-2">
-            <div class="service-heading-area">
-              <img
-                class="hidden-vertical floating"
-                src="images/services/services_icons/coding_icon.png"
-                alt="Tutoring"
-              />
-              <h2 class="hidden-vertical">Tutoring</h2>
-              <p class="hidden-vertical">
-                Private in-person or online tutoring for beginners.
-              </p>
+            <!-- Line decor sits in the middle (between the two services) -->
+            <div class="line-decor-container">
+              <div
+                class="line-decor line-decor-hidden"
+                id="services-line-decor"
+              ></div>
             </div>
 
-            <div class="service-content">
-              <div class="image-display">
-                <img src="/images/logos/java_logo.svg" alt="Java" />
-                <img src="/images/logos/python_logo.png" alt="Python" />
-                <img src="/images/logos/javascript_logo.png" alt="Javascript" />
-                <img src="/images/logos/html_logo.png" alt="HTML" />
-                <img src="/images/logos/css_logo.png" alt="CSS" />
+            <!-- service 2 -->
+            <div class="service service-2" id="service-2">
+              <div class="service-heading-area">
+                <img
+                  class="hidden-vertical floating"
+                  src="images/services/services_icons/coding_icon.png"
+                  alt="Tutoring"
+                />
+                <h2 class="hidden-vertical">Tutoring</h2>
+                <p class="hidden-vertical">
+                  Private in-person or online tutoring for beginners.
+                </p>
               </div>
-              <!-- image display arrangement for mobile only -->
-              <div class="image-display image-display-mobile">
-                <div class="row-1">
+              <div class="service-content">
+                <div class="image-display">
                   <img src="/images/logos/java_logo.svg" alt="Java" />
                   <img src="/images/logos/python_logo.png" alt="Python" />
                   <img
                     src="/images/logos/javascript_logo.png"
                     alt="Javascript"
                   />
-                </div>
-                <div class="row-2">
                   <img src="/images/logos/html_logo.png" alt="HTML" />
                   <img src="/images/logos/css_logo.png" alt="CSS" />
                 </div>
+                <!-- image display arrangement for mobile only -->
+                <div class="image-display image-display-mobile">
+                  <div class="row-1">
+                    <img src="/images/logos/java_logo.svg" alt="Java" />
+                    <img src="/images/logos/python_logo.png" alt="Python" />
+                    <img
+                      src="/images/logos/javascript_logo.png"
+                      alt="Javascript"
+                    />
+                  </div>
+                  <div class="row-2">
+                    <img src="/images/logos/html_logo.png" alt="HTML" />
+                    <img src="/images/logos/css_logo.png" alt="CSS" />
+                  </div>
+                </div>
+                <p class="service-description">
+                  <span
+                    >If you're a student, or just want to learn a new amazing
+                    skill, this is for you!</span
+                  >
+                  <br /><br />We'll have one-on-one sessions (either in-person
+                  or online) where I'll teach you the basics of programming and
+                  help you get started on your journey.
+                </p>
               </div>
-
-              <p class="service-description">
-                <span
-                  >If you're a student, or just want to learn a new amazing
-                  skill, this is for you!</span
-                >
-                <br /><br />We'll have one-on-one sessions (either in-person or
-                online) where I'll teach you the basics of programming and help
-                you get started on your journey.
-              </p>
             </div>
           </div>
-        </div>
 
-        <!-- Blob decor -->
-        <svg
-          class="blob services-blob"
-          viewBox="0 0 900 600"
-          width="900"
-          height="600"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-        >
-          <g transform="translate(465.6026626506933 335.7759882438256)">
-            <path
-              id="services-blob-frame1"
-              d="M140.6 -194.8C159.1 -152.1 134.9 -85.8 147.7 -24.4C160.5 37 210.1 93.5 203.5 129.3C196.9 165.2 134 180.3 80.2 184.1C26.4 187.9 -18.2 180.4 -50.6 159.7C-82.9 138.9 -103 105 -138.1 68.1C-173.2 31.2 -223.5 -8.5 -233.4 -56.6C-243.4 -104.7 -213 -161.1 -167.3 -199.1C-121.7 -237 -60.9 -256.5 0.1 -256.6C61.1 -256.8 122.1 -237.5 140.6 -194.8"
-              fill="#ddbcff"
-            ></path>
-          </g>
-
-          <g
-            transform="translate(420.8390403252394 250.83639946129207)"
-            style="visibility: hidden"
+          <!-- Blob decor -->
+          <svg
+            class="blob services-blob"
+            viewBox="0 0 900 600"
+            width="900"
+            height="600"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
           >
-            <path
-              id="services-blob-frame2"
-              d="M94.2 -86.7C140.1 -73.7 207.9 -61.1 239 -21.9C270.1 17.4 264.5 83.5 235.7 138.5C206.8 193.6 154.7 237.8 95.2 257.8C35.7 277.8 -31.2 273.8 -64.9 236.4C-98.6 199 -99.1 128.2 -120.7 76.6C-142.2 25 -184.9 -7.6 -197.5 -52C-210.2 -96.5 -192.8 -152.8 -154.9 -167.3C-117 -181.8 -58.5 -154.4 -17.2 -133.9C24.1 -113.4 48.2 -99.8 94.2 -86.7"
-              fill="#ddbcff"
-            ></path>
-          </g>
-        </svg>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="contact">
-        <div class="contact-heading section-heading">
-          <h1 class="underline-style">Contact</h1>
-        </div>
-        <div class="contact-content">
-          <p class="contact-text">
-            If you would like to book a service, work with me, <br />or just
-            have a question, reach out!
-          </p>
-
-          <form
-            class="contact-form"
-            id="contact-form"
-            action="https://formspree.io/f/mknljzno"
-            method="POST"
-          >
-            <input
-              class="name-field form-field"
-              type="text"
-              id="form-name-field"
-              name="name"
-              placeholder="Name"
-              required
-            />
-            <input
-              class="email-field form-field"
-              type="email"
-              id="form-email-field"
-              name="email"
-              placeholder="Email"
-              required
-            />
-            <input
-              class="subject-field form-field"
-              type="text"
-              id="form-subject-field"
-              name="subject"
-              placeholder="Subject"
-              required
-            />
-            <textarea
-              class="message-field form-field"
-              name="message"
-              id="form-message-field"
-              placeholder="Message"
-            ></textarea>
-            <button class="submit-button" type="submit">Submit</button>
-          </form>
-        </div>
-
-        <svg
-          class="blob contact-blob"
-          viewBox="0 0 900 600"
-          width="900"
-          height="600"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-        >
-          <g transform="translate(451.0507747876063 337.7346003796648)">
-            <path
-              id="contact-blob-frame1"
-              d="M140 -175.8C179.7 -133.5 209 -87.8 206 -45.1C203 -2.5 167.8 37 142.1 82.7C116.5 128.4 100.5 180.2 72 185.1C43.5 190 2.5 147.9 -54.9 134.2C-112.3 120.5 -186 135.2 -203.7 113.4C-221.5 91.5 -183.1 33 -167.9 -25.5C-152.6 -83.9 -160.5 -142.3 -136.4 -187.4C-112.3 -232.5 -56.1 -264.2 -3 -260.7C50.1 -257.1 100.3 -218.2 140 -175.8"
-              fill="#39bde2"
-            ></path>
-          </g>
-
-          <g
-            transform="translate(432.5778496319417 277.0561357064055)"
-            style="visibility: hidden"
-          >
-            <path
-              id="contact-blob-frame2"
-              d="M141.5 -169.7C159.9 -153.1 135.4 -86.3 147.9 -24.7C160.5 37 210.1 93.5 204.8 132.8C199.4 172 139 194.1 81.7 207.8C24.3 221.5 -30.1 226.8 -71.9 207.3C-113.8 187.9 -143.1 143.7 -157.9 99.9C-172.7 56.1 -173 12.8 -165.6 -29.2C-158.2 -71.2 -143.1 -111.8 -114.2 -126.6C-85.3 -141.3 -42.6 -130.1 9.4 -141.4C61.5 -152.6 123 -186.2 141.5 -169.7"
-              fill="#39bde2"
-            ></path>
-          </g>
-        </svg>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <section id="footer">
-      <div class="footer">
-        <div class="footer-content">
-          <div class="link-container">
-            <a href="https://github.com/NaspoDev" target="_blank"
-              ><img src="/images/footer/github_icon.png" alt="GitHub"
-            /></a>
-            <a
-              href="https://www.linkedin.com/in/athanasios-topaltsis/"
-              target="_blank"
+            <g transform="translate(465.6026626506933 335.7759882438256)">
+              <path
+                id="services-blob-frame1"
+                d="M140.6 -194.8C159.1 -152.1 134.9 -85.8 147.7 -24.4C160.5 37 210.1 93.5 203.5 129.3C196.9 165.2 134 180.3 80.2 184.1C26.4 187.9 -18.2 180.4 -50.6 159.7C-82.9 138.9 -103 105 -138.1 68.1C-173.2 31.2 -223.5 -8.5 -233.4 -56.6C-243.4 -104.7 -213 -161.1 -167.3 -199.1C-121.7 -237 -60.9 -256.5 0.1 -256.6C61.1 -256.8 122.1 -237.5 140.6 -194.8"
+                fill="#ddbcff"
+              ></path>
+            </g>
+            <g
+              transform="translate(420.8390403252394 250.83639946129207)"
+              style="visibility: hidden"
             >
-              <img src="/images/footer/linkedin_icon.png" alt="LinkedIn" />
-            </a>
-            <a
-              class="java-icon"
-              href="https://www.spigotmc.org/members/naspo.757523/"
-              target="_blank"
-            >
-              <img src="/images/footer/java_icon.png" alt="SpigotMC" />
-            </a>
+              <path
+                id="services-blob-frame2"
+                d="M94.2 -86.7C140.1 -73.7 207.9 -61.1 239 -21.9C270.1 17.4 264.5 83.5 235.7 138.5C206.8 193.6 154.7 237.8 95.2 257.8C35.7 277.8 -31.2 273.8 -64.9 236.4C-98.6 199 -99.1 128.2 -120.7 76.6C-142.2 25 -184.9 -7.6 -197.5 -52C-210.2 -96.5 -192.8 -152.8 -154.9 -167.3C-117 -181.8 -58.5 -154.4 -17.2 -133.9C24.1 -113.4 48.2 -99.8 94.2 -86.7"
+                fill="#ddbcff"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="contact">
+          <div class="contact-heading section-heading">
+            <h1 class="underline-style">Contact</h1>
           </div>
-
-          <p class="copyright-notice">&copy; Athanasios Topaltsis, 2023</p>
+          <div class="contact-content">
+            <p class="contact-text">
+              If you would like to book a service, work with me, <br />or just
+              have a question, reach out!
+            </p>
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://formspree.io/f/mknljzno"
+              method="POST"
+            >
+              <input
+                class="name-field form-field"
+                type="text"
+                id="form-name-field"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <input
+                class="email-field form-field"
+                type="email"
+                id="form-email-field"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                class="subject-field form-field"
+                type="text"
+                id="form-subject-field"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+              <textarea
+                class="message-field form-field"
+                name="message"
+                id="form-message-field"
+                placeholder="Message"
+              ></textarea>
+              <button class="submit-button" type="submit">Submit</button>
+            </form>
+          </div>
+          <svg
+            class="blob contact-blob"
+            viewBox="0 0 900 600"
+            width="900"
+            height="600"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+          >
+            <g transform="translate(451.0507747876063 337.7346003796648)">
+              <path
+                id="contact-blob-frame1"
+                d="M140 -175.8C179.7 -133.5 209 -87.8 206 -45.1C203 -2.5 167.8 37 142.1 82.7C116.5 128.4 100.5 180.2 72 185.1C43.5 190 2.5 147.9 -54.9 134.2C-112.3 120.5 -186 135.2 -203.7 113.4C-221.5 91.5 -183.1 33 -167.9 -25.5C-152.6 -83.9 -160.5 -142.3 -136.4 -187.4C-112.3 -232.5 -56.1 -264.2 -3 -260.7C50.1 -257.1 100.3 -218.2 140 -175.8"
+                fill="#39bde2"
+              ></path>
+            </g>
+            <g
+              transform="translate(432.5778496319417 277.0561357064055)"
+              style="visibility: hidden"
+            >
+              <path
+                id="contact-blob-frame2"
+                d="M141.5 -169.7C159.9 -153.1 135.4 -86.3 147.9 -24.7C160.5 37 210.1 93.5 204.8 132.8C199.4 172 139 194.1 81.7 207.8C24.3 221.5 -30.1 226.8 -71.9 207.3C-113.8 187.9 -143.1 143.7 -157.9 99.9C-172.7 56.1 -173 12.8 -165.6 -29.2C-158.2 -71.2 -143.1 -111.8 -114.2 -126.6C-85.3 -141.3 -42.6 -130.1 9.4 -141.4C61.5 -152.6 123 -186.2 141.5 -169.7"
+                fill="#39bde2"
+              ></path>
+            </g>
+          </svg>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer">
+        <div class="footer">
+          <div class="footer-content">
+            <div class="link-container">
+              <a href="https://github.com/NaspoDev" target="_blank"
+                ><img src="/images/footer/github_icon.png" alt="GitHub"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/athanasios-topaltsis/"
+                target="_blank"
+              >
+                <img src="/images/footer/linkedin_icon.png" alt="LinkedIn" />
+              </a>
+              <a
+                class="java-icon"
+                href="https://www.spigotmc.org/members/naspo.757523/"
+                target="_blank"
+              >
+                <img src="/images/footer/java_icon.png" alt="SpigotMC" />
+              </a>
+            </div>
+            <p class="copyright-notice">&copy; Athanasios Topaltsis, 2023</p>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- Scripts -->
     <script type="module" src="js/main.js"></script>

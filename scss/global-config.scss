@@ -79,6 +79,13 @@ img {
 body {
   background-color: $background-color-grey;
   overflow-x: hidden;
+
+  // Overflow properties on the body are ignored by mobile browsers.
+  // So, in order to prevent horizontal overflow, we need to wrap the contents of the
+  // body in a wrapper and apply overflow-x: hidden to the wrapper.
+  .body-content-wrapper {
+    overflow-x: hidden;
+  }
 }
 
 button {
