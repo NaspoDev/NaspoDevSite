@@ -36,7 +36,6 @@ function getThreshold() {
 export function runTechGridScript() {
   fillGridItems();
   createGridSlots(false);
-  console.log(`gridSlots.length: ${gridSlots.length}`);
 
   // if there are more grid items than grid slots, log a warning.
   if (gridItems.length > gridSlots.length) {
