@@ -1,0 +1,92 @@
+@import "utility/variables";
+@import "utility/mixins";
+
+// === Tutoring ===
+
+.tutoring {
+  height: 900px;
+  display: grid;
+  grid-template-rows: auto 2fr 1fr;
+  position: relative;
+  padding: 0px 150px;
+
+  .tutoring-heading {
+    height: 200px;
+    gap: 50px;
+
+    .tutoring-subheading-text {
+      font-size: 30px;
+    }
+  }
+
+  .tutoring-content {
+    width: 100%;
+    @include flexCenter(row, center, flex-start);
+    padding-top: 60px;
+
+    .languages-covered-container {
+      width: 50%;
+      @include flexCenter(column);
+
+      .languages-covered-heading {
+        margin-bottom: 30px;
+      }
+
+      .image-display {
+        @include flexCenter(column, space-between, center);
+        width: auto;
+        gap: 20px;
+
+        img {
+          width: 100px;
+        }
+
+        .row-1,
+        .row-2 {
+          @include flexCenter();
+          gap: 80px;
+        }
+      }
+    }
+
+    .topics-covered-container {
+      width: 50%;
+      @include flexCenter(column);
+
+      .topics-heading {
+        margin-bottom: 30px;
+      }
+
+      .topic-list {
+        li {
+          margin-bottom: 20px;
+          font-size: 20px;
+          background-image: url("/images/other/check.png");
+          background-repeat: no-repeat;
+          background-size: 30px;
+          background-position: left center;
+          padding-left: 42px;
+          height: 40px;
+          @include flexCenter(row, flex-start);
+          font-family: "Inter Medium";
+        }
+      }
+    }
+  }
+
+  .content-outro {
+    @include flexCenter(column);
+    gap: 20px;
+
+    .service-description-1 {
+      text-align: center;
+      line-height: 1.5;
+      font-family: "Inter Medium";
+    }
+
+    .service-description-2 {
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
+}

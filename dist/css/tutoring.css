@@ -1,0 +1,92 @@
+.tutoring {
+  height: 900px;
+  display: grid;
+  grid-template-rows: auto 2fr 1fr;
+  position: relative;
+  padding: 0px 150px;
+}
+.tutoring .tutoring-heading {
+  height: 200px;
+  gap: 50px;
+}
+.tutoring .tutoring-heading .tutoring-subheading-text {
+  font-size: 30px;
+}
+.tutoring .tutoring-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+.tutoring .tutoring-content .languages-covered-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tutoring .tutoring-content .languages-covered-container .languages-covered-heading {
+  margin-bottom: 30px;
+}
+.tutoring .tutoring-content .languages-covered-container .image-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  gap: 20px;
+}
+.tutoring .tutoring-content .languages-covered-container .image-display img {
+  width: 100px;
+}
+.tutoring .tutoring-content .languages-covered-container .image-display .row-1,
+.tutoring .tutoring-content .languages-covered-container .image-display .row-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.tutoring .tutoring-content .topics-covered-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tutoring .tutoring-content .topics-covered-container .topics-heading {
+  margin-bottom: 30px;
+}
+.tutoring .tutoring-content .topics-covered-container .topic-list li {
+  margin-bottom: 20px;
+  font-size: 20px;
+  background-image: url("/images/other/check.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: left center;
+  padding-left: 42px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter Medium";
+}
+.tutoring .content-outro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.tutoring .content-outro .service-description-1 {
+  text-align: center;
+  line-height: 1.5;
+  font-family: "Inter Medium";
+}
+.tutoring .content-outro .service-description-2 {
+  text-align: center;
+  line-height: 1.5;
+}
