@@ -155,8 +155,8 @@
     transform: translateY(8px);
   }
 }
-@media (max-width: 1600px) {
-  .services {
+@media (max-width: 1400px) {
+  .service-content {
     height: 1000px;
   }
 }

@@ -22,6 +22,7 @@
 }
 .tutoring .tutoring-heading .tutoring-subheading-text {
   font-size: 28px;
+  text-align: center;
 }
 .tutoring .tutoring-content {
   width: 100%;
@@ -101,9 +102,87 @@
 .tutoring .content-outro .service-description-2 {
   text-align: center;
   line-height: 1.5;
+  max-width: 700px;
 }
 .tutoring .tutoring-blob {
   top: -100px;
   right: -400px;
   z-index: 2;
+}
+
+@media (max-width: 1400px) {
+  .tutoring-section-spacer {
+    height: 250px;
+  }
+  #tutoring {
+    height: 1300px;
+  }
+  .tutoring {
+    height: 1250px;
+  }
+  .tutoring .tutoring-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .tutoring .tutoring-heading,
+  .tutoring .tutoring-content,
+  .tutoring .content-outro {
+    z-index: 3;
+  }
+  .tutoring .tutoring-blob {
+    right: -500px;
+    opacity: 0.7;
+  }
+}
+@media (max-width: 1000px) {
+  .tutoring-section-spacer {
+    height: 180px;
+  }
+  .tutoring {
+    padding: 0px 20px;
+  }
+}
+@media (max-width: 800px) {
+  .tutoring .tutoring-heading .tutoring-subheading-text {
+    font-size: 24px;
+  }
+  .tutoring .tutoring-content .languages-covered-container .languages-covered-heading {
+    font-size: 20px;
+  }
+  .tutoring .tutoring-content .languages-covered-container .image-display img {
+    width: 70px;
+  }
+  .tutoring .tutoring-content .languages-covered-container .image-display .row-1,
+  .tutoring .tutoring-content .languages-covered-container .image-display .row-2 {
+    gap: 40px;
+  }
+  .tutoring .tutoring-content .topics-covered-container .topics-heading {
+    font-size: 20px;
+  }
+  .tutoring .tutoring-content .topics-covered-container .topic-list li {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .tutoring-section-spacer {
+    height: 140px;
+  }
+}
+@media (max-width: 600px) {
+  .tutoring-section-spacer {
+    height: 100px;
+  }
+}
+@media (max-width: 400px) {
+  .tutoring .content-outro {
+    margin-top: 25px;
+  }
+  .tutoring .tutoring-blob {
+    right: -550px;
+  }
 }

@@ -29,6 +29,7 @@
 
     .tutoring-subheading-text {
       font-size: 28px;
+      text-align: center;
     }
   }
 
@@ -101,6 +102,7 @@
     .service-description-2 {
       text-align: center;
       line-height: 1.5;
+      max-width: 700px;
     }
   }
 
@@ -108,5 +110,112 @@
     top: -100px;
     right: -400px;
     z-index: 2;
+  }
+}
+
+// Responsive Design
+
+@media (max-width: 1400px) {
+  .tutoring-section-spacer {
+    height: 250px;
+  }
+
+  #tutoring {
+    height: 1300px;
+  }
+
+  .tutoring {
+    height: 1250px;
+    .tutoring-content {
+      @include flexCenter(column);
+      gap: 100px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .tutoring {
+    .tutoring-heading,
+    .tutoring-content,
+    .content-outro {
+      z-index: 3;
+    }
+    .tutoring-blob {
+      right: -500px;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .tutoring-section-spacer {
+    height: 180px;
+  }
+
+  .tutoring {
+    padding: 0px 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .tutoring {
+    .tutoring-heading {
+      .tutoring-subheading-text {
+        font-size: 24px;
+      }
+    }
+
+    .tutoring-content {
+      .languages-covered-container {
+        .languages-covered-heading {
+          font-size: 20px;
+        }
+        .image-display {
+          img {
+            width: 70px;
+          }
+          .row-1,
+          .row-2 {
+            gap: 40px;
+          }
+        }
+      }
+
+      .topics-covered-container {
+        .topics-heading {
+          font-size: 20px;
+        }
+
+        .topic-list {
+          li {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .tutoring-section-spacer {
+    height: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tutoring-section-spacer {
+    height: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tutoring {
+    .content-outro {
+      margin-top: 25px;
+    }
+
+    .tutoring-blob {
+      right: -550px;
+    }
   }
 }
