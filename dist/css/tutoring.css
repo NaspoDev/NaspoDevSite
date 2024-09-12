@@ -1,3 +1,14 @@
+.tutoring-section-spacer {
+  background-image: url(/images/section_transition_svgs/services-section-waves-transition.svg);
+  height: 350px;
+  background-position: top;
+}
+
+#tutoring {
+  height: 900px;
+  padding-top: 50px;
+}
+
 .tutoring {
   height: 850px;
   display: grid;

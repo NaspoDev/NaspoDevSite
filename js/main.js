@@ -8,7 +8,6 @@ import { runWelcomeScript } from "./scripts/welcome-script.js";
 import { initializeScrollAnimations } from "./scripts/scroll-animations.js";
 import { runTechGridScript } from "./scripts/tech-grid-script.js";
 import { runProjectsScript } from "./scripts/projects-script.js";
-import { runServicesScript } from "./scripts/services-script.js";
 
 // Module imports
 import { initializeBlobs } from "./modules/blobs.js";
@@ -32,7 +31,6 @@ const APP = {
     initializeScrollAnimations();
     runTechGridScript();
     runProjectsScript();
-    runServicesScript();
 
     initializeBlobs();
     console.log("Startup scripts executed!");

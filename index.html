@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="dist/css/projects.css" />
     <link rel="stylesheet" href="dist/css/services.css" />
     <link rel="stylesheet" href="dist/css/tutoring.css" />
-    <!-- <link rel="stylesheet" href="dist/css/web-development.css" /> -->
+    <link rel="stylesheet" href="dist/css/web-development.css" />
     <link rel="stylesheet" href="dist/css/contact.css" />
     <link rel="stylesheet" href="dist/css/footer.css" />
 
@@ -93,10 +93,16 @@
                   <p>Projects</p>
                 </a>
                 <a
-                  href="#services"
-                  class="services-button section-button info-bar-item hidden"
+                  href="#tutoring"
+                  class="tutoring-button section-button info-bar-item hidden"
                 >
-                  <p>Services</p>
+                  <p>Tutoring</p>
+                </a>
+                <a
+                  href="#web-development"
+                  class="web-development-button section-button info-bar-item hidden"
+                >
+                  <p>Web Services</p>
                 </a>
                 <a
                   href="#contact"
@@ -244,10 +250,10 @@
           <div class="header" id="header-div">
             <a class="logo" href="/">NaspoDev</a>
             <ul class="navigation">
-              <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#tutoring">Tutoring</a></li>
+              <li><a href="#web-development">Web Services</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -525,7 +531,7 @@
         </div>
       </section>
 
-      <div class="waves-spacer services-section-spacer"></div>
+      <div class="waves-spacer tutoring-section-spacer"></div>
 
       <!-- Tutoring Section -->
       <section id="tutoring">
@@ -636,133 +642,70 @@
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section id="services">
-        <div class="services">
-          <div class="services-heading section-heading">
-            <h1 class="underline-style">Services</h1>
+      <!-- Web Development Service Section -->
+      <section id="web-development">
+        <div class="web-development">
+          <div class="web-development-heading section-heading">
+            <h1 class="underline-style">Web Development</h1>
           </div>
 
-          <div class="services-content">
-            <!-- service 1 -->
-            <div class="service service-1" id="service-1">
-              <div class="service-heading-area">
-                <img
-                  class="hidden-vertical floating service-icon"
-                  src="images/services/services_icons/website_icon.png"
-                  alt="Web Development"
-                />
-                <h2 class="hidden-vertical service-heading">Web Development</h2>
-                <p class="hidden-vertical service-subheading">
-                  Custom website development for your business or personal use.
-                </p>
-              </div>
-              <div class="service-content">
-                <div class="service-description-list-container">
-                  <h3 class="service-description-list-heading">
-                    I'll take care of everything.
-                  </h3>
-                  <ul class="service-description-list">
-                    <li>Website Design</li>
-                    <li>Development</li>
-                    <li>Deployment (with a custom domain name!)</li>
-                    <li>Maintenance & Upkeep</li>
-                  </ul>
-                </div>
-                <div class="website-showcase">
-                  <h3 class="showcase-heading">Some sites I've made:</h3>
-                  <div class="website-showcase-content">
-                    <div class="showcased-website showcased-website-1">
-                      <div class="website-heading-area">
-                        <p class="website-title">CozyUpCafe</p>
-                        <a
-                          href="https://cozyupcafe.naspoapps.com/"
-                          target="_blank"
-                          ><i class="fa-solid fa-up-right-from-square"></i
-                        ></a>
-                      </div>
-                      <p class="website-description">
-                        A website for a fictional cafe. Incorporates a warm,
-                        retro-modern design.
-                      </p>
-                    </div>
-                    <div class="showcased-website-separator"></div>
-                    <div class="showcased-website showcased-website-2">
-                      <div class="website-heading-area">
-                        <p class="website-title">Exipnos Hosting</p>
-                        <a
-                          href="https://exipnoshosting.naspoapps.com/"
-                          target="_blank"
-                          ><i class="fa-solid fa-up-right-from-square"></i
-                        ></a>
-                      </div>
-                      <p class="website-description">
-                        A website for a cloud hosting company, originally made
-                        for a university project. Incorporates a modern techy
-                        design. (Desktop view only).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="web-development-content">
+            <div class="service-heading-area">
+              <img
+                class="hidden-vertical floating service-icon"
+                src="images/services/services_icons/website_icon.png"
+                alt="Web Development"
+              />
+              <p class="hidden-vertical service-subheading">
+                Custom website development for your business or personal use.
+              </p>
             </div>
-
-            <!-- Line decor sits in the middle (between the two services) -->
-            <div class="line-decor-container">
-              <div
-                class="line-decor line-decor-hidden"
-                id="services-line-decor"
-              ></div>
-            </div>
-
-            <!-- service 2 -->
-            <div class="service service-2" id="service-2">
-              <div class="service-heading-area">
-                <img
-                  class="hidden-vertical floating"
-                  src="images/services/services_icons/coding_icon.png"
-                  alt="Tutoring"
-                />
-                <h2 class="hidden-vertical">Tutoring</h2>
-                <p class="hidden-vertical">
-                  Private in-person or online tutoring for beginners.
-                </p>
+            <div class="service-content">
+              <div class="service-description-list-container">
+                <h3 class="service-description-list-heading">
+                  I'll take care of everything.
+                </h3>
+                <ul class="service-description-list">
+                  <li>Website Design</li>
+                  <li>Development</li>
+                  <li>Deployment (with a custom domain name!)</li>
+                  <li>Maintenance & Upkeep</li>
+                </ul>
               </div>
-              <div class="service-content">
-                <div class="image-display">
-                  <img src="/images/logos/java_logo.svg" alt="Java" />
-                  <img src="/images/logos/python_logo.png" alt="Python" />
-                  <img
-                    src="/images/logos/javascript_logo.png"
-                    alt="Javascript"
-                  />
-                  <img src="/images/logos/html_logo.png" alt="HTML" />
-                  <img src="/images/logos/css_logo.png" alt="CSS" />
-                </div>
-                <!-- image display arrangement for mobile only -->
-                <div class="image-display image-display-mobile">
-                  <div class="row-1">
-                    <img src="/images/logos/java_logo.svg" alt="Java" />
-                    <img src="/images/logos/python_logo.png" alt="Python" />
-                    <img
-                      src="/images/logos/javascript_logo.png"
-                      alt="Javascript"
-                    />
+              <div class="website-showcase">
+                <h3 class="showcase-heading">Some sites I've made:</h3>
+                <div class="website-showcase-content">
+                  <div class="showcased-website showcased-website-1">
+                    <div class="website-heading-area">
+                      <p class="website-title">CozyUpCafe</p>
+                      <a
+                        href="https://cozyupcafe.naspoapps.com/"
+                        target="_blank"
+                        ><i class="fa-solid fa-up-right-from-square"></i
+                      ></a>
+                    </div>
+                    <p class="website-description">
+                      A website for a fictional cafe. Incorporates a warm,
+                      retro-modern design.
+                    </p>
                   </div>
-                  <div class="row-2">
-                    <img src="/images/logos/html_logo.png" alt="HTML" />
-                    <img src="/images/logos/css_logo.png" alt="CSS" />
+                  <div class="showcased-website-separator"></div>
+                  <div class="showcased-website showcased-website-2">
+                    <div class="website-heading-area">
+                      <p class="website-title">Exipnos Hosting</p>
+                      <a
+                        href="https://exipnoshosting.naspoapps.com/"
+                        target="_blank"
+                        ><i class="fa-solid fa-up-right-from-square"></i
+                      ></a>
+                    </div>
+                    <p class="website-description">
+                      A website for a cloud hosting company, originally made for
+                      a university project. Incorporates a modern techy design.
+                      (Desktop view only).
+                    </p>
                   </div>
                 </div>
-                <p class="service-description">
-                  <span
-                    >If you're a student, or just want to learn a new amazing
-                    skill, this is for you!</span
-                  >
-                  <br /><br />We'll have one-on-one sessions (either in-person
-                  or online) where I'll teach you the basics of programming and
-                  help you get started on your journey.
-                </p>
               </div>
             </div>
           </div>
