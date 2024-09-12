@@ -21,8 +21,10 @@
   gap: 50px;
 }
 .tutoring .tutoring-heading .tutoring-subheading-text {
-  font-size: 28px;
+  font-size: 26px;
   text-align: center;
+  font-family: "Inter Extra-Light";
+  font-weight: inherit;
 }
 .tutoring .tutoring-content {
   width: 100%;
