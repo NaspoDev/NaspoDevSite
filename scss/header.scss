@@ -54,11 +54,28 @@
 @media (max-width: 1199px) {
   .header {
     width: 100vw;
-    justify-content: space-between;
     padding: 20px 5%;
+    align-items: center;
+    justify-content: center !important;
 
-    .navigation li:not(:last-child) {
+    .hidden-mobile {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    padding: 30px 10px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .header {
+    .navigation {
+      li a {
+        font-size: 14px !important;
+      }
     }
   }
 }
