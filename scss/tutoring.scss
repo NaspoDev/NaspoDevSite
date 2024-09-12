@@ -4,18 +4,18 @@
 // === Tutoring ===
 
 .tutoring {
-  height: 900px;
+  height: 850px;
   display: grid;
   grid-template-rows: auto 2fr 1fr;
   position: relative;
   padding: 0px 150px;
 
   .tutoring-heading {
-    height: 200px;
+    height: auto;
     gap: 50px;
 
     .tutoring-subheading-text {
-      font-size: 30px;
+      font-size: 28px;
     }
   }
 
@@ -23,9 +23,10 @@
     width: 100%;
     @include flexCenter(row, center, flex-start);
     padding-top: 60px;
+    gap: 250px;
 
     .languages-covered-container {
-      width: 50%;
+      width: auto;
       @include flexCenter(column);
 
       .languages-covered-heading {
@@ -50,7 +51,7 @@
     }
 
     .topics-covered-container {
-      width: 50%;
+      width: auto;
       @include flexCenter(column);
 
       .topics-heading {
@@ -88,5 +89,11 @@
       text-align: center;
       line-height: 1.5;
     }
+  }
+
+  .tutoring-blob {
+    top: -100px;
+    right: -400px;
+    z-index: 2;
   }
 }

@@ -1,16 +1,16 @@
 .tutoring {
-  height: 900px;
+  height: 850px;
   display: grid;
   grid-template-rows: auto 2fr 1fr;
   position: relative;
   padding: 0px 150px;
 }
 .tutoring .tutoring-heading {
-  height: 200px;
+  height: auto;
   gap: 50px;
 }
 .tutoring .tutoring-heading .tutoring-subheading-text {
-  font-size: 30px;
+  font-size: 28px;
 }
 .tutoring .tutoring-content {
   width: 100%;
@@ -19,9 +19,10 @@
   justify-content: center;
   align-items: flex-start;
   padding-top: 60px;
+  gap: 250px;
 }
 .tutoring .tutoring-content .languages-covered-container {
-  width: 50%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +51,7 @@
   gap: 80px;
 }
 .tutoring .tutoring-content .topics-covered-container {
-  width: 50%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,4 +90,9 @@
 .tutoring .content-outro .service-description-2 {
   text-align: center;
   line-height: 1.5;
+}
+.tutoring .tutoring-blob {
+  top: -100px;
+  right: -400px;
+  z-index: 2;
 }
