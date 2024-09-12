@@ -65,6 +65,7 @@
 
       .left-side {
         justify-content: flex-start;
+        width: 30%;
 
         .run-title-container {
           cursor: default;
@@ -96,6 +97,7 @@
 
       .right-side {
         justify-content: flex-end;
+        width: 70%;
 
         .section-button {
           transition: opacity 3s;

@@ -51,6 +51,7 @@
 }
 .home .terminal-display .info-bar .left-side {
   justify-content: flex-start;
+  width: 30%;
 }
 .home .terminal-display .info-bar .left-side .run-title-container {
   cursor: default;
@@ -74,6 +75,7 @@
 }
 .home .terminal-display .info-bar .right-side {
   justify-content: flex-end;
+  width: 70%;
 }
 .home .terminal-display .info-bar .right-side .section-button {
   transition: opacity 3s;
