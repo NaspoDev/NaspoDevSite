@@ -129,6 +129,7 @@
 }
 .projects .projects-content .projects-grid .project-1 .project-content img {
   width: 7%;
+  filter: invert(1);
 }
 .projects .projects-content .projects-grid .project-1 .scrolling-text-wrapper {
   animation: scroll 18s linear infinite;
