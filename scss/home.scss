@@ -187,8 +187,11 @@
             font-family: "Inter Bold";
             // text shadow trickery to create a text border
             // 3px bg color to left, top, right, and bottom
-            text-shadow: -3px 0 $text-color-white, 0 3px $text-color-white,
-              3px 0 $text-color-white, 0 -3px $text-color-white;
+            text-shadow:
+              -3px 0 $text-color-white,
+              0 3px $text-color-white,
+              3px 0 $text-color-white,
+              0 -3px $text-color-white;
           }
         }
 
