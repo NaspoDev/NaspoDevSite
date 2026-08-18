@@ -9,7 +9,7 @@ import { blobs } from "../modules/blobs.js";
 // print statement to by typed out with typewriter effect
 // id: id of element, text: text to type out
 const printStatementComponents = [
-  { id: "print-statement-print", text: "print" },
+  { id: "print-statement-print", text: "println" },
   { id: "print-statement-bracket-1", text: "(" },
   { id: "print-statement-text", text: '"Hey there, I\'m\\nNaspo"' },
   { id: "print-statement-bracket-2", text: ")" },
